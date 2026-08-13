@@ -98,6 +98,13 @@ cp -r skills/<theme>/<name>/. .agents/skills/<name>/
 
 **Manual** — copy any `skills/<theme>/<name>/` folder into your agent's skills directory; the whole folder is self-contained.
 
+## Related resources
+
+- [skills.sh](https://www.skills.sh/) — The agent skills directory. 1.2M+ skills searchable across 20+ harnesses. Claude Code has a built-in `/skills` command to search this catalog. Skills from this repo can also be published there.
+- [superpowers](https://github.com/obra/superpowers) — Complete software development methodology (MIT, Jesse Vincent / Prime Radiant). Our software-development theme depends on it.
+- [Checklist Design](https://checklist.design) — UX/UI reference checklists by George Hatzis.
+- [rag.saas-shipkit](https://github.com/rag-saas-shipkit) — Brandon Bayer's pioneering task templates that inspired our bug-triage and migration-safety skills.
+
 ## Contributing
 
 Add a skill at `skills/<theme>/<name>/SKILL.md` with YAML frontmatter:
