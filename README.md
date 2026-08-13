@@ -8,14 +8,17 @@ This repo is a library of **SOPs written as executable markdown**. Each skill is
 
 ## Themes
 
-Three roles today. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
+Four themes today — three roles and a meta-layer: **software-development**, **growth**, and **backoffice** are deployable employee roles; **skillification** is the meta-layer that governs how skills themselves get promoted into this repo. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
 
 ### software-development — the Engineer
 
 Design review, testing, and framework practices for shipping web apps.
 
+Also depends on superpowers (Jesse Vincent / Prime Radiant, MIT) for core development methodology — TDD, debugging, planning, code review, worktrees.
+
 | Skill | Description | Author |
 |---|---|---|
+| feature-shaping | Shape a vague idea into a structured spec — problem framing, scope, success metrics, risks. Bridges brainstorming and writing-plans. | Nuvel Skills *(owned)* |
 | bug-triage | Triage-first bug workflow — capture the exact error, classify, fix simple bugs fast, escalate complex ones. | Nuvel Skills *(owned)* |
 | database-migration-safety | Migration safety protocol — down migrations, round-trip rollback testing, schema diff review, zero-downtime. | Nuvel Skills *(owned)* |
 | design-checklist-review | Reference UX/UI quality checklists for web app screens. Run before shipping. | markfolken *(owned)* |
@@ -51,6 +54,14 @@ Document generation and data operations.
 | pptx | Create, edit, and analyze PowerPoint presentations — layouts, speaker notes. | Anthropic *(vendored)* |
 | supabase-postgres-best-practices | Postgres performance optimization and best practices from Supabase. | supabase *(vendored)* |
 | xlsx | Create, read, and edit spreadsheets — formulas, formatting, data analysis. | Anthropic *(vendored)* |
+
+### skillification — the meta-layer
+
+Skills about skills: promotion, verification, extraction — how skills enter and stay healthy in this repo.
+
+| Skill | Description | Author |
+|---|---|---|
+| skill-promotion | Promote a dogfooded internal skill into the canonical repo — curation gates, versioning, attribution review, PR workflow. | Nuvel Skills *(owned)* |
 
 ## Install
 
