@@ -8,7 +8,7 @@ This repo is a library of **SOPs written as executable markdown**. Each skill is
 
 ## Themes
 
-Three roles today. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
+Four themes today — three roles and a meta-layer: **software-development**, **growth**, and **backoffice** are deployable employee roles; **skillification** is the meta-layer that governs how skills themselves get promoted into this repo. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
 
 ### software-development — the Engineer
 
