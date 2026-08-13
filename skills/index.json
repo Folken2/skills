@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "updated": "2026-08-13",
   "themes": {
     "software-development": [
@@ -151,6 +151,12 @@
       {
         "name": "skill-promotion",
         "description": "Promote a dogfooded internal skill into the canonical repo — curation gate, versioning, attribution review, PR workflow.",
+        "author": "Nuvel Skills",
+        "theme": "skillification"
+      },
+      {
+        "name": "skill-evaluation",
+        "description": "Automated evaluation of a theme's skills — spawn subagents with only those skills, run scenario tests, score against exit criteria.",
         "author": "Nuvel Skills",
         "theme": "skillification"
       }

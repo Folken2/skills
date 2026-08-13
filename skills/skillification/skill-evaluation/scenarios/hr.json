@@ -1,0 +1,14 @@
+{
+  "hiring": {
+    "scenario": "We need to hire a senior backend engineer. Walk through the full hiring process from req to offer acceptance.",
+    "expected_steps": ["requisition", "screening", "interview", "offer", "background", "closeout"]
+  },
+  "employee-onboarding": {
+    "scenario": "A senior backend engineer is starting Monday. Walk through the full onboarding process.",
+    "expected_steps": ["paperwork", "equipment", "access", "orientation", "buddy", "30-60-90"]
+  },
+  "employee-engagement": {
+    "scenario": "An engineer has been disengaged for 3 months. Walk through the engagement process.",
+    "expected_steps": ["1:1", "feedback", "review", "growth", "recognition", "stay interview", "exit"]
+  }
+}
