@@ -13,7 +13,9 @@ A migration is production surgery on live data. The difference between a safe mi
 
 **Core principle:** No up migration ships without a corresponding down migration, and no migration reaches production without being run and rolled back on a disposable copy first.
 
-This skill is database-agnostic. For engine/tool-specific mechanics (e.g. Drizzle's `down.sql` convention and journal handling), see [references/drizzle-migration-examples.md](references/drizzle-migration-examples.md).
+This skill is database-agnostic. For engine/tool-specific mechanics, see [references/drizzle-migration-examples.md](references/drizzle-migration-examples.md).
+
+- Note: `down.sql` and `db:rollback` scripts are a project-level wrapper convention (e.g. CoAssistant package.json scripts), not native to drizzle-kit. Drizzle-kit generates forward migrations only; your project must maintain its own down migration files and rollback commands.
 
 ## The Non-Negotiables
 
@@ -37,6 +39,8 @@ For each forward operation, write its inverse. Reversibility falls into three bu
 | Change column type | Change back | ⚠️ only if the conversion is lossless |
 | Insert seed data | Delete those specific rows | ⚠️ scope the delete precisely |
 | **Drop table/column** | **Cannot restore data** | ❌ requires backup / manual restore |
+
+- If the drop used CASCADE and destroyed dependent objects (views, functions, triggers), the down migration must recreate those objects, not just the column or table.
 
 **Safety rules for down migrations:**
 
@@ -63,6 +67,7 @@ Before applying, confirm ordering is sound:
 - A migration must not depend on an object created by a *later* migration.
 - When rolling back, ensure no *later* applied migration depends on what you are about to reverse — roll those back first, in reverse order.
 - Foreign keys, indexes, and constraints must be created after, and dropped before, the objects they reference.
+- Check for dependent objects — views, materialized views, functions, triggers, and rules — that reference the column, table, or type being dropped or altered. Drop/recreate them explicitly in the migration; never rely on CASCADE to silently remove them. If they are recreated, restore them in the down migration.
 
 ## Schema Diff Review
 
@@ -73,6 +78,7 @@ Before applying any generated migration, read the diff — do not trust auto-gen
 - [ ] Any operation that will lock a large table or rewrite it in place?
 - [ ] Do generated names (indexes, constraints) collide with existing ones?
 - [ ] Is a NOT NULL column being added without a default to an existing populated table?
+- Did any dependent object change unexpectedly (views, functions, triggers) due to a CASCADE effect?
 
 ## Rollback Workflow
 

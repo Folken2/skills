@@ -15,6 +15,13 @@ Most bugs are simple. A triage-first workflow gets you to the fix fast without d
 
 The discipline here is *proportional response*: match the depth of investigation to the actual complexity of the bug, and never skip STEP 1 to save time.
 
+## When to use this vs systematic-debugging
+
+This skill owns the **proportional-response decision** — classify the bug first, escalate only when needed. Use it when you need to decide how much investigation a bug warrants before fixing.
+
+- If STEP 2 classifies the bug as **"complex"** → hand off to `superpowers:systematic-debugging` for the deep investigation. This skill covers the classification and simple-fix path; systematic-debugging handles the full root-cause tracing.
+- If STEP 2 classifies as **simple fix / missing import / type / env** → continue with STEP 3 here.
+
 ## The Workflow
 
 ```
@@ -34,6 +41,8 @@ You cannot fix what you cannot see. Before hypothesizing, get:
 - **Reproducibility** — always / intermittent / only under specific conditions (describe them).
 
 If any of these are missing, get them before continuing. A guess without the error text is a wasted fix attempt.
+
+- **For intermittent/nondeterministic bugs:** capture the conditions under which the bug appears (time of day, data volume, specific inputs, user session, browser/device, previous actions). If a reliable reproduction is impossible, note this — the bug may need instrumentation or stress testing rather than a single reproduce-then-verify cycle.
 
 ### STEP 2 — Classify
 
@@ -78,6 +87,7 @@ Only enter here when STEP 2 landed on "complex." This is where you slow down and
 ## Verification (after any fix)
 
 - [ ] The specific error case from STEP 1 no longer reproduces.
+- **For intermittent bugs:** verification means the bug does not appear under the captured conditions after N repeated runs (N >= 5), or monitoring/instrumentation shows the root cause is addressed. Document the test methodology used.
 - [ ] No new errors introduced (type-check, lint, tests, relevant runtime path).
 - [ ] Checked for the same bug pattern elsewhere in the codebase.
 - [ ] For complex fixes: the affected downstream consumers still behave correctly.
