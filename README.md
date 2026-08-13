@@ -1,6 +1,6 @@
-# Folken2 Skills
+# Nuvel Skills
 
-Curated skills for autonomous agents, organized by role. Thin harness, thick skills — each folder is a deployable employee.
+Nuvel Skills — curated skills for autonomous agents, organized by role. Thin harness, thick skills — each folder is a deployable employee.
 
 ## What this is
 
@@ -16,7 +16,10 @@ Design review, testing, and framework practices for shipping web apps.
 
 | Skill | Description | Author |
 |---|---|---|
+| bug-triage | Triage-first bug workflow — capture the exact error, classify, fix simple bugs fast, escalate complex ones. | Nuvel Skills *(owned)* |
+| database-migration-safety | Migration safety protocol — down migrations, round-trip rollback testing, schema diff review, zero-downtime. | Nuvel Skills *(owned)* |
 | design-checklist-review | Reference UX/UI quality checklists for web app screens. Run before shipping. | markfolken *(owned)* |
+| second-order-impact-analysis | Before declaring a change done, trace ripple effects — upstream/downstream, data, API contract, performance, rollback. | Nuvel Skills *(owned)* |
 | frontend-design | Create distinctive, production-grade frontend interfaces that avoid generic AI aesthetics. | Anthropic *(vendored)* |
 | mcp-builder | Guide for creating high-quality MCP servers (Python FastMCP or Node/TypeScript MCP SDK). | Anthropic *(vendored)* |
 | nextjs-best-practices | Next.js App Router principles — Server Components, data fetching, routing patterns. | community / uncredited |
@@ -114,5 +117,6 @@ Several skills are vendored verbatim from upstream sources and credited to their
 - **Vercel** — `vercel-react-best-practices` and `web-design-guidelines` (Vercel Engineering / Web Interface Guidelines).
 - **Supabase** — `supabase-postgres-best-practices`.
 - **Resend** — `resend` (and its sub-skills for sending, receiving, audiences, and broadcasts).
+- **Brandon Bayer** ([rag.saas-shipkit](https://github.com/flybayer)) — the owned skills `bug-triage`, `database-migration-safety`, and `second-order-impact-analysis` are Nuvel Skills originals, restructured into modern `SKILL.md` form and inspired by the structured task templates Brandon pioneered in rag.saas-shipkit.
 
 All other skills are owned/maintained in this repo or adapted from community references. If you are a rights holder and want attribution corrected or content removed, open an issue.
