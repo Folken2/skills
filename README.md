@@ -1,115 +1,118 @@
-# Skills
+# Folken2 Skills
 
-A harness-agnostic hub of reusable agent skills — self-contained `SKILL.md` files that teach an AI agent how to do a specific task well. Grouped into categories so both humans and agents can navigate quickly.
+Curated skills for autonomous agents, organized by role. Thin harness, thick skills — each folder is a deployable employee.
 
-Each skill lives at `skills/<category>/<name>/SKILL.md` with YAML frontmatter (`name`, `description`, and where available `version` / `author`). Point an agent at the raw URL, or install into your harness of choice — see [Install](#install).
+## What this is
 
-For a machine-readable version of this catalog, see [`skills/index.json`](./skills/index.json).
+This repo is a library of **SOPs written as executable markdown**. Each skill is a self-contained `SKILL.md` (plus any supporting files) that teaches an agent how to do one job well. Skills are grouped into **theme folders**, and each theme folder maps to a **role** — an "employee." Pair a theme with an agent harness (Nuvel, Hermes, Claude Code, Cursor, …) and you get a specialist: the harness is thin, the skills carry the expertise.
 
-## Catalog
+## Themes
 
-### design
-Building and reviewing polished, accessible user interfaces.
+Three roles today. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
 
-| Skill | Description | Author |
-|-------|-------------|--------|
-| [design-checklist-review](./skills/design/design-checklist-review/) | Reference UX/UI quality checklists for web app screens. Run before shipping. | markfolken |
-| [frontend-design](./skills/design/frontend-design/) | Create distinctive, production-grade frontend interfaces with high design quality — web components, pages, artifacts, posters, or applications. | community / uncredited |
-| [web-design-guidelines](./skills/design/web-design-guidelines/) | Review UI code for Web Interface Guidelines compliance — accessibility, UX, design audits. | vercel |
+### software-development — the Engineer
 
-### documents
-Creating, editing, and analyzing office document formats.
+Design review, testing, and framework practices for shipping web apps.
 
 | Skill | Description | Author |
-|-------|-------------|--------|
-| [docx](./skills/documents/docx/) | Word document (.docx) creation, editing, and analysis — tracked changes, comments, formatting, text extraction. | community / uncredited |
-| [pdf](./skills/documents/pdf/) | PDF manipulation — extract text/tables, create, merge/split, and fill forms. | community / uncredited |
-| [pptx](./skills/documents/pptx/) | Presentation (.pptx) creation, editing, and analysis — layouts, speaker notes, comments. | community / uncredited |
-| [xlsx](./skills/documents/xlsx/) | Spreadsheet (.xlsx, .csv, .tsv) creation, editing, and analysis — formulas, formatting, data analysis, visualization. | community / uncredited |
+|---|---|---|
+| design-checklist-review | Reference UX/UI quality checklists for web app screens. Run before shipping. | markfolken *(owned)* |
+| frontend-design | Create distinctive, production-grade frontend interfaces that avoid generic AI aesthetics. | Anthropic *(vendored)* |
+| mcp-builder | Guide for creating high-quality MCP servers (Python FastMCP or Node/TypeScript MCP SDK). | Anthropic *(vendored)* |
+| nextjs-best-practices | Next.js App Router principles — Server Components, data fetching, routing patterns. | community / uncredited |
+| nextjs-supabase-auth | Expert integration of Supabase Auth with the Next.js App Router. | community / uncredited |
+| vercel-react-best-practices | React/Next.js performance optimization guidelines from Vercel Engineering. | vercel *(vendored)* |
+| web-design-guidelines | Review UI code for Web Interface Guidelines compliance (accessibility, UX audit). | vercel *(vendored)* |
+| webapp-testing | Interact with and test local web apps using Playwright — verify, debug, screenshot. | community / uncredited |
 
-### email
-Building, sending, and hardening email features.
+### growth — the Growth marketer
 
-| Skill | Description | Author |
-|-------|-------------|--------|
-| [email-best-practices](./skills/email/email-best-practices/) | Building email features, deliverability (SPF/DKIM/DMARC), compliance (CAN-SPAM, GDPR, CASL), webhooks, transactional vs marketing. | community / uncredited |
-| [react-email](./skills/email/react-email/) | Creating email templates with React that render across email clients. | community / uncredited |
-| [resend](./skills/email/resend/) | Working with the Resend email platform — sending, receiving, audiences, broadcasts. | resend |
-
-### web
-Building, optimizing, and testing web applications.
+SEO, email deliverability, and content/video production.
 
 | Skill | Description | Author |
-|-------|-------------|--------|
-| [nextjs-best-practices](./skills/web/nextjs-best-practices/) | Next.js App Router principles — Server Components, data fetching, routing. | community / uncredited |
-| [vercel-react-best-practices](./skills/web/vercel-react-best-practices/) | React and Next.js performance optimization guidelines from Vercel Engineering. | vercel |
-| [nextjs-supabase-auth](./skills/web/nextjs-supabase-auth/) | Integrating Supabase Auth with the Next.js App Router — login, middleware, protected routes. | community / uncredited |
-| [webapp-testing](./skills/web/webapp-testing/) | Interacting with and testing local web apps via Playwright — verify UI, debug, screenshots, logs. | community / uncredited |
-| [seo-audit](./skills/web/seo-audit/) | Audit, review, or diagnose SEO issues — technical SEO, on-page SEO, meta tags, health checks. | community / uncredited |
-| [remotion-best-practices](./skills/web/remotion-best-practices/) | Best practices for Remotion — video creation in React. | community / uncredited |
+|---|---|---|
+| email-best-practices | Deliverability, SPF/DKIM/DMARC, compliance (CAN-SPAM, GDPR, CASL), capture, webhooks. | community / uncredited |
+| react-email | Build email templates with React that render across email clients. | community / uncredited |
+| remotion-best-practices | Best practices for Remotion — video creation in React. | community / uncredited |
+| resend | Work with the Resend email platform — routes to send/receive/audiences/broadcasts. | resend *(vendored)* |
+| seo-audit | Audit, review, or diagnose technical + on-page SEO issues on a site. | community / uncredited |
 
-### data
-Databases, queries, and data-layer performance.
+### backoffice — the Ops specialist
 
-| Skill | Description | Author |
-|-------|-------------|--------|
-| [supabase-postgres-best-practices](./skills/data/supabase-postgres-best-practices/) | Postgres performance optimization and best practices from Supabase. | supabase |
-
-### tooling
-Building developer tooling and agent infrastructure.
+Document generation and data operations.
 
 | Skill | Description | Author |
-|-------|-------------|--------|
-| [mcp-builder](./skills/tooling/mcp-builder/) | Building high-quality MCP servers — Python (FastMCP) or Node/TypeScript (MCP SDK). | community / uncredited |
+|---|---|---|
+| docx | Create, edit, and analyze Word documents — tracked changes, comments, formatting. | Anthropic *(vendored)* |
+| pdf | Extract text/tables, create, merge/split, and fill PDF forms at scale. | Anthropic *(vendored)* |
+| pptx | Create, edit, and analyze PowerPoint presentations — layouts, speaker notes. | Anthropic *(vendored)* |
+| supabase-postgres-best-practices | Postgres performance optimization and best practices from Supabase. | supabase *(vendored)* |
+| xlsx | Create, read, and edit spreadsheets — formulas, formatting, data analysis. | Anthropic *(vendored)* |
 
 ## Install
 
-Skills are plain `SKILL.md` files, so any harness that reads skills can consume them. Paths now include the category: `skills/<category>/<name>/SKILL.md`.
+Skills live at `skills/<theme>/<name>/SKILL.md`. Install into whichever harness you run.
 
 **Hermes**
+
 ```bash
-hermes skills install https://raw.githubusercontent.com/Folken2/skills/main/skills/<category>/<name>/SKILL.md
+hermes skills install https://raw.githubusercontent.com/Folken2/skills/main/skills/<theme>/<name>/SKILL.md
 # e.g.
-hermes skills install https://raw.githubusercontent.com/Folken2/skills/main/skills/design/frontend-design/SKILL.md
+hermes skills install https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/webapp-testing/SKILL.md
 ```
 
-**Claude Code** — copy the skill directory into your skills folder:
+**Claude Code** — copy the skill folder into your skills dir:
+
 ```bash
-# per-user
-git clone https://github.com/Folken2/skills.git /tmp/skills
-cp -r /tmp/skills/skills/<category>/<name> ~/.claude/skills/<name>
-# e.g.
-cp -r /tmp/skills/skills/web/nextjs-best-practices ~/.claude/skills/nextjs-best-practices
+mkdir -p ~/.claude/skills/<name>
+cp -r skills/<theme>/<name>/. ~/.claude/skills/<name>/
 ```
 
-**Cursor** — copy into the project's Cursor skills folder:
+**Cursor**
+
 ```bash
-cp -r /tmp/skills/skills/<category>/<name> .cursor/skills/<name>
+mkdir -p .cursor/skills/<name>
+cp -r skills/<theme>/<name>/. .cursor/skills/<name>/
 ```
 
-**Codex / Gemini** — copy into the shared agents skills folder:
+**Codex / Gemini**
+
 ```bash
-cp -r /tmp/skills/skills/<category>/<name> .agents/skills/<name>
+mkdir -p .agents/skills/<name>
+cp -r skills/<theme>/<name>/. .agents/skills/<name>/
 ```
 
-**Manual** — open `skills/<category>/<name>/SKILL.md` and paste its contents into your agent's context or system prompt.
+**Manual** — copy any `skills/<theme>/<name>/` folder into your agent's skills directory; the whole folder is self-contained.
 
 ## Contributing
 
-1. Add your skill as `skills/<category>/<name>/SKILL.md` (create a new category dir only if none of the existing six fit).
-2. Include YAML frontmatter with at least:
-   ```yaml
-   ---
-   name: your-skill-name
-   description: One line on when to use it and what it does.
-   version: 1.0.0
-   author: your-handle
-   ---
-   ```
-3. Keep the skill **self-contained** — bundle any reference files it needs inside its own directory.
-4. Update [`skills/index.json`](./skills/index.json) with an entry (name, description, author) under the right category, and add a row to that category's `README.md`.
-5. Don't edit unrelated skill bodies.
+Add a skill at `skills/<theme>/<name>/SKILL.md` with YAML frontmatter:
+
+```yaml
+---
+name: my-skill
+description: When to use this skill and what it does.
+version: 1.0.0
+author: your-handle
+---
+```
+
+- Keep each skill **self-contained** — bundle any supporting files inside its folder.
+- **Attribution is required** for vendored content: set `author` to the true source and note it here.
+- Update `skills/index.json` (grouped by theme) when you add or move a skill.
+- Pick the theme that matches the role the skill serves, not the tool it happens to use.
 
 ## License
 
-MIT
+MIT — see below. Owned skills are provided under MIT. Vendored skills remain under their original licenses.
+
+### Attributions
+
+Several skills are vendored verbatim from upstream sources and credited to their authors. They are used under their respective licenses:
+
+- **Anthropic** — `frontend-design`, `mcp-builder`, and the official document skills `docx`, `pdf`, `pptx`, `xlsx` (from Anthropic's open-source Claude skills).
+- **Vercel** — `vercel-react-best-practices` and `web-design-guidelines` (Vercel Engineering / Web Interface Guidelines).
+- **Supabase** — `supabase-postgres-best-practices`.
+- **Resend** — `resend` (and its sub-skills for sending, receiving, audiences, and broadcasts).
+
+All other skills are owned/maintained in this repo or adapted from community references. If you are a rights holder and want attribution corrected or content removed, open an issue.
