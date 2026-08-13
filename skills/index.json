@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "updated": "2026-08-13",
   "themes": {
     "software-development": [
@@ -173,6 +173,26 @@
         "description": "Ongoing employee lifecycle and retention — 1:1 cadence, quarterly/annual performance reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, and exit interviews fed back into retention.",
         "author": "Nuvel Skills",
         "theme": "hr"
+      }
+    ],
+    "sales": [
+      {
+        "name": "lead-qualification",
+        "description": "Score and prioritize inbound leads. Capture qualification criteria (BANT/GPCT/CHAMP) and ICP fit, score 0–100, tier A/B/C, route to the right pipeline, and set a follow-up cadence. Includes a lead-scorer script.",
+        "author": "Nuvel Skills",
+        "theme": "sales"
+      },
+      {
+        "name": "discovery-call",
+        "description": "Run a structured discovery call. Pre-call research, problem identification (SPIN), need amplification (Sandler pain funnel), impact quantification, budget, authority mapping, timeline, decision criteria (MEDDIC), and post-call debrief. Includes a call-notes template.",
+        "author": "Nuvel Skills",
+        "theme": "sales"
+      },
+      {
+        "name": "pipeline-management",
+        "description": "Manage a sales pipeline end-to-end. Stage exit criteria, deal velocity, coverage ratio, forecasting, MEDDIC deal inspection, stalled-deal recovery, lost-deal analysis, and pipeline hygiene. Includes a pipeline health-report script.",
+        "author": "Nuvel Skills",
+        "theme": "sales"
       }
     ]
   }
