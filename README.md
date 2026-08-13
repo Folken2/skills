@@ -8,7 +8,7 @@ This repo is a library of **SOPs written as executable markdown**. Each skill is
 
 ## Themes
 
-Four themes today — three roles and a meta-layer: **software-development**, **growth**, and **backoffice** are deployable employee roles; **skillification** is the meta-layer that governs how skills themselves get promoted into this repo. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
+Five themes today — four roles and a meta-layer: **software-development**, **growth**, **backoffice**, and **hr** are deployable employee roles; **skillification** is the meta-layer that governs how skills themselves get promoted into this repo. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
 
 ### software-development — the Engineer
 
@@ -54,6 +54,16 @@ Document generation and data operations.
 | pptx | Create, edit, and analyze PowerPoint presentations — layouts, speaker notes. | Anthropic *(vendored)* |
 | supabase-postgres-best-practices | Postgres performance optimization and best practices from Supabase. | supabase *(vendored)* |
 | xlsx | Create, read, and edit spreadsheets — formulas, formatting, data analysis. | Anthropic *(vendored)* |
+
+### hr — People Operations
+
+Hire, onboard, engage, and retain employees. Full-cycle people ops as executable SOPs — from opening a req to the exit interview.
+
+| Skill | Description | Author |
+|---|---|---|
+| hiring | Full-cycle hiring from an approved need to a signed offer — requisition approval, scorecard screening, structured interviews, offer management, background check, onboarding handoff. | Nuvel Skills *(owned)* |
+| employee-onboarding | New hire lifecycle to day 90 — pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, access lifecycle. | Nuvel Skills *(owned)* |
+| employee-engagement | Ongoing retention — 1:1 cadence, quarterly/annual reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, exit interviews. | Nuvel Skills *(owned)* |
 
 ### skillification — the meta-layer
 
@@ -136,5 +146,7 @@ Several skills are vendored verbatim from upstream sources and credited to their
 - **Supabase** — `supabase-postgres-best-practices`.
 - **Resend** — `resend` (and its sub-skills for sending, receiving, audiences, and broadcasts).
 - **Brandon Bayer** ([rag.saas-shipkit](https://github.com/flybayer)) — the owned skills `bug-triage`, `database-migration-safety`, and `second-order-impact-analysis` are Nuvel Skills originals, restructured into modern `SKILL.md` form and inspired by the structured task templates Brandon pioneered in rag.saas-shipkit.
+
+- **HR best-practice sources** — the owned `hr` skills (`hiring`, `employee-onboarding`, `employee-engagement`) are Nuvel Skills originals whose workflows are aligned with published industry standards, principally **SHRM** (Society for Human Resource Management) guidance and benchmarking on structured hiring, onboarding, retention, and stay/exit interviews, plus **Gallup** onboarding-experience research and the widely used 30-60-90 day onboarding framework. Sources are cited inline in each skill body. Adapt jurisdiction-specific steps (background checks, tax/eligibility forms, data retention) to your local employment law.
 
 All other skills are owned/maintained in this repo or adapted from community references. If you are a rights holder and want attribution corrected or content removed, open an issue.
