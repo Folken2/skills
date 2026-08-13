@@ -1,8 +1,26 @@
 {
-  "version": 2,
+  "version": 3,
   "updated": "2026-08-13",
   "themes": {
     "software-development": [
+      {
+        "name": "bug-triage",
+        "description": "Triage-first bug workflow. Capture the exact error, classify it, fix simple bugs immediately, and escalate only genuinely complex bugs to deep investigation.",
+        "author": "Nuvel Skills (Brandon Bayer / rag.saas-shipkit)",
+        "theme": "software-development"
+      },
+      {
+        "name": "database-migration-safety",
+        "description": "Database-agnostic migration safety protocol. Mandatory down migration for every up, round-trip rollback testing, schema diff review, migration order checks, and zero-downtime principles.",
+        "author": "Nuvel Skills (Brandon Bayer / rag.saas-shipkit)",
+        "theme": "software-development"
+      },
+      {
+        "name": "second-order-impact-analysis",
+        "description": "Before declaring a change complete, trace the ripple effects. Upstream and downstream dependencies, data integrity, API contract changes, performance implications, and rollback safety.",
+        "author": "Nuvel Skills (Brandon Bayer / rag.saas-shipkit)",
+        "theme": "software-development"
+      },
       {
         "name": "design-checklist-review",
         "description": "Reference UX/UI quality checklists for web app screens. Run before shipping.",
