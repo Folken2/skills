@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "updated": "2026-08-13",
   "themes": {
     "software-development": [
@@ -153,6 +153,26 @@
         "description": "Promote a dogfooded internal skill into the canonical repo — curation gate, versioning, attribution review, PR workflow.",
         "author": "Nuvel Skills",
         "theme": "skillification"
+      }
+    ],
+    "hr": [
+      {
+        "name": "hiring",
+        "description": "Full-cycle hiring from an approved need to a signed offer and onboarding handoff — requisition approval, scorecard-driven screening, structured interviews, offer management, background check, and close-out.",
+        "author": "Nuvel Skills",
+        "theme": "hr"
+      },
+      {
+        "name": "employee-onboarding",
+        "description": "New hire lifecycle from accepted offer to day 90 — pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, and access lifecycle for offboarding prep.",
+        "author": "Nuvel Skills",
+        "theme": "hr"
+      },
+      {
+        "name": "employee-engagement",
+        "description": "Ongoing employee lifecycle and retention — 1:1 cadence, quarterly/annual performance reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, and exit interviews fed back into retention.",
+        "author": "Nuvel Skills",
+        "theme": "hr"
       }
     ]
   }
