@@ -63,6 +63,10 @@ Benchmark reality (SHRM 2025): a non-executive hire averages ~45 days and ~$5,47
 - [ ] Start date confirmed and [[employee-onboarding]] triggered with offer + manager + start date.
 - [ ] All non-selected candidates dispositioned; requisition closed; metrics recorded (time-to-fill, source-of-hire, cost).
 
+## Tools
+
+- `scripts/hiring-metrics.py` — compute the step-9 close-out metrics (time-to-fill, cost-per-hire, source-of-hire mix, funnel conversion) from a pipeline JSON. Run `python scripts/hiring-metrics.py --sample > pipeline.json` to get a template to fill in, then `python scripts/hiring-metrics.py pipeline.json`.
+
 ## Sources
 
 Aligned with SHRM structured-hiring guidance and 2025 Talent Acquisition benchmarking (time-to-hire, cost-per-hire, structured-process retention gains), and standard requisition/recruitment-workflow practice. Adapt screening, background-check, and data-retention steps to your jurisdiction's employment law (e.g., FCRA-style consent/adjudication in the US, GDPR data handling in the EU).

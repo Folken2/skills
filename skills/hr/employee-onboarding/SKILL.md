@@ -73,6 +73,10 @@ An unprepared day 1 is the most common and most preventable onboarding failure. 
 - [ ] Access inventory maintained and current so offboarding revocation is a complete checklist.
 - [ ] Employee transitioned into the ongoing lifecycle via [[employee-engagement]] at day 90.
 
+## Tools
+
+- `scripts/onboarding-checklist.sh` — generate a per-hire checklist (pre-start → day 90) plus the access-inventory CSV that steps 3 and 12 depend on. Run `./scripts/onboarding-checklist.sh "Name" "Role" "Department" YYYY-MM-DD [out-dir]`. Keep the emitted access CSV current as access changes so offboarding revocation is a complete checklist.
+
 ## Sources
 
 Aligned with SHRM onboarding and retention guidance, Gallup onboarding-experience research, and the widely used 30-60-90 day onboarding framework (Cornerstone and others). Least-privilege access and access-inventory practices follow standard IT security/onboarding-offboarding controls. Adapt eligibility/tax forms and data handling to your jurisdiction.

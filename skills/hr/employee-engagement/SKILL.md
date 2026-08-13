@@ -60,6 +60,10 @@ Keep employees engaged, growing, and retained across the middle of the lifecycle
 - [ ] Feedback themes are converted into concrete, tracked changes.
 - [ ] At departure, a structured exit interview is completed, access revoked per the onboarding access inventory, and findings routed back into retention.
 
+## Tools
+
+- `scripts/engagement-score.py` — turn the step-6 flight-risk signals (skipped 1:1s, comp drift, no growth plan, low pulse, no recognition, life changes) into a consistent per-employee triage score so no at-risk person is overlooked. Run `python scripts/engagement-score.py --sample > people.json` for a template, then `python scripts/engagement-score.py people.json`. High score = run a stay interview and act, not a verdict that they're leaving.
+
 ## Sources
 
 Aligned with SHRM guidance on retention, stay vs. exit interviews, and cost-of-turnover estimates (50–200% of salary), plus standard employee-lifecycle management practice (continuous feedback, 360 reviews, growth planning, recognition). Coordinate departures and access removal with the inventory maintained in [[employee-onboarding]]; involve HR/legal for formal performance or termination processes.
