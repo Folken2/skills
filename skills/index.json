@@ -1,8 +1,21 @@
 {
-  "version": 3,
+  "version": 4,
   "updated": "2026-08-13",
   "themes": {
     "software-development": [
+      {
+        "name": "superpowers",
+        "description": "Complete software development methodology (TDD, debugging, planning, code review, git worktrees)",
+        "author": "Jesse Vincent / Prime Radiant",
+        "theme": "software-development",
+        "dependency": true
+      },
+      {
+        "name": "feature-shaping",
+        "description": "Shape a vague idea or request into a structured spec before planning or building. Bridges brainstorming and writing-plans.",
+        "author": "Nuvel Skills",
+        "theme": "software-development"
+      },
       {
         "name": "bug-triage",
         "description": "Triage-first bug workflow. Capture the exact error, classify it, fix simple bugs immediately, and escalate only genuinely complex bugs to deep investigation.",
@@ -132,6 +145,14 @@
         "description": "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When Claude needs to work with spreadsheets (.xlsx, .xlsm, .csv, .tsv, etc) for: (1) Creating new spreadsheets with formulas and formatting, (2) Reading or analyzing data, (3) Modify existing spreadsheets while preserving formulas, (4) Data analysis and visualization in spreadsheets, or (5) Recalculating formulas",
         "author": "Anthropic",
         "theme": "backoffice"
+      }
+    ],
+    "skillification": [
+      {
+        "name": "skill-promotion",
+        "description": "Promote a dogfooded internal skill into the canonical repo — curation gate, versioning, attribution review, PR workflow.",
+        "author": "Nuvel Skills",
+        "theme": "skillification"
       }
     ]
   }
