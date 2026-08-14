@@ -158,6 +158,11 @@ jobs:
               echo "  [REPLACEMENT] $f — vendored skill upgraded to owned Nuvel Skills (author: '$OLD_AUTHOR' -> '$NEW_AUTHOR')"
               continue
             fi
+            # Allow body changes to owned Nuvel Skills (they are maintained, not vendored)
+            if [ -n "$OLD_AUTHOR" ] && [ "$OLD_AUTHOR" = "Nuvel Skills" ] && [ "$NEW_AUTHOR" = "Nuvel Skills" ]; then
+              echo "  [OWNED] $f — owned Nuvel Skills body changed (intentional maintenance)"
+              continue
+            fi
             BASE_CLOSE=$(git show "$BASE:$f" 2>/dev/null | awk 'BEGIN{n=0} /^---$/ {n++; if(n==2){print NR; exit}}')
             PR_CLOSE=$(awk 'BEGIN{n=0} /^---$/ {n++; if(n==2){print NR; exit}}' "$f")
             if [ -z "$BASE_CLOSE" ] || [ -z "$PR_CLOSE" ]; then
