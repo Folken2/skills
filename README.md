@@ -8,7 +8,7 @@ This repo is a library of **SOPs written as executable markdown**. Each skill is
 
 ## Themes
 
-Six themes today — five roles and a meta-layer: **software-development**, **growth**, **backoffice**, **hr**, and **sales** are deployable employee roles; **skillification** is the meta-layer that governs how skills themselves get promoted into this repo. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
+Seven themes today — six roles and a meta-layer: **software-development**, **growth**, **backoffice**, **hr**, **sales**, and **customer-support** are deployable employee roles; **skillification** is the meta-layer that governs how skills themselves get promoted into this repo. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
 
 ### software-development — the Engineer
 
@@ -78,6 +78,17 @@ Go-to-market SOPs: qualify inbound, run structured discovery, and manage a pipel
 | lead-qualification | Score and prioritize inbound leads — capture criteria (BANT/GPCT/CHAMP) + ICP fit, score, tier, route, set cadence. Bundles a lead-scorer script. | Nuvel Skills *(owned)* |
 | discovery-call | Run a structured discovery call — research, problem ID, need amplification, impact quantification, budget, authority, timeline, decision criteria, debrief. Bundles a call-notes template. | Nuvel Skills *(owned)* |
 | pipeline-management | Manage a pipeline end-to-end — stage exit criteria, velocity, coverage ratio, forecasting, deal inspection, stalled-deal recovery, lost-deal analysis, hygiene. Bundles a health-report script. | Nuvel Skills *(owned)* |
+
+### customer-support — the Customer Support Specialist
+
+Resolve customer issues consistently: triage and route tickets, run the order lifecycle, troubleshoot technical faults, and communicate through every hard conversation. Harness- and industry-agnostic SOPs for any B2B/B2C support desk.
+
+| Skill | Description | Author |
+|---|---|---|
+| ticket-triage | Classify, prioritize, and route tickets — type × severity → SLA + tier from a triage matrix, first response, and evidence-backed escalation with structured handoffs. | Nuvel Skills *(owned)* |
+| order-management | Full order lifecycle — locate, verify identity, status, shipping/fulfillment issues, and returns/refunds/replacements/payments against a decision matrix with per-scenario templates. | Nuvel Skills *(owned)* |
+| technical-troubleshooting | Structured technical support — symptom capture, KB search, reproduce/isolate/single-hypothesis diagnosis, fix/workaround/escalate, evidence-backed handoff, follow-up. | Nuvel Skills *(owned)* |
+| customer-communication | Communication guide — tone, greeting/understanding/action/expectation/close structure, channel etiquette, difficult conversations, firm-but-kind escalation, proactive updates. | Nuvel Skills *(owned)* |
 
 ### skillification — the meta-layer
 
