@@ -151,6 +151,13 @@ jobs:
           BASE="origin/main"
           FAILED=""
           for f in $MODIFIED; do
+            # Detect vendor-to-owned replacement: if old author was not Nuvel Skills and new author is Nuvel Skills
+            OLD_AUTHOR=$(git show "$BASE:$f" 2>/dev/null | python3 -c "import sys,yaml; print(yaml.safe_load(sys.stdin.read().split('---')[1]).get('author',''))" 2>/dev/null || echo "")
+            NEW_AUTHOR=$(python3 -c "import sys,yaml; print(yaml.safe_load(open('$f').read().split('---')[1]).get('author',''))" 2>/dev/null || echo "")
+            if [ -n "$OLD_AUTHOR" ] && [ "$OLD_AUTHOR" != "Nuvel Skills" ] && [ "$NEW_AUTHOR" = "Nuvel Skills" ]; then
+              echo "  [REPLACEMENT] $f — vendored skill upgraded to owned Nuvel Skills (author: '$OLD_AUTHOR' -> '$NEW_AUTHOR')"
+              continue
+            fi
             BASE_CLOSE=$(git show "$BASE:$f" 2>/dev/null | awk 'BEGIN{n=0} /^---$/ {n++; if(n==2){print NR; exit}}')
             PR_CLOSE=$(awk 'BEGIN{n=0} /^---$/ {n++; if(n==2){print NR; exit}}' "$f")
             if [ -z "$BASE_CLOSE" ] || [ -z "$PR_CLOSE" ]; then
