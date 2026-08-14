@@ -13,6 +13,13 @@ The employee-spend lifecycle: a clear policy, frictionless capture, correct cate
 
 Reality: expense fraud and leakage are dominated by small, repeated, plausible amounts — the duplicate submission, the personal meal coded as client entertainment, the round-number "misc" — not the occasional large obvious one. So the design goal is a policy specific enough to make violations visible and automation that flags patterns, freeing approvers to judge the genuine edge cases.
 
+## Toolchain
+
+This skill is domain expertise; the data work runs through supporting skills:
+
+- **[[backoffice/xlsx]]** — read submitted expense reports and corporate-card statements, run policy/duplicate/anomaly checks over the rows, and write the validated report and spend reports back. Reach for it whenever a step reads from or writes to an `.xlsx` file.
+- **[[backoffice/pdf]]** — extract fields from receipt PDFs and render the spend report for distribution.
+
 ## When to use
 
 - You are writing or revising an expense policy or approval matrix.
@@ -32,10 +39,10 @@ Reality: expense fraud and leakage are dominated by small, repeated, plausible a
 2. **Build the approval matrix.** Map who approves what by amount, department, and expense type — including thresholds that require a second/finance approver and rules that block self-approval and manager-approving-own-chain conflicts. Define the exception path for justified policy breaks so they're approved on record, not smuggled through.
 3. **Capture expenses with evidence.** Require itemized receipts at point of spend via digital/photo capture; use OCR to extract merchant, date, amount, and tax where available. Enforce the receipt requirement at submission — no receipt over threshold, no submission. Capture the business purpose and, for entertainment, attendees.
 4. **Categorize and code.** Map each line to the chart-of-accounts code and correct tax treatment (recoverable VAT/GST vs. not, and any personal-benefit/taxable element like some entertainment or gifts). Consistent coding is what makes step 8 reporting trustworthy — miscoding here corrupts everything downstream.
-5. **Route for approval.** Send each report through the matrix. The approver checks policy compliance, evidence, and business justification — not just the total. Kick back non-compliant items with a reason rather than approving-then-clawing-back. Record who approved what and when.
+5. **Route for approval.** Read the submitted expense report from its Excel file with [[backoffice/xlsx]], validate each line against the policy limits, flag anomalies, and send it through the matrix. The approver checks policy compliance, evidence, and business justification — not just the total. Kick back non-compliant items with a reason rather than approving-then-clawing-back. Record who approved what and when, then write the approved report back with the decision column populated.
 6. **Reimburse on schedule.** Pay approved out-of-pocket expenses through the defined method (payroll, bank transfer) on a published timeline. A predictable, prompt reimbursement cycle is itself a control — it removes the excuse for employees to float costs on the wrong instrument or inflate later claims.
-7. **Control corporate cards.** Set per-card and per-category limits, require the same receipts and coding as reimbursements, and reconcile every statement line to a submitted expense monthly. Chase unreconciled transactions and unsubmitted receipts before close. An unreconciled card is an open control gap.
-8. **Detect fraud and report.** Run automated checks: duplicate detection (same amount/date/merchant across users or re-submitted), out-of-policy amounts, split transactions dodging a threshold, weekend/round-number/velocity anomalies, and mismatched receipts. Investigate flags through a consistent, documented process. Then report spend by category, department, vendor, and trend, and feed the findings back into policy and limits.
+7. **Control corporate cards.** Set per-card and per-category limits, require the same receipts and coding as reimbursements, and reconcile every statement line to a submitted expense monthly — read the card statement export with [[backoffice/xlsx]] and match it against the expense rows. Chase unreconciled transactions and unsubmitted receipts before close. An unreconciled card is an open control gap.
+8. **Detect fraud and report.** Run automated checks over the expense and card spreadsheets: duplicate detection (same amount/date/merchant across users or re-submitted), out-of-policy amounts, split transactions dodging a threshold, weekend/round-number/velocity anomalies, and mismatched receipts. Investigate flags through a consistent, documented process. Then build the spend report by category, department, vendor, and trend as an Excel file with [[backoffice/xlsx]] (render it via [[backoffice/pdf]] for distribution), and feed the findings back into policy and limits.
 
 ## Common Pitfalls
 
@@ -57,6 +64,12 @@ Reality: expense fraud and leakage are dominated by small, repeated, plausible a
 - [ ] Corporate-card limits set and every statement line reconciled to a coded expense.
 - [ ] Automated duplicate/out-of-policy/split/anomaly checks run and flags investigated consistently.
 - [ ] Spend reported by category/department/vendor/trend and fed back into policy and limits.
+
+## Supporting skills
+
+- [[backoffice/xlsx]] — read expense reports and card statements; write validated reports and spend reports.
+- [[backoffice/pdf]] — extract receipt fields and render the spend report.
+- [[cashflow-forecasting]] — feed approved reimbursement timing into the outflow model.
 
 ## Sources
 
