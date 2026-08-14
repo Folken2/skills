@@ -2,9 +2,8 @@
 name: resend
 description: Use when working with Resend email platform - routes to specific sub-skills for sending, receiving, audiences, or broadcasts.
 license: MIT
-metadata:
-    author: resend
-    version: "2.1.0"
+author: resend
+version: 2.1.0
 ---
 
 # Resend

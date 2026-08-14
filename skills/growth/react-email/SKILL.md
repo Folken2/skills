@@ -1,6 +1,8 @@
 ---
 name: react-email
 description: Use when creating email templates with React - welcome emails, password resets, notifications, order confirmations, or transactional emails that need to render across email clients.
+author: community / uncredited
+version: 1.0.0
 ---
 
 # React Email
