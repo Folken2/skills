@@ -90,6 +90,17 @@ Resolve customer issues consistently: triage and route tickets, run the order li
 | technical-troubleshooting | Structured technical support — symptom capture, KB search, reproduce/isolate/single-hypothesis diagnosis, fix/workaround/escalate, evidence-backed handoff, follow-up. | Nuvel Skills *(owned)* |
 | customer-communication | Communication guide — tone, greeting/understanding/action/expectation/close structure, channel etiquette, difficult conversations, firm-but-kind escalation, proactive updates. | Nuvel Skills *(owned)* |
 
+### finance — the Finance Specialist
+
+Order-to-cash and treasury SOPs: bill accurately, collect on a disciplined cadence, control spend, and forecast when cash actually lands. Operational finance as executable process, harness-agnostic and industry-neutral.
+
+| Skill | Description | Author |
+|---|---|---|
+| invoicing | Full order-to-cash billing — invoice creation (fields, sequential numbering, tax, currency), delivery (email/portal/EDI), terms, follow-up cadence, payment capture, reconciliation, and exceptions (disputes, credit notes, write-offs). | Nuvel Skills *(owned)* |
+| credit-control | Accounts-receivable management — AR aging + DSO, escalating dunning, payment reminders, payment-plan negotiation, dispute handling, escalation (credit hold/agency/legal), and accurate cash application. | Nuvel Skills *(owned)* |
+| expense-management | Corporate expense lifecycle — testable policy, receipt capture/OCR, chart-of-accounts + tax coding, tiered approval matrix, reimbursement, corporate-card controls, fraud/duplicate detection, and spend reporting. | Nuvel Skills *(owned)* |
+| cashflow-forecasting | Cash flow forecasting — reconciled position, bottom-up inflows/outflows on value dates, a 13-week rolling model, base/best/worst scenarios, timing-vs-permanent variance analysis, and review cadence. | Nuvel Skills *(owned)* |
+
 ### skillification — the meta-layer
 
 Skills about skills: promotion, verification, extraction — how skills enter and stay healthy in this repo.
