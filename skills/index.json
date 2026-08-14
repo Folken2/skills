@@ -1,5 +1,5 @@
 {
-  "version": 11,
+  "version": 12,
   "updated": "2026-08-14",
   "themes": {
     "software-development": [
@@ -293,6 +293,32 @@
         "description": "Cash flow forecasting \u2014 reconciled cash position, bottom-up inflows/outflows on value dates, a 13-week rolling model, base/best/worst scenarios and sensitivities, timing-vs-permanent variance analysis, and weekly/monthly/quarterly review cadence.",
         "author": "Nuvel Skills",
         "theme": "finance"
+      }
+    ],
+    "procurement": [
+      {
+        "name": "supplier-qualification",
+        "description": "Vendor/supplier qualification \u2014 identify candidates, run due diligence (financials, compliance, references, insurance), assess capability (capacity, quality, technology, lead times), evaluate risk, onboard (NDA, contract, master data), and manage vendor tiering with periodic review.",
+        "author": "Nuvel Skills",
+        "theme": "procurement"
+      },
+      {
+        "name": "purchase-order-management",
+        "description": "Purchase order lifecycle \u2014 requisition, PO creation, approval workflow, order tracking, goods receipt, 3-way match (PO vs receipt vs invoice), exceptions (shortages, damage, price variance), and close-out.",
+        "author": "Nuvel Skills",
+        "theme": "procurement"
+      },
+      {
+        "name": "vendor-negotiation",
+        "description": "Structured vendor negotiation \u2014 prepare with market intelligence, BATNA, and walk-away point; choose strategy; negotiate pricing, terms, SLA, warranty, IP; use concessions framework; document outcomes; debrief.",
+        "author": "Nuvel Skills",
+        "theme": "procurement"
+      },
+      {
+        "name": "inventory-planning",
+        "description": "Procurement inventory planning \u2014 demand forecasting, reorder points (lead time demand, safety stock, EOQ), stock levels (min/max, ABC classification), supplier lead-time tracking, stockout mitigation, overstock management, and review cadence.",
+        "author": "Nuvel Skills",
+        "theme": "procurement"
       }
     ]
   }

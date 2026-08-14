@@ -79,27 +79,17 @@ Go-to-market SOPs: qualify inbound, run structured discovery, and manage a pipel
 | discovery-call | Run a structured discovery call — research, problem ID, need amplification, impact quantification, budget, authority, timeline, decision criteria, debrief. Bundles a call-notes template. | Nuvel Skills *(owned)* |
 | pipeline-management | Manage a pipeline end-to-end — stage exit criteria, velocity, coverage ratio, forecasting, deal inspection, stalled-deal recovery, lost-deal analysis, hygiene. Bundles a health-report script. | Nuvel Skills *(owned)* |
 
-### customer-support — the Customer Support Specialist
 
-Resolve customer issues consistently: triage and route tickets, run the order lifecycle, troubleshoot technical faults, and communicate through every hard conversation. Harness- and industry-agnostic SOPs for any B2B/B2C support desk.
+### procurement — the Procurement Specialist
 
-| Skill | Description | Author |
-|---|---|---|
-| ticket-triage | Classify, prioritize, and route tickets — type × severity → SLA + tier from a triage matrix, first response, and evidence-backed escalation with structured handoffs. | Nuvel Skills *(owned)* |
-| order-management | Full order lifecycle — locate, verify identity, status, shipping/fulfillment issues, and returns/refunds/replacements/payments against a decision matrix with per-scenario templates. | Nuvel Skills *(owned)* |
-| technical-troubleshooting | Structured technical support — symptom capture, KB search, reproduce/isolate/single-hypothesis diagnosis, fix/workaround/escalate, evidence-backed handoff, follow-up. | Nuvel Skills *(owned)* |
-| customer-communication | Communication guide — tone, greeting/understanding/action/expectation/close structure, channel etiquette, difficult conversations, firm-but-kind escalation, proactive updates. | Nuvel Skills *(owned)* |
-
-### finance — the Finance Specialist
-
-Order-to-cash and treasury SOPs: bill accurately, collect on a disciplined cadence, control spend, and forecast when cash actually lands. Operational finance as executable process, harness-agnostic and industry-neutral.
+Source-to-pay SOPs: qualify suppliers behind a gate, run purchase orders under a 3-way match, negotiate from a BATNA, and plan inventory so stock meets demand without tying up cash.
 
 | Skill | Description | Author |
 |---|---|---|
-| invoicing | Full order-to-cash billing — invoice creation (fields, sequential numbering, tax, currency), delivery (email/portal/EDI), terms, follow-up cadence, payment capture, reconciliation, and exceptions (disputes, credit notes, write-offs). | Nuvel Skills *(owned)* |
-| credit-control | Accounts-receivable management — AR aging + DSO, escalating dunning, payment reminders, payment-plan negotiation, dispute handling, escalation (credit hold/agency/legal), and accurate cash application. | Nuvel Skills *(owned)* |
-| expense-management | Corporate expense lifecycle — testable policy, receipt capture/OCR, chart-of-accounts + tax coding, tiered approval matrix, reimbursement, corporate-card controls, fraud/duplicate detection, and spend reporting. | Nuvel Skills *(owned)* |
-| cashflow-forecasting | Cash flow forecasting — reconciled position, bottom-up inflows/outflows on value dates, a 13-week rolling model, base/best/worst scenarios, timing-vs-permanent variance analysis, and review cadence. | Nuvel Skills *(owned)* |
+| supplier-qualification | Qualify and onboard a vendor through a gate — identification (RFI, referrals), due diligence (financial, legal, certifications, references, insurance), capability, risk (single-source), weighted scorecard, master record. | Nuvel Skills *(owned)* |
+| purchase-order-management | Run the PO lifecycle — budget-checked requisition, numbered PO, approval matrix, order tracking, goods receipt (GRN), 3-way match, exception handling, close-out. | Nuvel Skills *(owned)* |
+| vendor-negotiation | Prepare and run a commercial negotiation — market intelligence, BATNA, walk-away point, targets, pricing levers, terms (SLA/liability/renewal), concession matrix, agreement, debrief. | Nuvel Skills *(owned)* |
+| inventory-planning | Decide how much to stock and when to reorder — demand forecast, ABC classification, safety stock and reorder points from lead-time variability, EOQ, min/max/par, stockout and overstock handling. | Nuvel Skills *(owned)* |
 
 ### skillification — the meta-layer
 
