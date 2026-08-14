@@ -1,6 +1,8 @@
 ---
 name: resend-inbound
 description: Use when receiving emails with Resend - setting up inbound domains, processing email.received webhooks, retrieving email content/attachments, or forwarding received emails.
+author: resend
+version: 2.1.0
 ---
 
 # Receive Emails with Resend

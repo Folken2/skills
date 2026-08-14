@@ -1,6 +1,8 @@
 ---
 name: send-email
 description: Use when sending transactional emails (welcome messages, order confirmations, password resets, receipts), notifications, or bulk emails via Resend API.
+author: resend
+version: 2.1.0
 ---
 
 # Send Email with Resend
