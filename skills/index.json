@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "updated": "2026-08-14",
   "themes": {
     "software-development": [
@@ -116,7 +116,7 @@
       },
       {
         "name": "resend-inbound",
-        "description": "Receive emails with Resend \u2014 inbound domains, email.received webhooks, retrieve content and attachments.",
+        "description": "Receive emails with Resend — inbound domains, email.received webhooks, retrieve content and attachments.",
         "author": "resend",
         "theme": "growth"
       },
@@ -128,8 +128,32 @@
       },
       {
         "name": "seo-audit",
-        "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" or \"SEO health check.\" For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup.",
-        "author": "community / uncredited",
+        "description": "Use when auditing, reviewing, or diagnosing SEO on a site — crawl the site, run a scored technical + on-page + keyword audit, and produce a prioritized, effort-estimated fix queue. Also use for 'SEO health check,' 'technical SEO,' 'why am I not ranking,' or 'meta tags review.'",
+        "author": "Nuvel Skills",
+        "theme": "growth"
+      },
+      {
+        "name": "content-pipeline",
+        "description": "Use when running content marketing end to end — keyword research, brief, draft, editorial review, publish, distribution, and measurement — on a repeatable monthly/quarterly cadence. Also use when content ships inconsistently, pieces don't rank or convert, or there's no line from topic to KPI.",
+        "author": "Nuvel Skills",
+        "theme": "growth"
+      },
+      {
+        "name": "email-lifecycle",
+        "description": "Use when designing or fixing lifecycle email — list hygiene and authentication (SPF/DKIM/DMARC), lifecycle-stage mapping (welcome, onboarding, nurture, re-engagement, winback), sequence design, deliverability, and compliance (CAN-SPAM, GDPR, CASL). Also use when emails hit spam, engagement decays, or there's no map of what sends to whom and why.",
+        "author": "Nuvel Skills",
+        "theme": "growth"
+      },
+      {
+        "name": "analytics-setup",
+        "description": "Use when standing up or fixing web/product analytics — event taxonomy design, property setup (GA4/PostHog/Plausible), conversion and funnel tracking, dashboards across the AARRR pirate metrics, attribution basics, and data-quality checks. Also use when events are inconsistent, numbers don't reconcile, or nobody trusts the dashboard.",
+        "author": "Nuvel Skills",
+        "theme": "growth"
+      },
+      {
+        "name": "paid-acquisition",
+        "description": "Use when planning or running paid acquisition — channel selection, campaign structure, creative testing, landing-page alignment, budget allocation (test vs scale), ROAS/CAC targets, and an optimization loop with scale/stop rules. Also use when paid spend isn't converting, creative testing is ad hoc, or budget is spread thin with no ROAS discipline.",
+        "author": "Nuvel Skills",
         "theme": "growth"
       }
     ],
@@ -168,13 +192,13 @@
     "skillification": [
       {
         "name": "skill-promotion",
-        "description": "Promote a dogfooded internal skill into the canonical repo \u2014 curation gate, versioning, attribution review, PR workflow.",
+        "description": "Promote a dogfooded internal skill into the canonical repo — curation gate, versioning, attribution review, PR workflow.",
         "author": "Nuvel Skills",
         "theme": "skillification"
       },
       {
         "name": "skill-evaluation",
-        "description": "Automated evaluation of a theme's skills \u2014 spawn subagents with only those skills, run scenario tests, score against exit criteria.",
+        "description": "Automated evaluation of a theme's skills — spawn subagents with only those skills, run scenario tests, score against exit criteria.",
         "author": "Nuvel Skills",
         "theme": "skillification"
       }
@@ -182,19 +206,19 @@
     "hr": [
       {
         "name": "hiring",
-        "description": "Full-cycle hiring from an approved need to a signed offer and onboarding handoff \u2014 requisition approval, scorecard-driven screening, structured interviews, offer management, background check, and close-out.",
+        "description": "Full-cycle hiring from an approved need to a signed offer and onboarding handoff — requisition approval, scorecard-driven screening, structured interviews, offer management, background check, and close-out.",
         "author": "Nuvel Skills",
         "theme": "hr"
       },
       {
         "name": "employee-onboarding",
-        "description": "New hire lifecycle from accepted offer to day 90 \u2014 pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, and access lifecycle for offboarding prep.",
+        "description": "New hire lifecycle from accepted offer to day 90 — pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, and access lifecycle for offboarding prep.",
         "author": "Nuvel Skills",
         "theme": "hr"
       },
       {
         "name": "employee-engagement",
-        "description": "Ongoing employee lifecycle and retention \u2014 1:1 cadence, quarterly/annual performance reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, and exit interviews fed back into retention.",
+        "description": "Ongoing employee lifecycle and retention — 1:1 cadence, quarterly/annual performance reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, and exit interviews fed back into retention.",
         "author": "Nuvel Skills",
         "theme": "hr"
       }
@@ -202,7 +226,7 @@
     "sales": [
       {
         "name": "lead-qualification",
-        "description": "Score and prioritize inbound leads. Capture qualification criteria (BANT/GPCT/CHAMP) and ICP fit, score 0\u2013100, tier A/B/C, route to the right pipeline, and set a follow-up cadence. Includes a lead-scorer script.",
+        "description": "Score and prioritize inbound leads. Capture qualification criteria (BANT/GPCT/CHAMP) and ICP fit, score 0–100, tier A/B/C, route to the right pipeline, and set a follow-up cadence. Includes a lead-scorer script.",
         "author": "Nuvel Skills",
         "theme": "sales"
       },

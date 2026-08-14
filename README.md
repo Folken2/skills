@@ -33,15 +33,19 @@ Also depends on superpowers (Jesse Vincent / Prime Radiant, MIT) for core develo
 
 ### growth — the Growth marketer
 
-SEO, email deliverability, and content/video production.
+The full-funnel growth loop as executable SOPs — SEO, content, lifecycle email, analytics, and paid — plus email deliverability and video production.
 
 | Skill | Description | Author |
 |---|---|---|
+| seo-audit | Crawl the site and run a scored technical + on-page + keyword audit into a prioritized, effort-estimated fix queue. | Nuvel Skills *(owned)* |
+| content-pipeline | Run content marketing end to end — keyword research → brief → draft → review → publish → distribute → measure. | Nuvel Skills *(owned)* |
+| email-lifecycle | Design lifecycle email — auth/hygiene, stage mapping, sequence design, deliverability, and compliance. | Nuvel Skills *(owned)* |
+| analytics-setup | Stand up web/product analytics — event taxonomy, property setup, funnels, AARRR dashboards, and data-quality checks. | Nuvel Skills *(owned)* |
+| paid-acquisition | Plan and run paid acquisition — channels, campaign structure, creative testing, ROAS/CAC targets, and a scale/stop loop. | Nuvel Skills *(owned)* |
 | email-best-practices | Deliverability, SPF/DKIM/DMARC, compliance (CAN-SPAM, GDPR, CASL), capture, webhooks. | community / uncredited |
 | react-email | Build email templates with React that render across email clients. | community / uncredited |
 | remotion-best-practices | Best practices for Remotion — video creation in React. | community / uncredited |
 | resend | Work with the Resend email platform — routes to send/receive/audiences/broadcasts. | resend *(vendored)* |
-| seo-audit | Audit, review, or diagnose technical + on-page SEO issues on a site. | community / uncredited |
 
 ### backoffice — the Ops specialist
 

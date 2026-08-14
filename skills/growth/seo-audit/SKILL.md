@@ -1,395 +1,104 @@
 ---
 name: seo-audit
+description: "Use when auditing, reviewing, or diagnosing SEO on a site — crawl the site, run a scored technical + on-page + keyword audit, and produce a prioritized, effort-estimated fix queue. Also use for 'SEO health check,' 'technical SEO,' 'why am I not ranking,' or 'meta tags review.'"
 version: 1.0.0
-author: community / uncredited
-description: When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO," "why am I not ranking," "SEO issues," "on-page SEO," "meta tags review," or "SEO health check." For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup.
+author: Nuvel Skills
 ---
 
 # SEO Audit
 
-You are an expert in search engine optimization. Your goal is to identify SEO issues and provide actionable recommendations to improve organic search performance.
-
-## Initial Assessment
-
-**Check for product marketing context first:**
-If `.claude/product-marketing-context.md` exists, read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
-
-Before auditing, understand:
-
-1. **Site Context**
-   - What type of site? (SaaS, e-commerce, blog, etc.)
-   - What's the primary business goal for SEO?
-   - What keywords/topics are priorities?
-
-2. **Current State**
-   - Any known issues or concerns?
-   - Current organic traffic level?
-   - Recent changes or migrations?
-
-3. **Scope**
-   - Full site audit or specific pages?
-   - Technical + on-page, or one focus area?
-   - Access to Search Console / analytics?
-
----
-
-## Audit Framework
-
-### Priority Order
-1. **Crawlability & Indexation** (can Google find and index it?)
-2. **Technical Foundations** (is the site fast and functional?)
-3. **On-Page Optimization** (is content optimized?)
-4. **Content Quality** (does it deserve to rank?)
-5. **Authority & Links** (does it have credibility?)
-
----
-
-## Technical SEO Audit
-
-### Crawlability
-
-**Robots.txt**
-- Check for unintentional blocks
-- Verify important pages allowed
-- Check sitemap reference
-
-**XML Sitemap**
-- Exists and accessible
-- Submitted to Search Console
-- Contains only canonical, indexable URLs
-- Updated regularly
-- Proper formatting
-
-**Site Architecture**
-- Important pages within 3 clicks of homepage
-- Logical hierarchy
-- Internal linking structure
-- No orphan pages
-
-**Crawl Budget Issues** (for large sites)
-- Parameterized URLs under control
-- Faceted navigation handled properly
-- Infinite scroll with pagination fallback
-- Session IDs not in URLs
-
-### Indexation
-
-**Index Status**
-- site:domain.com check
-- Search Console coverage report
-- Compare indexed vs. expected
-
-**Indexation Issues**
-- Noindex tags on important pages
-- Canonicals pointing wrong direction
-- Redirect chains/loops
-- Soft 404s
-- Duplicate content without canonicals
-
-**Canonicalization**
-- All pages have canonical tags
-- Self-referencing canonicals on unique pages
-- HTTP → HTTPS canonicals
-- www vs. non-www consistency
-- Trailing slash consistency
-
-### Site Speed & Core Web Vitals
-
-**Core Web Vitals**
-- LCP (Largest Contentful Paint): < 2.5s
-- INP (Interaction to Next Paint): < 200ms
-- CLS (Cumulative Layout Shift): < 0.1
-
-**Speed Factors**
-- Server response time (TTFB)
-- Image optimization
-- JavaScript execution
-- CSS delivery
-- Caching headers
-- CDN usage
-- Font loading
-
-**Tools**
-- PageSpeed Insights
-- WebPageTest
-- Chrome DevTools
-- Search Console Core Web Vitals report
-
-### Mobile-Friendliness
-
-- Responsive design (not separate m. site)
-- Tap target sizes
-- Viewport configured
-- No horizontal scroll
-- Same content as desktop
-- Mobile-first indexing readiness
-
-### Security & HTTPS
-
-- HTTPS across entire site
-- Valid SSL certificate
-- No mixed content
-- HTTP → HTTPS redirects
-- HSTS header (bonus)
-
-### URL Structure
-
-- Readable, descriptive URLs
-- Keywords in URLs where natural
-- Consistent structure
-- No unnecessary parameters
-- Lowercase and hyphen-separated
-
----
-
-## On-Page SEO Audit
-
-### Title Tags
-
-**Check for:**
-- Unique titles for each page
-- Primary keyword near beginning
-- 50-60 characters (visible in SERP)
-- Compelling and click-worthy
-- Brand name placement (end, usually)
-
-**Common issues:**
-- Duplicate titles
-- Too long (truncated)
-- Too short (wasted opportunity)
-- Keyword stuffing
-- Missing entirely
-
-### Meta Descriptions
-
-**Check for:**
-- Unique descriptions per page
-- 150-160 characters
-- Includes primary keyword
-- Clear value proposition
-- Call to action
-
-**Common issues:**
-- Duplicate descriptions
-- Auto-generated garbage
-- Too long/short
-- No compelling reason to click
-
-### Heading Structure
-
-**Check for:**
-- One H1 per page
-- H1 contains primary keyword
-- Logical hierarchy (H1 → H2 → H3)
-- Headings describe content
-- Not just for styling
-
-**Common issues:**
-- Multiple H1s
-- Skip levels (H1 → H3)
-- Headings used for styling only
-- No H1 on page
-
-### Content Optimization
-
-**Primary Page Content**
-- Keyword in first 100 words
-- Related keywords naturally used
-- Sufficient depth/length for topic
-- Answers search intent
-- Better than competitors
-
-**Thin Content Issues**
-- Pages with little unique content
-- Tag/category pages with no value
-- Doorway pages
-- Duplicate or near-duplicate content
-
-### Image Optimization
-
-**Check for:**
-- Descriptive file names
-- Alt text on all images
-- Alt text describes image
-- Compressed file sizes
-- Modern formats (WebP)
-- Lazy loading implemented
-- Responsive images
-
-### Internal Linking
-
-**Check for:**
-- Important pages well-linked
-- Descriptive anchor text
-- Logical link relationships
-- No broken internal links
-- Reasonable link count per page
-
-**Common issues:**
-- Orphan pages (no internal links)
-- Over-optimized anchor text
-- Important pages buried
-- Excessive footer/sidebar links
-
-### Keyword Targeting
-
-**Per Page**
-- Clear primary keyword target
-- Title, H1, URL aligned
-- Content satisfies search intent
-- Not competing with other pages (cannibalization)
-
-**Site-Wide**
-- Keyword mapping document
-- No major gaps in coverage
-- No keyword cannibalization
-- Logical topical clusters
-
----
-
-## Content Quality Assessment
-
-### E-E-A-T Signals
-
-**Experience**
-- First-hand experience demonstrated
-- Original insights/data
-- Real examples and case studies
-
-**Expertise**
-- Author credentials visible
-- Accurate, detailed information
-- Properly sourced claims
-
-**Authoritativeness**
-- Recognized in the space
-- Cited by others
-- Industry credentials
-
-**Trustworthiness**
-- Accurate information
-- Transparent about business
-- Contact information available
-- Privacy policy, terms
-- Secure site (HTTPS)
-
-### Content Depth
-
-- Comprehensive coverage of topic
-- Answers follow-up questions
-- Better than top-ranking competitors
-- Updated and current
-
-### User Engagement Signals
-
-- Time on page
-- Bounce rate in context
-- Pages per session
-- Return visits
-
----
-
-## Common Issues by Site Type
-
-### SaaS/Product Sites
-- Product pages lack content depth
-- Blog not integrated with product pages
-- Missing comparison/alternative pages
-- Feature pages thin on content
-- No glossary/educational content
-
-### E-commerce
-- Thin category pages
-- Duplicate product descriptions
-- Missing product schema
-- Faceted navigation creating duplicates
-- Out-of-stock pages mishandled
-
-### Content/Blog Sites
-- Outdated content not refreshed
-- Keyword cannibalization
-- No topical clustering
-- Poor internal linking
-- Missing author pages
-
-### Local Business
-- Inconsistent NAP
-- Missing local schema
-- No Google Business Profile optimization
-- Missing location pages
-- No local content
-
----
-
-## Output Format
-
-### Audit Report Structure
-
-**Executive Summary**
-- Overall health assessment
-- Top 3-5 priority issues
-- Quick wins identified
-
-**Technical SEO Findings**
-For each issue:
-- **Issue**: What's wrong
-- **Impact**: SEO impact (High/Medium/Low)
-- **Evidence**: How you found it
-- **Fix**: Specific recommendation
-- **Priority**: 1-5 or High/Medium/Low
-
-**On-Page SEO Findings**
-Same format as above
-
-**Content Findings**
-Same format as above
-
-**Prioritized Action Plan**
-1. Critical fixes (blocking indexation/ranking)
-2. High-impact improvements
-3. Quick wins (easy, immediate benefit)
-4. Long-term recommendations
-
----
-
-## References
-
-- [AI Writing Detection](references/ai-writing-detection.md): Common AI writing patterns to avoid (em dashes, overused phrases, filler words)
-- [AEO & GEO Patterns](references/aeo-geo-patterns.md): Content patterns optimized for answer engines and AI citation
-
----
-
-## Tools Referenced
-
-**Free Tools**
-- Google Search Console (essential)
-- Google PageSpeed Insights
-- Bing Webmaster Tools
-- Rich Results Test
-- Mobile-Friendly Test
-- Schema Validator
-
-**Paid Tools** (if available)
-- Screaming Frog
-- Ahrefs / Semrush
-- Sitebulb
-- ContentKing
-
----
-
-## Task-Specific Questions
-
-1. What pages/keywords matter most?
-2. Do you have Search Console access?
-3. Any recent changes or migrations?
-4. Who are your top organic competitors?
-5. What's your current organic traffic baseline?
-
----
-
-## Related Skills
-
-- **programmatic-seo**: For building SEO pages at scale
-- **schema-markup**: For implementing structured data
-- **page-cro**: For optimizing pages for conversion (not just ranking)
-- **analytics-tracking**: For measuring SEO performance
+## Overview
+
+An SEO audit that ends in a long list of "issues found" is a report nobody acts on. This skill produces a *scored, ranked, effort-estimated fix queue* — every finding carries a severity, a score, and an estimate, so the team knows what to fix first and what to ignore.
+
+**Core principle:** Score, then rank, then sequence. An issue with no severity score is un-triaged, and un-triaged findings get worked in whatever order someone happens to read them — which is the same as not prioritizing at all. Crawlability blockers outrank cosmetic on-page nits every time, and the score has to encode that.
+
+## When to use
+
+- A site needs a full or scoped SEO health check before a growth push.
+- Organic traffic dropped or plateaued and the cause is unknown.
+- Before or after a migration, redesign, or replatform.
+
+## When NOT to use
+
+- **Building pages at scale to target keywords** — that's a production task, not an audit.
+- **Pure conversion optimization** — ranking ≠ converting; audit for rankings here, optimize the page separately.
+- **A single-page spot check** — steps 1–2 are overkill; jump to the on-page checklist for one URL.
+
+## The workflow
+
+```
+STEP 1        STEP 2         STEP 3        STEP 4        STEP 5      STEP 6
+crawl      →  technical  →  on-page   →  keyword    →  score    →  report
+(inventory)   (indexation)  (content)     (mapping)     (0–100)     (fix queue)
+```
+
+### STEP 1 — Crawl and inventory
+
+Run a full crawl (Screaming Frog, Sitebulb, HTTrack, or equivalent). Capture for every URL: status code, redirect target and chain depth, canonical tag, indexability, title, meta description, H1, and word count.
+**Exit:** a URL inventory table exists with status codes and redirect chains resolved. Every 3xx/4xx/5xx is listed with its source page.
+
+### STEP 2 — Technical audit
+
+Check, and record pass/fail with evidence for each:
+- **Crawlability:** robots.txt (no accidental blocks, sitemap referenced), sitemap.xml (accessible, only canonical indexable URLs), index status vs. expected (`site:` + Search Console coverage).
+- **Speed / Core Web Vitals:** LCP < 2.5s, INP < 200ms, CLS < 0.1 (field data, not just lab).
+- **Mobile:** responsive, viewport set, tap targets, parity with desktop.
+- **HTTPS:** site-wide, valid cert, no mixed content, HTTP→HTTPS redirects.
+- **Redirects & canonicals:** no chains > 1 hop, no loops, self-referencing canonicals on unique pages.
+- **Structured data:** validates against the Rich Results Test with no errors.
+
+**Exit:** every technical check has a pass/fail verdict with a URL or screenshot as evidence.
+
+### STEP 3 — On-page audit
+
+For sampled and template pages: title tags (unique, 50–60 chars, keyword-forward), meta descriptions (unique, 150–160 chars), heading hierarchy (one H1, no skipped levels), content depth vs. intent and top competitors, internal linking (no orphans, descriptive anchors), image alt text, and URL structure (readable, lowercase, hyphenated).
+**Exit:** on-page findings logged per template/page type, with the specific failing element named.
+
+### STEP 4 — Keyword mapping
+
+Map target keywords to URLs. Identify: content gaps (target keyword with no owning page), cannibalization (two+ pages competing for one keyword), and current-rank vs. target-rank deltas.
+**Exit:** a keyword→URL map with gaps and cannibalization pairs explicitly listed.
+
+### STEP 5 — Score every issue (0–100)
+
+Assign each finding a severity band and a numeric score. Suggested banding:
+
+| Band | Score | Meaning |
+|---|---|---|
+| **Critical** | 90–100 | Blocks indexing or ranking (noindex on money pages, sitewide 5xx, redirect loops). |
+| **Major** | 60–89 | Materially suppresses ranking (slow CWV, thin content, cannibalization). |
+| **Minor** | 30–59 | Marginal impact (single missing alt text, sub-optimal title length). |
+| **Info** | 0–29 | Nice-to-have, no ranking effect. |
+
+Flag **quick wins**: any Major/Critical issue with a low effort estimate. These jump the queue.
+**Exit:** every finding has a score, a band, and an S/M/L effort estimate; quick wins are tagged.
+
+### STEP 6 — Report and fix queue
+
+Produce: an executive summary (health verdict + top 3–5 issues), the scored findings grouped by area, and a **prioritized fix queue** sorted by score-per-effort, grouped into sprints. Each queue item: issue, evidence, fix, score, effort, owner.
+**Exit:** report delivered with a ranked fix queue and a standalone quick-wins list.
+
+## Common Pitfalls
+
+- **Reporting without ranking.** A flat list of 80 issues is not an audit output — the deliverable is the *ordered* queue. If it's not sorted by impact-per-effort, you're not done.
+- **Lab-only Core Web Vitals.** A green Lighthouse score with red field data means real users are suffering. Use field/CrUX data for the verdict.
+- **Confusing "indexed" with "ranking."** A page can be perfectly indexed and still deserve to rank nowhere. Check content quality, not just crawlability.
+- **Scoring by gut.** If two people would score the same issue differently, the banding rubric isn't concrete enough. Tie scores to observable evidence.
+- **Auditing every URL by hand.** Sample by template. Ten product pages built from one template share one finding — log it once against the template.
+
+## Verification Checklist
+
+- [ ] Full crawl completed; URL inventory with status codes and resolved redirect chains exists.
+- [ ] Every technical check (crawlability, CWV, mobile, HTTPS, redirects/canonicals, structured data) has a pass/fail verdict with evidence.
+- [ ] On-page findings logged per template with the failing element named.
+- [ ] Keyword→URL map produced; content gaps and cannibalization pairs listed.
+- [ ] Every finding carries a severity band, a 0–100 score, and an S/M/L effort estimate.
+- [ ] Quick wins tagged (high-impact + low-effort).
+- [ ] Prioritized fix queue delivered, sorted by impact-per-effort and grouped into sprints.
+- [ ] Executive summary names the top 3–5 issues and the overall health verdict.
+
+## Cross-references
+
+- **content-pipeline** — fixing thin-content and gap findings feeds directly into the content brief stage.
+- **analytics-setup** — establish the organic-traffic baseline and conversion tracking used to measure audit fixes.
