@@ -242,6 +242,32 @@
         "author": "Nuvel Skills",
         "theme": "sales"
       }
+    ],
+    "customer-support": [
+      {
+        "name": "ticket-triage",
+        "description": "Classify, prioritize, and route support tickets. Capture the issue, tag type and severity, assign SLA and tier from a triage matrix, send a first response, and escalate on security/data/at-risk triggers with structured handoffs.",
+        "author": "Nuvel Skills",
+        "theme": "customer-support"
+      },
+      {
+        "name": "order-management",
+        "description": "Full order lifecycle for support — locate the order, verify identity, check status, resolve shipping/fulfillment issues, and process returns, refunds, replacements, and payment problems against a decision matrix with per-scenario communication.",
+        "author": "Nuvel Skills",
+        "theme": "customer-support"
+      },
+      {
+        "name": "technical-troubleshooting",
+        "description": "Structured technical support — capture the symptom, search the knowledge base, diagnose by reproduce/isolate/single-hypothesis testing, choose fix/workaround/escalate, escalate with evidence, and follow up with the customer.",
+        "author": "Nuvel Skills",
+        "theme": "customer-support"
+      },
+      {
+        "name": "customer-communication",
+        "description": "Customer communication guide — tone calibration, a greeting/understanding/action/expectation/close structure, channel etiquette, handling complaints/delays/denials/pricing, firm-but-kind escalation language, and proactive positive updates.",
+        "author": "Nuvel Skills",
+        "theme": "customer-support"
+      }
     ]
   }
 }
