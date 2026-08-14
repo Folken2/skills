@@ -13,6 +13,15 @@ The same resolution can leave a customer loyal or furious depending entirely on 
 
 This skill is a tone-and-structure guide plus a phrase bank for the hard moments. It is channel-aware (email, chat, phone, social) and works for any company voice — adapt the wording, keep the structure.
 
+## Toolchain
+
+Consistent communication comes from a shared template bank and a logged history. Use these supporting skills:
+
+- [[backoffice/xlsx]] — read the customer contact log to see prior interactions, pull the matching response template from the templates sheet, and log the communication outcome back to the log.
+- [[backoffice/pdf]] — render a formal response letter (apology, denial, escalation) as a PDF for email or the record.
+
+A runnable example lives in `scripts/generate_communication_log.py`, which builds a two-sheet workbook (Contact Log, Response Templates).
+
 ## When to use
 
 - You are drafting a customer-facing reply and want it to land well.
@@ -27,14 +36,14 @@ This skill is a tone-and-structure guide plus a phrase bank for the hard moments
 
 ## Workflow
 
-1. **Match tone to the moment.** Default to empathy, clarity, and professionalism. Calibrate to the situation: warmer and more apologetic when the customer is frustrated or the company erred; crisp and factual for a simple how-to. Never mismatch — cheeriness on a serious complaint reads as dismissive, and coldness on a small question reads as rude.
+1. **Match tone to the moment.** Read the customer's prior interactions from the **Contact Log** sheet with [[backoffice/xlsx]] — channel, issue type, and the tone used last time — before you write. Default to empathy, clarity, and professionalism. Calibrate to the situation: warmer and more apologetic when the customer is frustrated or the company erred; crisp and factual for a simple how-to. Never mismatch — cheeriness on a serious complaint reads as dismissive, and coldness on a small question reads as rude.
 2. **Structure the message.** Use a reliable spine: **greeting** (acknowledge the person) → **understanding** (restate their problem so they feel heard) → **action** (what you did or will do) → **expectation** (what happens next and by when) → **close** (invite follow-up, thank them). This structure works across every scenario; only the content changes.
 3. **Adapt to the channel.** **Email:** complete and self-contained, skimmable, subject line that states the topic. **Chat:** shorter, faster, one idea per message, set expectations before any pause. **Phone:** confirm understanding by summarizing back, and recap next steps before hanging up. **Social/public:** brief, empathetic, and move specifics to a private channel — never debate details in public.
 4. **Show understanding before solving.** Restate the problem in your own words before jumping to the fix. Customers need to feel heard first; a correct answer delivered before acknowledgment still feels like being brushed off.
-5. **Handle difficult conversations deliberately.** For a **complaint**: acknowledge, apologize for the impact (not necessarily fault), and state the remedy. For a **delay**: be proactive and specific with the new timeline — never go silent. For a **denial/saying no**: give the reason, then offer the nearest alternative you *can* do. For **pricing objections**: acknowledge the concern and reframe on value, without becoming defensive.
+5. **Handle difficult conversations deliberately.** Pull the matching row from the **Response Templates** sheet with [[backoffice/xlsx]] — keyed by Scenario Type, Channel, and Tone — and adapt it rather than writing from a blank page. For a **complaint**: acknowledge, apologize for the impact (not necessarily fault), and state the remedy. For a **delay**: be proactive and specific with the new timeline — never go silent. For a **denial/saying no**: give the reason, then offer the nearest alternative you *can* do. For **pricing objections**: acknowledge the concern and reframe on value, without becoming defensive.
 6. **Use escalation language that is firm but kind.** When escalating or holding a boundary, be politely firm: state the position plainly, explain briefly, avoid blame, and involve management transparently ("I'm bringing in my manager so we get this right"). Firmness and respect are not opposites.
 7. **Layer in positive communication.** Thank customers genuinely, send proactive updates before they have to ask, and follow up after a resolution to confirm it held. Unprompted good communication is what turns a resolved ticket into loyalty — it costs a sentence and buys goodwill.
-8. **Proofread against the customer's likely reaction.** Before sending, reread as the customer: is anything ambiguous, is any promise unbacked, does any phrase sound like blame or a brush-off? Remove jargon, hedge nothing you've committed to, and confirm the next step is unmistakable.
+8. **Proofread against the customer's likely reaction.** Before sending, reread as the customer: is anything ambiguous, is any promise unbacked, does any phrase sound like blame or a brush-off? Remove jargon, hedge nothing you've committed to, and confirm the next step is unmistakable. After sending, log the communication outcome — channel, tone used, outcome, and whether follow-up is required — as a new row in the Contact Log with [[backoffice/xlsx]], and render any formal letter to PDF with [[backoffice/pdf]] for the record.
 
 ## Common Pitfalls
 
@@ -54,3 +63,10 @@ This skill is a tone-and-structure guide plus a phrase bank for the hard moments
 - [ ] Any escalation or boundary is stated with polite firmness, not blame.
 - [ ] A proactive or positive element (thanks, update, or follow-up) is included where appropriate.
 - [ ] The message was reread from the customer's perspective — no ambiguity, no unbacked promise, clear next step.
+- [ ] The matching response template was pulled from the templates sheet and the communication outcome was logged to the Contact Log.
+
+## Supporting skills
+
+- [[backoffice/xlsx]] — read the Contact Log for history, pull a Response Template, and log the communication outcome.
+- [[backoffice/pdf]] — render a formal apology, denial, or escalation letter as a PDF.
+- [[ticket-triage]], [[order-management]], [[technical-troubleshooting]] — the routing and the resolution whose outcome you are wording.

@@ -13,6 +13,15 @@ Triage is the first 5 minutes of a support ticket's life, and it sets everything
 
 This skill produces a repeatable triage matrix (type × severity → SLA + tier) so every ticket is handled consistently regardless of who is at the desk. It is deliberately harness-agnostic and industry-agnostic — the same flow works for a SaaS help desk, an e-commerce inbox, or a B2B account team.
 
+## Toolchain
+
+Triage is data work, not just judgment. Use these supporting skills to move real ticket data:
+
+- [[backoffice/xlsx]] — read the inbound ticket import spreadsheet, write triaged tickets back with severity/SLA/tier columns, and generate the daily open/closed/escalated report workbook.
+- [[backoffice/pdf]] — render the daily triage report or an escalation summary as a shareable PDF for stakeholders.
+
+A runnable example lives in `scripts/generate_ticket_template.py`, which builds a three-sheet ticket-tracking workbook (Tickets, SLA Matrix, Daily Report) you can use as the triage template.
+
 ## When to use
 
 - A new ticket, email, chat, or call has arrived and has not been classified.
@@ -28,14 +37,14 @@ This skill produces a repeatable triage matrix (type × severity → SLA + tier)
 
 ## Workflow
 
-1. **Capture the essentials.** Record: source (email/chat/phone/social/in-app), customer identity and account tier, a one-line problem statement in the customer's words, and any urgency signals (production down, revenue impact, angry tone, legal/security language, deadline). Do not proceed on a vague "it's broken" — get one concrete symptom.
+1. **Capture the essentials.** Read the inbound ticket import spreadsheet with [[backoffice/xlsx]] — one row per raw ticket — and for each row record: source (email/chat/phone/social/in-app), customer identity and account tier, a one-line problem statement in the customer's words, and any urgency signals (production down, revenue impact, angry tone, legal/security language, deadline). Do not proceed on a vague "it's broken" — get one concrete symptom.
 2. **Classify the type.** Tag exactly one primary type: **bug** (product not working as designed), **question** (how-to / clarification), **request** (feature or change), **complaint** (dissatisfaction, no defect), or **order** (billing, shipping, account/fulfillment). Also tag the product/feature area for routing and trend analysis.
 3. **Assign severity.** Rate **critical** (widespread outage, data loss, security, or blocked revenue — no workaround), **high** (major feature broken for one customer, workaround painful), **medium** (partial impairment with a workaround), or **low** (cosmetic, question, minor request). Severity is about impact, not the customer's volume.
-4. **Set the SLA.** Map type × severity to a response-time and resolution-time target, and note whether the clock runs on business hours or 24/7 for this severity. Define the escalation threshold — the elapsed time at which an unresolved ticket auto-escalates. Write these into a triage matrix so they are applied uniformly.
-5. **Route to a tier.** **Tier 1** handles first response and common/known issues; **tier 2** handles technical diagnosis and account-specific problems; **tier 3** is engineering/management for defects, data, or policy exceptions. Route to the lowest tier that can fully resolve it — do not skip tiers to look fast, and do not park a tier-3 issue in tier 1.
+4. **Set the SLA.** Map type × severity to a response-time and resolution-time target using the **SLA Matrix** sheet as a lookup table (read it with [[backoffice/xlsx]]), and note whether the clock runs on business hours or 24/7 for this severity. Define the escalation threshold — the elapsed time at which an unresolved ticket auto-escalates. Write the resolved SLA Due timestamp into the ticket row so the matrix is applied uniformly.
+5. **Route to a tier.** **Tier 1** handles first response and common/known issues; **tier 2** handles technical diagnosis and account-specific problems; **tier 3** is engineering/management for defects, data, or policy exceptions. Route to the lowest tier that can fully resolve it — do not skip tiers to look fast, and do not park a tier-3 issue in tier 1. Write the classified rows — with Priority Score, Assigned Tier, and SLA Due columns filled — back to a new triaged workbook with [[backoffice/xlsx]] (billing→Tier1, technical→Tier2, bug→Tier3; Critical=100 / High=75 / Medium=50 / Low=25 priority score).
 6. **Send the first response.** Acknowledge receipt, restate the problem so the customer knows they were understood, set an expectation (who is on it and by when), and state the next step. A fast, honest acknowledgment beats a slow "solved" — first-response time is the metric customers feel most.
 7. **Apply escalation criteria.** Escalate immediately — regardless of SLA timer — on: any security/privacy report, data loss, a repeat of an already-"resolved" issue, a critical account at churn risk, legal/regulatory language, or severity crossing the threshold. Escalation is a routing decision, not an admission of failure.
-8. **Hand off with a structured summary.** When moving a ticket between tiers or agents, pass a summary: problem, type/severity, what was tried, customer expectation already set, and the specific ask of the receiving tier. A handoff without context forces the customer to repeat themselves — the top driver of support dissatisfaction.
+8. **Hand off with a structured summary.** When moving a ticket between tiers or agents, pass a summary: problem, type/severity, what was tried, customer expectation already set, and the specific ask of the receiving tier. A handoff without context forces the customer to repeat themselves — the top driver of support dissatisfaction. At end of shift, generate the **Daily Report** sheet with [[backoffice/xlsx]] that uses COUNTIFS formulas over the Tickets sheet to count open/closed/escalated tickets by severity and tier, and optionally render it to PDF with [[backoffice/pdf]] for the stand-up.
 
 ## Common Pitfalls
 
@@ -55,3 +64,10 @@ This skill produces a repeatable triage matrix (type × severity → SLA + tier)
 - [ ] A first response acknowledging the issue and setting an expectation has been sent.
 - [ ] Escalation criteria were checked; any security/data/at-risk trigger was actioned immediately.
 - [ ] Any tier or agent handoff carries a structured summary (problem, severity, tried, expectation, ask).
+- [ ] Triaged tickets were written back to a workbook with Priority Score, Assigned Tier, and SLA Due columns, and a daily open/closed/escalated report was generated.
+
+## Supporting skills
+
+- [[backoffice/xlsx]] — read the ticket import spreadsheet, write the triaged workbook (Tickets + SLA Matrix), and build the daily open/closed/escalated report.
+- [[backoffice/pdf]] — render the daily triage report or escalation summary as a shareable PDF.
+- [[order-management]], [[technical-troubleshooting]], [[customer-communication]] — the downstream skills a triaged ticket routes into.
