@@ -1,6 +1,6 @@
 {
-  "version": 7,
-  "updated": "2026-08-13",
+  "version": 9,
+  "updated": "2026-08-14",
   "themes": {
     "software-development": [
       {
@@ -109,6 +109,24 @@
         "theme": "growth"
       },
       {
+        "name": "agent-email-inbox",
+        "description": "Set up an email inbox for an AI agent with inbound email, webhooks, tunneling for local dev, and prompt injection defenses.",
+        "author": "resend",
+        "theme": "growth"
+      },
+      {
+        "name": "resend-inbound",
+        "description": "Receive emails with Resend \u2014 inbound domains, email.received webhooks, retrieve content and attachments.",
+        "author": "resend",
+        "theme": "growth"
+      },
+      {
+        "name": "send-email",
+        "description": "Send transactional emails (welcome, confirmations, password resets, notifications) via Resend API.",
+        "author": "resend",
+        "theme": "growth"
+      },
+      {
         "name": "seo-audit",
         "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" or \"SEO health check.\" For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup.",
         "author": "community / uncredited",
@@ -150,13 +168,13 @@
     "skillification": [
       {
         "name": "skill-promotion",
-        "description": "Promote a dogfooded internal skill into the canonical repo — curation gate, versioning, attribution review, PR workflow.",
+        "description": "Promote a dogfooded internal skill into the canonical repo \u2014 curation gate, versioning, attribution review, PR workflow.",
         "author": "Nuvel Skills",
         "theme": "skillification"
       },
       {
         "name": "skill-evaluation",
-        "description": "Automated evaluation of a theme's skills — spawn subagents with only those skills, run scenario tests, score against exit criteria.",
+        "description": "Automated evaluation of a theme's skills \u2014 spawn subagents with only those skills, run scenario tests, score against exit criteria.",
         "author": "Nuvel Skills",
         "theme": "skillification"
       }
@@ -164,19 +182,19 @@
     "hr": [
       {
         "name": "hiring",
-        "description": "Full-cycle hiring from an approved need to a signed offer and onboarding handoff — requisition approval, scorecard-driven screening, structured interviews, offer management, background check, and close-out.",
+        "description": "Full-cycle hiring from an approved need to a signed offer and onboarding handoff \u2014 requisition approval, scorecard-driven screening, structured interviews, offer management, background check, and close-out.",
         "author": "Nuvel Skills",
         "theme": "hr"
       },
       {
         "name": "employee-onboarding",
-        "description": "New hire lifecycle from accepted offer to day 90 — pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, and access lifecycle for offboarding prep.",
+        "description": "New hire lifecycle from accepted offer to day 90 \u2014 pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, and access lifecycle for offboarding prep.",
         "author": "Nuvel Skills",
         "theme": "hr"
       },
       {
         "name": "employee-engagement",
-        "description": "Ongoing employee lifecycle and retention — 1:1 cadence, quarterly/annual performance reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, and exit interviews fed back into retention.",
+        "description": "Ongoing employee lifecycle and retention \u2014 1:1 cadence, quarterly/annual performance reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, and exit interviews fed back into retention.",
         "author": "Nuvel Skills",
         "theme": "hr"
       }
@@ -184,7 +202,7 @@
     "sales": [
       {
         "name": "lead-qualification",
-        "description": "Score and prioritize inbound leads. Capture qualification criteria (BANT/GPCT/CHAMP) and ICP fit, score 0–100, tier A/B/C, route to the right pipeline, and set a follow-up cadence. Includes a lead-scorer script.",
+        "description": "Score and prioritize inbound leads. Capture qualification criteria (BANT/GPCT/CHAMP) and ICP fit, score 0\u2013100, tier A/B/C, route to the right pipeline, and set a follow-up cadence. Includes a lead-scorer script.",
         "author": "Nuvel Skills",
         "theme": "sales"
       },

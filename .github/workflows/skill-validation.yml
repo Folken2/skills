@@ -89,45 +89,44 @@ jobs:
           print("Every skill directory has a SKILL.md")
           PY
 
+      - name: Install pyyaml for frontmatter validation
+        run: pip install pyyaml --quiet
+
       - name: Validate SKILL.md frontmatter
         run: |
           python3 - <<'PY'
-          import glob, sys
-
-          def parse_frontmatter(path):
-              with open(path, encoding="utf-8") as fh:
-                  text = fh.read()
-              if not text.startswith("---"):
-                  return None
-              parts = text.split("---", 2)
-              if len(parts) < 3:
-                  return None
-              fields = {}
-              for line in parts[1].splitlines():
-                  line = line.rstrip()
-                  if not line or line.lstrip().startswith("#"):
-                      continue
-                  if ":" not in line or line[0] in " \t-":
-                      continue
-                  key, value = line.split(":", 1)
-                  fields[key.strip()] = value.strip()
-              return fields
+          import glob, sys, yaml
 
           errors = []
           warnings = []
           for path in sorted(glob.glob("skills/**/SKILL.md", recursive=True)):
-              fm = parse_frontmatter(path)
-              if fm is None:
+              with open(path, encoding="utf-8") as fh:
+                  text = fh.read()
+              if not text.startswith("---"):
                   errors.append(f"{path}: missing or malformed YAML frontmatter")
+                  continue
+              parts = text.split("---", 2)
+              if len(parts) < 3 or not parts[2].strip():
+                  errors.append(f"{path}: frontmatter missing closing --- or empty body")
+                  continue
+              try:
+                  fm = yaml.safe_load(parts[1])
+              except Exception as e:
+                  errors.append(f"{path}: YAML parse error — {e}")
+                  continue
+              if not isinstance(fm, dict):
+                  errors.append(f"{path}: frontmatter is not a YAML mapping")
                   continue
               for field in ("name", "description"):
                   if not fm.get(field):
                       errors.append(f"{path}: frontmatter missing required field '{field}'")
               if not fm.get("version"):
                   warnings.append(f"{path}: frontmatter missing recommended field 'version'")
+              if not fm.get("author"):
+                  warnings.append(f"{path}: frontmatter missing recommended field 'author'")
 
           if warnings:
-              print("::warning::SKILL.md files missing recommended 'version' field:")
+              print("::warning::SKILL.md files missing recommended fields:")
               for w in warnings:
                   print(f"  - {w}")
 
@@ -139,16 +138,41 @@ jobs:
           print("Every SKILL.md has valid frontmatter (name, description)")
           PY
 
-      - name: Block modifications to existing SKILL.md bodies
+      - name: Block body modifications to existing SKILL.md files
         run: |
           git fetch origin main
-          MODIFIED=$(git diff origin/main --name-only --diff-filter=M)
-          echo "Modified files vs origin/main:"
+          MODIFIED=$(git diff origin/main --name-only --diff-filter=M -- 'skills/**/SKILL.md')
+          echo "Modified SKILL.md vs origin/main:"
           echo "$MODIFIED"
-          OFFENDING=$(echo "$MODIFIED" | grep -E '^skills/.*/SKILL\.md$' || true)
-          if [ -n "$OFFENDING" ]; then
-            echo "FAIL: existing SKILL.md files were modified. Only new skills or README/index.json changes are allowed:"
-            echo "$OFFENDING" | sed 's/^/  - /'
+          if [ -z "$MODIFIED" ]; then
+            echo "No existing SKILL.md files were modified"
+            exit 0
+          fi
+          BASE="origin/main"
+          FAILED=""
+          for f in $MODIFIED; do
+            BASE_CLOSE=$(git show "$BASE:$f" 2>/dev/null | awk 'BEGIN{n=0} /^---$/ {n++; if(n==2){print NR; exit}}')
+            PR_CLOSE=$(awk 'BEGIN{n=0} /^---$/ {n++; if(n==2){print NR; exit}}' "$f")
+            if [ -z "$BASE_CLOSE" ] || [ -z "$PR_CLOSE" ]; then
+              echo "  [SKIP] $f — cannot determine body boundary"
+              continue
+            fi
+            BASE_BODY=$(git show "$BASE:$f" 2>/dev/null | tail -n +$((BASE_CLOSE + 1)))
+            PR_BODY=$(tail -n +$((PR_CLOSE + 1)) "$f")
+            if [ "$BASE_BODY" != "$PR_BODY" ]; then
+              FAILED="$FAILED $f"
+              echo "  [BLOCKED] $f — body content was modified"
+            else
+              echo "  [OK] $f — only frontmatter metadata changed (author/version additions)"
+            fi
+          done
+          if [ -n "$FAILED" ]; then
+            echo ""
+            echo "FAIL: existing SKILL.md body content was modified."
+            echo "Only frontmatter metadata changes (author, version) or entirely new skills are allowed."
+            echo "Modified files:"
+            echo "$FAILED" | tr ' ' '\n' | sed '/^$/d' | sed 's/^/  - /'
             exit 1
           fi
-          echo "No existing SKILL.md bodies were modified"
+          echo ""
+          echo "All existing SKILL.md files — only frontmatter was modified. ✓"

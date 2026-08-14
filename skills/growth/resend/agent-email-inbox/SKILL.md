@@ -1,6 +1,8 @@
 ---
 name: agent-email-inbox
 description: Use when setting up an email inbox for an AI agent (Moltbot, Clawdbot, or similar) - configuring inbound email, webhooks, tunneling for local development, and implementing security measures to prevent prompt injection attacks.
+author: resend
+version: 2.1.0
 ---
 
 # AI Agent Email Inbox
