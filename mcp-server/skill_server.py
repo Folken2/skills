@@ -68,7 +68,10 @@ def entry_skill_path(theme, entry):
     """
     path = entry.get("path")
     if path:
-        # Explicit path may point at the SKILL.md or the skill directory.
+        # path is repo-root-relative (e.g. "skills/hr/employee-onboarding/SKILL.md")
+        # skills_dir() already points to <repo>/skills/, so strip that prefix
+        if path.startswith("skills/"):
+            path = path[len("skills/"):]
         candidate = os.path.join(skills_dir(), path)
         if os.path.isdir(candidate):
             candidate = os.path.join(candidate, "SKILL.md")
