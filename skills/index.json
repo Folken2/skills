@@ -1,6 +1,6 @@
 {
-  "version": 12,
-  "updated": "2026-08-14",
+  "version": 13,
+  "updated": "2026-08-17",
   "themes": {
     "software-development": [
       {
@@ -8,79 +8,105 @@
         "description": "Complete software development methodology (TDD, debugging, planning, code review, git worktrees)",
         "author": "Jesse Vincent / Prime Radiant",
         "theme": "software-development",
-        "dependency": true
+        "dependency": true,
+        "path": "skills/software-development/superpowers/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/superpowers/SKILL.md"
       },
       {
         "name": "feature-shaping",
         "description": "Shape a vague idea or request into a structured spec before planning or building. Bridges brainstorming and writing-plans.",
         "author": "Nuvel Skills",
-        "theme": "software-development"
+        "theme": "software-development",
+        "path": "skills/software-development/feature-shaping/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/feature-shaping/SKILL.md"
       },
       {
         "name": "bug-triage",
         "description": "Triage-first bug workflow. Capture the exact error, classify it, fix simple bugs immediately, and escalate only genuinely complex bugs to deep investigation.",
         "author": "Nuvel Skills (Brandon Bayer / rag.saas-shipkit)",
-        "theme": "software-development"
+        "theme": "software-development",
+        "path": "skills/software-development/bug-triage/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/bug-triage/SKILL.md"
       },
       {
         "name": "database-migration-safety",
         "description": "Database-agnostic migration safety protocol. Mandatory down migration for every up, round-trip rollback testing, schema diff review, migration order checks, and zero-downtime principles.",
         "author": "Nuvel Skills (Brandon Bayer / rag.saas-shipkit)",
-        "theme": "software-development"
+        "theme": "software-development",
+        "path": "skills/software-development/database-migration-safety/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/database-migration-safety/SKILL.md"
       },
       {
         "name": "second-order-impact-analysis",
         "description": "Before declaring a change complete, trace the ripple effects. Upstream and downstream dependencies, data integrity, API contract changes, performance implications, and rollback safety.",
         "author": "Nuvel Skills (Brandon Bayer / rag.saas-shipkit)",
-        "theme": "software-development"
+        "theme": "software-development",
+        "path": "skills/software-development/second-order-impact-analysis/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/second-order-impact-analysis/SKILL.md"
       },
       {
         "name": "design-checklist-review",
         "description": "Reference UX/UI quality checklists for web app screens. Run before shipping.",
         "author": "markfolken",
-        "theme": "software-development"
+        "theme": "software-development",
+        "path": "skills/software-development/design-checklist-review/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/design-checklist-review/SKILL.md"
       },
       {
         "name": "frontend-design",
         "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
         "author": "Anthropic",
-        "theme": "software-development"
+        "theme": "software-development",
+        "path": "skills/software-development/frontend-design/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/frontend-design/SKILL.md"
       },
       {
         "name": "mcp-builder",
         "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
         "author": "Anthropic",
-        "theme": "software-development"
+        "theme": "software-development",
+        "path": "skills/software-development/mcp-builder/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/mcp-builder/SKILL.md"
       },
       {
         "name": "nextjs-best-practices",
         "description": "Next.js App Router principles. Server Components, data fetching, routing patterns.",
         "author": "community / uncredited",
-        "theme": "software-development"
+        "theme": "software-development",
+        "path": "skills/software-development/nextjs-best-practices/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/nextjs-best-practices/SKILL.md"
       },
       {
         "name": "nextjs-supabase-auth",
         "description": "Expert integration of Supabase Auth with Next.js App Router Use when: supabase auth next, authentication next.js, login supabase, auth middleware, protected route.",
         "author": "community / uncredited",
-        "theme": "software-development"
+        "theme": "software-development",
+        "path": "skills/software-development/nextjs-supabase-auth/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/nextjs-supabase-auth/SKILL.md"
       },
       {
         "name": "vercel-react-best-practices",
         "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
         "author": "vercel",
-        "theme": "software-development"
+        "theme": "software-development",
+        "path": "skills/software-development/vercel-react-best-practices/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/vercel-react-best-practices/SKILL.md"
       },
       {
         "name": "web-design-guidelines",
         "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
         "author": "vercel",
-        "theme": "software-development"
+        "theme": "software-development",
+        "path": "skills/software-development/web-design-guidelines/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/web-design-guidelines/SKILL.md"
       },
       {
         "name": "webapp-testing",
         "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
         "author": "community / uncredited",
-        "theme": "software-development"
+        "theme": "software-development",
+        "path": "skills/software-development/webapp-testing/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/webapp-testing/SKILL.md"
       }
     ],
     "growth": [
@@ -88,73 +114,97 @@
         "name": "email-best-practices",
         "description": "Use when building email features, emails going to spam, high bounce rates, setting up SPF/DKIM/DMARC authentication, implementing email capture, ensuring compliance (CAN-SPAM, GDPR, CASL), handling webhooks, retry logic, or deciding transactional vs marketing.",
         "author": "community / uncredited",
-        "theme": "growth"
+        "theme": "growth",
+        "path": "skills/growth/email-best-practices/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/growth/email-best-practices/SKILL.md"
       },
       {
         "name": "react-email",
         "description": "Use when creating email templates with React - welcome emails, password resets, notifications, order confirmations, or transactional emails that need to render across email clients.",
         "author": "community / uncredited",
-        "theme": "growth"
+        "theme": "growth",
+        "path": "skills/growth/react-email/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/growth/react-email/SKILL.md"
       },
       {
         "name": "remotion-best-practices",
         "description": "Best practices for Remotion - Video creation in React",
         "author": "community / uncredited",
-        "theme": "growth"
+        "theme": "growth",
+        "path": "skills/growth/remotion-best-practices/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/growth/remotion-best-practices/SKILL.md"
       },
       {
         "name": "resend",
         "description": "Use when working with Resend email platform - routes to specific sub-skills for sending, receiving, audiences, or broadcasts.",
         "author": "resend",
-        "theme": "growth"
+        "theme": "growth",
+        "path": "skills/growth/resend/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/growth/resend/SKILL.md"
       },
       {
         "name": "agent-email-inbox",
         "description": "Set up an email inbox for an AI agent with inbound email, webhooks, tunneling for local dev, and prompt injection defenses.",
         "author": "resend",
-        "theme": "growth"
+        "theme": "growth",
+        "path": "skills/growth/agent-email-inbox/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/growth/agent-email-inbox/SKILL.md"
       },
       {
         "name": "resend-inbound",
-        "description": "Receive emails with Resend \u2014 inbound domains, email.received webhooks, retrieve content and attachments.",
+        "description": "Receive emails with Resend — inbound domains, email.received webhooks, retrieve content and attachments.",
         "author": "resend",
-        "theme": "growth"
+        "theme": "growth",
+        "path": "skills/growth/resend-inbound/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/growth/resend-inbound/SKILL.md"
       },
       {
         "name": "send-email",
         "description": "Send transactional emails (welcome, confirmations, password resets, notifications) via Resend API.",
         "author": "resend",
-        "theme": "growth"
+        "theme": "growth",
+        "path": "skills/growth/send-email/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/growth/send-email/SKILL.md"
       },
       {
         "name": "seo-audit",
-        "description": "Use when auditing, reviewing, or diagnosing SEO on a site \u2014 crawl the site, run a scored technical + on-page + keyword audit, and produce a prioritized, effort-estimated fix queue. Also use for 'SEO health check,' 'technical SEO,' 'why am I not ranking,' or 'meta tags review.'",
+        "description": "Use when auditing, reviewing, or diagnosing SEO on a site — crawl the site, run a scored technical + on-page + keyword audit, and produce a prioritized, effort-estimated fix queue. Also use for 'SEO health check,' 'technical SEO,' 'why am I not ranking,' or 'meta tags review.'",
         "author": "Nuvel Skills",
-        "theme": "growth"
+        "theme": "growth",
+        "path": "skills/growth/seo-audit/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/growth/seo-audit/SKILL.md"
       },
       {
         "name": "content-pipeline",
-        "description": "Use when running content marketing end to end \u2014 keyword research, brief, draft, editorial review, publish, distribution, and measurement \u2014 on a repeatable monthly/quarterly cadence. Also use when content ships inconsistently, pieces don't rank or convert, or there's no line from topic to KPI.",
+        "description": "Use when running content marketing end to end — keyword research, brief, draft, editorial review, publish, distribution, and measurement — on a repeatable monthly/quarterly cadence. Also use when content ships inconsistently, pieces don't rank or convert, or there's no line from topic to KPI.",
         "author": "Nuvel Skills",
-        "theme": "growth"
+        "theme": "growth",
+        "path": "skills/growth/content-pipeline/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/growth/content-pipeline/SKILL.md"
       },
       {
         "name": "email-lifecycle",
-        "description": "Use when designing or fixing lifecycle email \u2014 list hygiene and authentication (SPF/DKIM/DMARC), lifecycle-stage mapping (welcome, onboarding, nurture, re-engagement, winback), sequence design, deliverability, and compliance (CAN-SPAM, GDPR, CASL). Also use when emails hit spam, engagement decays, or there's no map of what sends to whom and why.",
+        "description": "Use when designing or fixing lifecycle email — list hygiene and authentication (SPF/DKIM/DMARC), lifecycle-stage mapping (welcome, onboarding, nurture, re-engagement, winback), sequence design, deliverability, and compliance (CAN-SPAM, GDPR, CASL). Also use when emails hit spam, engagement decays, or there's no map of what sends to whom and why.",
         "author": "Nuvel Skills",
-        "theme": "growth"
+        "theme": "growth",
+        "path": "skills/growth/email-lifecycle/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/growth/email-lifecycle/SKILL.md"
       },
       {
         "name": "analytics-setup",
-        "description": "Use when standing up or fixing web/product analytics \u2014 event taxonomy design, property setup (GA4/PostHog/Plausible), conversion and funnel tracking, dashboards across the AARRR pirate metrics, attribution basics, and data-quality checks. Also use when events are inconsistent, numbers don't reconcile, or nobody trusts the dashboard.",
+        "description": "Use when standing up or fixing web/product analytics — event taxonomy design, property setup (GA4/PostHog/Plausible), conversion and funnel tracking, dashboards across the AARRR pirate metrics, attribution basics, and data-quality checks. Also use when events are inconsistent, numbers don't reconcile, or nobody trusts the dashboard.",
         "author": "Nuvel Skills",
-        "theme": "growth"
+        "theme": "growth",
+        "path": "skills/growth/analytics-setup/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/growth/analytics-setup/SKILL.md"
       },
       {
         "name": "paid-acquisition",
-        "description": "Use when planning or running paid acquisition \u2014 channel selection, campaign structure, creative testing, landing-page alignment, budget allocation (test vs scale), ROAS/CAC targets, and an optimization loop with scale/stop rules. Also use when paid spend isn't converting, creative testing is ad hoc, or budget is spread thin with no ROAS discipline.",
+        "description": "Use when planning or running paid acquisition — channel selection, campaign structure, creative testing, landing-page alignment, budget allocation (test vs scale), ROAS/CAC targets, and an optimization loop with scale/stop rules. Also use when paid spend isn't converting, creative testing is ad hoc, or budget is spread thin with no ROAS discipline.",
         "author": "Nuvel Skills",
-        "theme": "growth"
+        "theme": "growth",
+        "path": "skills/growth/paid-acquisition/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/growth/paid-acquisition/SKILL.md"
       }
     ],
     "backoffice": [
@@ -162,85 +212,111 @@
         "name": "docx",
         "description": "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When Claude needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks",
         "author": "Anthropic",
-        "theme": "backoffice"
+        "theme": "backoffice",
+        "path": "skills/backoffice/docx/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/backoffice/docx/SKILL.md"
       },
       {
         "name": "pdf",
         "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale.",
         "author": "Anthropic",
-        "theme": "backoffice"
+        "theme": "backoffice",
+        "path": "skills/backoffice/pdf/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/backoffice/pdf/SKILL.md"
       },
       {
         "name": "pptx",
         "description": "Presentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks",
         "author": "Anthropic",
-        "theme": "backoffice"
+        "theme": "backoffice",
+        "path": "skills/backoffice/pptx/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/backoffice/pptx/SKILL.md"
       },
       {
         "name": "supabase-postgres-best-practices",
         "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.",
         "author": "supabase",
-        "theme": "backoffice"
+        "theme": "backoffice",
+        "path": "skills/backoffice/supabase-postgres-best-practices/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/backoffice/supabase-postgres-best-practices/SKILL.md"
       },
       {
         "name": "xlsx",
         "description": "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When Claude needs to work with spreadsheets (.xlsx, .xlsm, .csv, .tsv, etc) for: (1) Creating new spreadsheets with formulas and formatting, (2) Reading or analyzing data, (3) Modify existing spreadsheets while preserving formulas, (4) Data analysis and visualization in spreadsheets, or (5) Recalculating formulas",
         "author": "Anthropic",
-        "theme": "backoffice"
+        "theme": "backoffice",
+        "path": "skills/backoffice/xlsx/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/backoffice/xlsx/SKILL.md"
       }
     ],
     "skillification": [
       {
         "name": "skill-promotion",
-        "description": "Promote a dogfooded internal skill into the canonical repo \u2014 curation gate, versioning, attribution review, PR workflow.",
+        "description": "Promote a dogfooded internal skill into the canonical repo — curation gate, versioning, attribution review, PR workflow.",
         "author": "Nuvel Skills",
-        "theme": "skillification"
+        "theme": "skillification",
+        "path": "skills/skillification/skill-promotion/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/skillification/skill-promotion/SKILL.md"
       },
       {
         "name": "skill-evaluation",
-        "description": "Automated evaluation of a theme's skills \u2014 spawn subagents with only those skills, run scenario tests, score against exit criteria.",
+        "description": "Automated evaluation of a theme's skills — spawn subagents with only those skills, run scenario tests, score against exit criteria.",
         "author": "Nuvel Skills",
-        "theme": "skillification"
+        "theme": "skillification",
+        "path": "skills/skillification/skill-evaluation/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/skillification/skill-evaluation/SKILL.md"
       }
     ],
     "hr": [
       {
         "name": "hiring",
-        "description": "Full-cycle hiring from an approved need to a signed offer and onboarding handoff \u2014 requisition approval, scorecard-driven screening, structured interviews, offer management, background check, and close-out.",
+        "description": "Full-cycle hiring from an approved need to a signed offer and onboarding handoff — requisition approval, scorecard-driven screening, structured interviews, offer management, background check, and close-out.",
         "author": "Nuvel Skills",
-        "theme": "hr"
+        "theme": "hr",
+        "path": "skills/hr/hiring/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/hiring/SKILL.md"
       },
       {
         "name": "employee-onboarding",
-        "description": "New hire lifecycle from accepted offer to day 90 \u2014 pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, and access lifecycle for offboarding prep.",
+        "description": "New hire lifecycle from accepted offer to day 90 — pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, and access lifecycle for offboarding prep.",
         "author": "Nuvel Skills",
-        "theme": "hr"
+        "theme": "hr",
+        "path": "skills/hr/employee-onboarding/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/employee-onboarding/SKILL.md"
       },
       {
         "name": "employee-engagement",
-        "description": "Ongoing employee lifecycle and retention \u2014 1:1 cadence, quarterly/annual performance reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, and exit interviews fed back into retention.",
+        "description": "Ongoing employee lifecycle and retention — 1:1 cadence, quarterly/annual performance reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, and exit interviews fed back into retention.",
         "author": "Nuvel Skills",
-        "theme": "hr"
+        "theme": "hr",
+        "path": "skills/hr/employee-engagement/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/employee-engagement/SKILL.md"
       }
     ],
     "sales": [
       {
         "name": "lead-qualification",
-        "description": "Score and prioritize inbound leads. Capture qualification criteria (BANT/GPCT/CHAMP) and ICP fit, score 0\u2013100, tier A/B/C, route to the right pipeline, and set a follow-up cadence. Includes a lead-scorer script.",
+        "description": "Score and prioritize inbound leads. Capture qualification criteria (BANT/GPCT/CHAMP) and ICP fit, score 0–100, tier A/B/C, route to the right pipeline, and set a follow-up cadence. Includes a lead-scorer script.",
         "author": "Nuvel Skills",
-        "theme": "sales"
+        "theme": "sales",
+        "path": "skills/sales/lead-qualification/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/sales/lead-qualification/SKILL.md"
       },
       {
         "name": "discovery-call",
         "description": "Run a structured discovery call. Pre-call research, problem identification (SPIN), need amplification (Sandler pain funnel), impact quantification, budget, authority mapping, timeline, decision criteria (MEDDIC), and post-call debrief. Includes a call-notes template.",
         "author": "Nuvel Skills",
-        "theme": "sales"
+        "theme": "sales",
+        "path": "skills/sales/discovery-call/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/sales/discovery-call/SKILL.md"
       },
       {
         "name": "pipeline-management",
         "description": "Manage a sales pipeline end-to-end. Stage exit criteria, deal velocity, coverage ratio, forecasting, MEDDIC deal inspection, stalled-deal recovery, lost-deal analysis, and pipeline hygiene. Includes a pipeline health-report script.",
         "author": "Nuvel Skills",
-        "theme": "sales"
+        "theme": "sales",
+        "path": "skills/sales/pipeline-management/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/sales/pipeline-management/SKILL.md"
       }
     ],
     "customer-support": [
@@ -248,77 +324,101 @@
         "name": "ticket-triage",
         "description": "Classify, prioritize, and route support tickets. Capture the issue, tag type and severity, assign SLA and tier from a triage matrix, send a first response, and escalate on security/data/at-risk triggers with structured handoffs.",
         "author": "Nuvel Skills",
-        "theme": "customer-support"
+        "theme": "customer-support",
+        "path": "skills/customer-support/ticket-triage/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/customer-support/ticket-triage/SKILL.md"
       },
       {
         "name": "order-management",
-        "description": "Full order lifecycle for support \u2014 locate the order, verify identity, check status, resolve shipping/fulfillment issues, and process returns, refunds, replacements, and payment problems against a decision matrix with per-scenario communication.",
+        "description": "Full order lifecycle for support — locate the order, verify identity, check status, resolve shipping/fulfillment issues, and process returns, refunds, replacements, and payment problems against a decision matrix with per-scenario communication.",
         "author": "Nuvel Skills",
-        "theme": "customer-support"
+        "theme": "customer-support",
+        "path": "skills/customer-support/order-management/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/customer-support/order-management/SKILL.md"
       },
       {
         "name": "technical-troubleshooting",
-        "description": "Structured technical support \u2014 capture the symptom, search the knowledge base, diagnose by reproduce/isolate/single-hypothesis testing, choose fix/workaround/escalate, escalate with evidence, and follow up with the customer.",
+        "description": "Structured technical support — capture the symptom, search the knowledge base, diagnose by reproduce/isolate/single-hypothesis testing, choose fix/workaround/escalate, escalate with evidence, and follow up with the customer.",
         "author": "Nuvel Skills",
-        "theme": "customer-support"
+        "theme": "customer-support",
+        "path": "skills/customer-support/technical-troubleshooting/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/customer-support/technical-troubleshooting/SKILL.md"
       },
       {
         "name": "customer-communication",
-        "description": "Customer communication guide \u2014 tone calibration, a greeting/understanding/action/expectation/close structure, channel etiquette, handling complaints/delays/denials/pricing, firm-but-kind escalation language, and proactive positive updates.",
+        "description": "Customer communication guide — tone calibration, a greeting/understanding/action/expectation/close structure, channel etiquette, handling complaints/delays/denials/pricing, firm-but-kind escalation language, and proactive positive updates.",
         "author": "Nuvel Skills",
-        "theme": "customer-support"
+        "theme": "customer-support",
+        "path": "skills/customer-support/customer-communication/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/customer-support/customer-communication/SKILL.md"
       }
     ],
     "finance": [
       {
         "name": "invoicing",
-        "description": "Full order-to-cash billing \u2014 invoice creation (required fields, sequential numbering, tax, currency), delivery (email/portal/EDI/PDF), payment terms, follow-up cadence, payment capture, reconciliation (partials, unapplied credits), and exceptions (disputes, credit notes, write-offs).",
+        "description": "Full order-to-cash billing — invoice creation (required fields, sequential numbering, tax, currency), delivery (email/portal/EDI/PDF), payment terms, follow-up cadence, payment capture, reconciliation (partials, unapplied credits), and exceptions (disputes, credit notes, write-offs).",
         "author": "Nuvel Skills",
-        "theme": "finance"
+        "theme": "finance",
+        "path": "skills/finance/invoicing/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/finance/invoicing/SKILL.md"
       },
       {
         "name": "credit-control",
-        "description": "Accounts-receivable management \u2014 AR aging + DSO, escalating dunning sequences, payment reminders, payment-plan negotiation, dispute handling, escalation (credit hold, agency, legal), and accurate cash application.",
+        "description": "Accounts-receivable management — AR aging + DSO, escalating dunning sequences, payment reminders, payment-plan negotiation, dispute handling, escalation (credit hold, agency, legal), and accurate cash application.",
         "author": "Nuvel Skills",
-        "theme": "finance"
+        "theme": "finance",
+        "path": "skills/finance/credit-control/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/finance/credit-control/SKILL.md"
       },
       {
         "name": "expense-management",
-        "description": "Corporate expense lifecycle \u2014 testable expense policy, receipt capture/OCR, chart-of-accounts + tax coding, tiered approval matrix, reimbursement, corporate-card controls, fraud/duplicate detection, and spend reporting.",
+        "description": "Corporate expense lifecycle — testable expense policy, receipt capture/OCR, chart-of-accounts + tax coding, tiered approval matrix, reimbursement, corporate-card controls, fraud/duplicate detection, and spend reporting.",
         "author": "Nuvel Skills",
-        "theme": "finance"
+        "theme": "finance",
+        "path": "skills/finance/expense-management/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/finance/expense-management/SKILL.md"
       },
       {
         "name": "cashflow-forecasting",
-        "description": "Cash flow forecasting \u2014 reconciled cash position, bottom-up inflows/outflows on value dates, a 13-week rolling model, base/best/worst scenarios and sensitivities, timing-vs-permanent variance analysis, and weekly/monthly/quarterly review cadence.",
+        "description": "Cash flow forecasting — reconciled cash position, bottom-up inflows/outflows on value dates, a 13-week rolling model, base/best/worst scenarios and sensitivities, timing-vs-permanent variance analysis, and weekly/monthly/quarterly review cadence.",
         "author": "Nuvel Skills",
-        "theme": "finance"
+        "theme": "finance",
+        "path": "skills/finance/cashflow-forecasting/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/finance/cashflow-forecasting/SKILL.md"
       }
     ],
     "procurement": [
       {
         "name": "supplier-qualification",
-        "description": "Vendor/supplier qualification \u2014 identify candidates, run due diligence (financials, compliance, references, insurance), assess capability (capacity, quality, technology, lead times), evaluate risk, onboard (NDA, contract, master data), and manage vendor tiering with periodic review.",
+        "description": "Vendor/supplier qualification — identify candidates, run due diligence (financials, compliance, references, insurance), assess capability (capacity, quality, technology, lead times), evaluate risk, onboard (NDA, contract, master data), and manage vendor tiering with periodic review.",
         "author": "Nuvel Skills",
-        "theme": "procurement"
+        "theme": "procurement",
+        "path": "skills/procurement/supplier-qualification/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/procurement/supplier-qualification/SKILL.md"
       },
       {
         "name": "purchase-order-management",
-        "description": "Purchase order lifecycle \u2014 requisition, PO creation, approval workflow, order tracking, goods receipt, 3-way match (PO vs receipt vs invoice), exceptions (shortages, damage, price variance), and close-out.",
+        "description": "Purchase order lifecycle — requisition, PO creation, approval workflow, order tracking, goods receipt, 3-way match (PO vs receipt vs invoice), exceptions (shortages, damage, price variance), and close-out.",
         "author": "Nuvel Skills",
-        "theme": "procurement"
+        "theme": "procurement",
+        "path": "skills/procurement/purchase-order-management/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/procurement/purchase-order-management/SKILL.md"
       },
       {
         "name": "vendor-negotiation",
-        "description": "Structured vendor negotiation \u2014 prepare with market intelligence, BATNA, and walk-away point; choose strategy; negotiate pricing, terms, SLA, warranty, IP; use concessions framework; document outcomes; debrief.",
+        "description": "Structured vendor negotiation — prepare with market intelligence, BATNA, and walk-away point; choose strategy; negotiate pricing, terms, SLA, warranty, IP; use concessions framework; document outcomes; debrief.",
         "author": "Nuvel Skills",
-        "theme": "procurement"
+        "theme": "procurement",
+        "path": "skills/procurement/vendor-negotiation/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/procurement/vendor-negotiation/SKILL.md"
       },
       {
         "name": "inventory-planning",
-        "description": "Procurement inventory planning \u2014 demand forecasting, reorder points (lead time demand, safety stock, EOQ), stock levels (min/max, ABC classification), supplier lead-time tracking, stockout mitigation, overstock management, and review cadence.",
+        "description": "Procurement inventory planning — demand forecasting, reorder points (lead time demand, safety stock, EOQ), stock levels (min/max, ABC classification), supplier lead-time tracking, stockout mitigation, overstock management, and review cadence.",
         "author": "Nuvel Skills",
-        "theme": "procurement"
+        "theme": "procurement",
+        "path": "skills/procurement/inventory-planning/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/procurement/inventory-planning/SKILL.md"
       }
     ]
   }
