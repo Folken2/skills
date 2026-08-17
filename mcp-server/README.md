@@ -112,6 +112,26 @@ its `uri`, `name`, `description`, and `mimeType`.
     (e.g. `software-development/bug-triage`).
   - Returns: full `SKILL.md` content, parsed frontmatter metadata, and index
     fields.
+- **`propose_improvement`** — Propose a fix to a skill after using it and
+  finding it drifted. Files a structured GitHub issue for a curator to review.
+  - Input: `skill_name` (string), `current_version` (string), `issue` (string),
+    `suggested_fix` (string), and optional `harness` (string, default
+    `unknown`).
+  - Returns: on success, the filed `issue_url` and `issue_number`.
+
+  **Requires a `GITHUB_TOKEN` environment variable** — a GitHub personal access
+  token with permission to create issues on
+  [`Folken2/skills`](https://github.com/Folken2/skills). If `GITHUB_TOKEN` is
+  unset, the tool does **not** call the API: it logs the full proposal to stderr
+  and returns `GitHub API not configured — improvement logged to stderr
+  instead`. Set it in the server's `env` block alongside `SKILLS_DIR`:
+
+  ```json
+  "env": {
+    "SKILLS_DIR": "/path/to/skills",
+    "GITHUB_TOKEN": "ghp_..."
+  }
+  ```
 
 ## Protocol reference
 
@@ -121,7 +141,7 @@ its `uri`, `name`, `description`, and `mimeType`.
 | `resources/list`  | List every skill as an MCP resource.               |
 | `resources/read`  | Read a skill's `SKILL.md` by `skill://` URI.       |
 | `tools/list`      | List available tools and their input schemas.      |
-| `tools/call`      | Invoke `search_skills` or `get_skill`.             |
+| `tools/call`      | Invoke `search_skills`, `get_skill`, or `propose_improvement`. |
 
 Errors are returned as JSON-RPC error objects (e.g. unknown skill, malformed
 URI, or unknown tool → code `-32602`; unknown method → `-32601`; malformed JSON

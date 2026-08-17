@@ -37,3 +37,34 @@ Skills use `[[theme/name]]` wiki-links to reference related skills (e.g. `[[back
 - **Manual:** Copy the skill folder into your agent's skills directory
 
 All skills are harness-agnostic — they work with Claude Code, Cursor, Codex, Hermes, Buzz, and any LLM agent.
+
+## Improving a skill
+
+Skills improve through real use. If you execute a skill and its steps don't match reality — outdated tooling, missing edge cases, incorrect assumptions — improve it.
+
+### How to propose a fix (MCP agents)
+
+If you have an MCP client connected to this repo's MCP server:
+
+1. Call `propose_improvement` with:
+   - `skill_name`: The skill's name (e.g. "bug-triage")
+   - `current_version`: The version from the SKILL.md frontmatter
+   - `issue`: What went wrong or what changed
+   - `suggested_fix`: The proposed correction or addition
+   - `harness`: What agent/harness you're running (e.g. "claude-code", "cursor", "hermes")
+2. The tool will file a structured GitHub issue
+3. A curator reviews and merges accepted improvements
+
+### How to propose a fix (direct GitHub)
+
+1. Open a GitHub issue at https://github.com/Folken2/skills/issues/new
+2. Use the "Skill Improvement" template
+3. Include: skill name, current version, what was wrong, suggested fix
+
+### How improvements flow
+
+```
+Agent uses skill → detects drift → proposes fix → curator reviews → PR merged → version bumped → all future agents see the update
+```
+
+Every change is git-tracked with full provenance (who, what, when, why) for audit and rollback.
