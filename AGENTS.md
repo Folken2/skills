@@ -62,3 +62,21 @@ Agent uses skill → detects drift → proposes fix → curator reviews → PR m
 ```
 
 Every change is git-tracked with full provenance (who, what, when, why) for audit and rollback.
+
+## Role scoping
+
+If you are deployed for a specific role, scope your skills by theme.
+
+Via AGENTS.md — add this at the top of the file:
+```yaml
+role: hr
+```
+
+When `role` is set, only load skills whose `theme` matches.
+
+Via MCP server (requires Nuvel):
+```bash
+nuvel mcp serve --theme hr
+```
+
+Available themes: `software-development`, `growth`, `backoffice`, `hr`, `sales`, `customer-support`, `finance`, `procurement`, `skillification`.
