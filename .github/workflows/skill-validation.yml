@@ -95,7 +95,14 @@ jobs:
       - name: Validate SKILL.md frontmatter
         run: |
           python3 - <<'PY'
-          import glob, sys, yaml
+          import glob, re, sys, yaml
+
+          # Semantic version: MAJOR.MINOR.PATCH with optional pre-release/build.
+          SEMVER = re.compile(
+              r"^\d+\.\d+\.\d+"
+              r"(?:-[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?"
+              r"(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?$"
+          )
 
           errors = []
           warnings = []
@@ -117,11 +124,16 @@ jobs:
               if not isinstance(fm, dict):
                   errors.append(f"{path}: frontmatter is not a YAML mapping")
                   continue
-              for field in ("name", "description"):
+              for field in ("name", "description", "version"):
                   if not fm.get(field):
                       errors.append(f"{path}: frontmatter missing required field '{field}'")
-              if not fm.get("version"):
-                  warnings.append(f"{path}: frontmatter missing recommended field 'version'")
+              version = fm.get("version")
+              if version is not None:
+                  if not SEMVER.match(str(version).strip()):
+                      errors.append(
+                          f"{path}: frontmatter 'version' must be a valid semver "
+                          f"string (e.g. '1.0.0') — got '{version}'"
+                      )
               if not fm.get("author"):
                   warnings.append(f"{path}: frontmatter missing recommended field 'author'")
 
@@ -135,7 +147,7 @@ jobs:
               for e in errors:
                   print(f"  - {e}")
               sys.exit(1)
-          print("Every SKILL.md has valid frontmatter (name, description)")
+          print("Every SKILL.md has valid frontmatter (name, description, version)")
           PY
 
       - name: Block body modifications to existing SKILL.md files

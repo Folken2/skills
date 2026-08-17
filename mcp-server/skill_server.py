@@ -15,6 +15,8 @@ is located via the SKILLS_DIR environment variable, falling back to the
 import json
 import os
 import sys
+import urllib.error
+import urllib.request
 
 PROTOCOL_VERSION = "2024-11-05"
 SERVER_INFO = {"name": "nuvel-skills", "version": "1.0.0"}
@@ -211,6 +213,41 @@ def handle_tools_list(params):
                     "required": ["name"],
                 },
             },
+            {
+                "name": "propose_improvement",
+                "description": (
+                    "Propose an improvement to a skill after using it and finding "
+                    "it drifted (outdated tooling, missing edge cases, wrong "
+                    "assumptions). Files a structured GitHub issue for a curator "
+                    "to review."
+                ),
+                "inputSchema": {
+                    "type": "object",
+                    "properties": {
+                        "skill_name": {
+                            "type": "string",
+                            "description": "Name of the skill being improved (e.g. 'bug-triage').",
+                        },
+                        "current_version": {
+                            "type": "string",
+                            "description": "Version from the SKILL.md frontmatter (e.g. '1.0.0').",
+                        },
+                        "issue": {
+                            "type": "string",
+                            "description": "What went wrong or what changed.",
+                        },
+                        "suggested_fix": {
+                            "type": "string",
+                            "description": "Proposed correction or addition.",
+                        },
+                        "harness": {
+                            "type": "string",
+                            "description": "Agent/harness you're running (e.g. 'claude-code', 'cursor', 'hermes').",
+                        },
+                    },
+                    "required": ["skill_name", "current_version", "issue", "suggested_fix"],
+                },
+            },
         ]
     }
 
@@ -277,12 +314,131 @@ def tool_get_skill(args):
     }
 
 
+GITHUB_REPO = "Folken2/skills"
+GITHUB_ISSUES_URL = "https://api.github.com/repos/{}/issues".format(GITHUB_REPO)
+
+
+def _summarize(text, limit=60):
+    """One-line summary for the issue title (first line, truncated)."""
+    first = (text or "").strip().splitlines()[0] if (text or "").strip() else ""
+    if len(first) > limit:
+        first = first[: limit - 1].rstrip() + "…"
+    return first
+
+
+def _improvement_issue(skill_name, current_version, issue, suggested_fix, harness):
+    """Build the (title, body) for a skill-improvement GitHub issue."""
+    title = "[Skill Improvement] {} v{} — {}".format(
+        skill_name, current_version, _summarize(issue) or "improvement"
+    )
+    body = (
+        "## Skill Improvement Proposal\n\n"
+        "| Field | Value |\n"
+        "| --- | --- |\n"
+        "| **Skill** | `{skill}` |\n"
+        "| **Current version** | `{version}` |\n"
+        "| **Harness** | `{harness}` |\n\n"
+        "### Issue — what went wrong or changed\n\n"
+        "{issue}\n\n"
+        "### Suggested fix\n\n"
+        "{fix}\n\n"
+        "---\n"
+        "_Filed via the `propose_improvement` MCP tool. A curator will review "
+        "and merge accepted improvements._\n"
+    ).format(
+        skill=skill_name,
+        version=current_version,
+        harness=harness,
+        issue=issue.strip(),
+        fix=suggested_fix.strip(),
+    )
+    return title, body
+
+
+def tool_propose_improvement(args):
+    skill_name = (args.get("skill_name") or "").strip()
+    current_version = (args.get("current_version") or "").strip()
+    issue = (args.get("issue") or "").strip()
+    suggested_fix = (args.get("suggested_fix") or "").strip()
+    harness = (args.get("harness") or "").strip() or "unknown"
+
+    missing = [
+        k
+        for k, v in (
+            ("skill_name", skill_name),
+            ("current_version", current_version),
+            ("issue", issue),
+            ("suggested_fix", suggested_fix),
+        )
+        if not v
+    ]
+    if missing:
+        raise McpError(
+            INVALID_PARAMS,
+            "Missing required argument(s): {}".format(", ".join(missing)),
+        )
+
+    title, body = _improvement_issue(
+        skill_name, current_version, issue, suggested_fix, harness
+    )
+
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        log("GitHub API not configured (no GITHUB_TOKEN). Improvement proposal:")
+        log("  title: {}".format(title))
+        log(body)
+        return {
+            "status": "logged",
+            "message": "GitHub API not configured — improvement logged to stderr instead",
+            "title": title,
+            "body": body,
+        }
+
+    payload = json.dumps(
+        {"title": title, "body": body, "labels": ["skill-improvement"]}
+    ).encode("utf-8")
+    request = urllib.request.Request(
+        GITHUB_ISSUES_URL,
+        data=payload,
+        method="POST",
+        headers={
+            "Authorization": "Bearer {}".format(token),
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "Content-Type": "application/json",
+            "User-Agent": "nuvel-skills-mcp",
+        },
+    )
+    try:
+        with urllib.request.urlopen(request) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", "replace") if exc.fp else str(exc)
+        log("GitHub API error {}: {}".format(exc.code, detail))
+        raise McpError(
+            INTERNAL_ERROR,
+            "GitHub API returned {}: {}".format(exc.code, detail),
+        )
+    except urllib.error.URLError as exc:
+        log("GitHub API request failed: {}".format(exc))
+        raise McpError(INTERNAL_ERROR, "GitHub API request failed: {}".format(exc))
+
+    return {
+        "status": "filed",
+        "message": "Improvement proposal filed as GitHub issue",
+        "issue_url": data.get("html_url"),
+        "issue_number": data.get("number"),
+        "title": title,
+    }
+
+
 def handle_tools_call(params):
     tool_name = params.get("name")
     args = params.get("arguments") or {}
     handlers = {
         "search_skills": tool_search_skills,
         "get_skill": tool_get_skill,
+        "propose_improvement": tool_propose_improvement,
     }
     handler = handlers.get(tool_name)
     if handler is None:
