@@ -1,0 +1,24 @@
+{
+  "name": "Nuvel Skills",
+  "description": "A library of executable SOPs for AI agents — consumable as MCP resources",
+  "version": "1.0.0",
+  "mcp_resources": {
+    "pattern": "skill://{theme}/{name}",
+    "description": "Fetch a skill's full SKILL.md content by theme and name",
+    "index_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/index.json",
+    "resolve_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/{theme}/{name}/SKILL.md"
+  },
+  "agent_plugins": {
+    "url": "https://github.com/Folken2/skills",
+    "format": "v1.0.0",
+    "skills_index": "skills/index.json",
+    "install": "git clone https://github.com/Folken2/skills.git && cp -r skills/<theme>/<name> /path/to/agent/skills/"
+  },
+  "harnesses": {
+    "hermes": "hermes skills install <raw-url>",
+    "claude_code": "Copy skill folder to ~/.claude/skills/ or read via AGENTS.md",
+    "cursor": "Skills are auto-discovered via .cursorrules at repo root",
+    "codex": "Codex reads AGENTS.md at repo root for discovery",
+    "buzz_agent_studio": "Import from https://github.com/Folken2/skills via GitHub import"
+  }
+}

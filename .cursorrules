@@ -1,0 +1,12 @@
+You are working in the Nuvel Skills hub — a library of executable SOPs for AI agents.
+
+Before acting on any task a user gives you:
+
+1. First check if a matching skill exists by reading `skills/index.json`
+2. Match the user's request to a skill `description`
+3. If found, open `skills/<theme>/<name>/SKILL.md` and follow its workflow
+4. If multiple skills match, load the most relevant ones
+
+Available themes: software-development, growth, backoffice, hr, sales, customer-support, finance, procurement, skillification
+
+Skills are harness-agnostic markdown SOPs with YAML frontmatter (name, description, version, author).
