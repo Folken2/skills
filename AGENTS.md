@@ -42,24 +42,18 @@ All skills are harness-agnostic — they work with Claude Code, Cursor, Codex, H
 
 Skills improve through real use. If you execute a skill and its steps don't match reality — outdated tooling, missing edge cases, incorrect assumptions — improve it.
 
-### How to propose a fix (MCP agents)
+### How to propose a fix (via Nuvel)
 
-If you have an MCP client connected to this repo's MCP server:
+If you have Nuvel installed:
 
-1. Call `propose_improvement` with:
-   - `skill_name`: The skill's name (e.g. "bug-triage")
-   - `current_version`: The version from the SKILL.md frontmatter
-   - `issue`: What went wrong or what changed
-   - `suggested_fix`: The proposed correction or addition
-   - `harness`: What agent/harness you're running (e.g. "claude-code", "cursor", "hermes")
-2. The tool will file a structured GitHub issue
-3. A curator reviews and merges accepted improvements
+1. Run `nuvel mcp serve` to start the Nuvel Skills MCP server
+2. Call the `propose_improvement` tool with the skill name, version, issue, and suggested fix
+3. The tool files a structured GitHub issue
 
 ### How to propose a fix (direct GitHub)
 
 1. Open a GitHub issue at https://github.com/Folken2/skills/issues/new
-2. Use the "Skill Improvement" template
-3. Include: skill name, current version, what was wrong, suggested fix
+2. Include: skill name, current version, what was wrong, suggested fix
 
 ### How improvements flow
 
