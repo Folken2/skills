@@ -1,6 +1,6 @@
 {
-  "version": 12,
-  "updated": "2026-08-14",
+  "version": 13,
+  "updated": "2026-08-17",
   "themes": {
     "software-development": [
       {
@@ -219,6 +219,18 @@
       {
         "name": "employee-engagement",
         "description": "Ongoing employee lifecycle and retention \u2014 1:1 cadence, quarterly/annual performance reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, and exit interviews fed back into retention.",
+        "author": "Nuvel Skills",
+        "theme": "hr"
+      },
+      {
+        "name": "employee-offboarding",
+        "description": "Exit workflow from departure confirmation to 30-day cleanup \u2014 access revocation (SSO, SaaS, VPN, keys, tokens, shared passwords), knowledge transfer, equipment return, exit interview, final pay/benefits, and a timestamped compliance audit trail.",
+        "author": "Nuvel Skills",
+        "theme": "hr"
+      },
+      {
+        "name": "leave-management",
+        "description": "Controlled leave lifecycle \u2014 request intake, leave-type classification, policy-driven eligibility and approval, coverage planning, payroll/accrual impact, statutory compliance (FMLA or local equivalent), return-to-work, and tracking/reporting.",
         "author": "Nuvel Skills",
         "theme": "hr"
       }
