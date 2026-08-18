@@ -1,6 +1,6 @@
 {
-  "version": 13,
-  "updated": "2026-08-17",
+  "version": 14,
+  "updated": "2026-08-18",
   "themes": {
     "software-development": [
       {
@@ -291,6 +291,14 @@
         "theme": "hr",
         "path": "skills/hr/employee-engagement/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/employee-engagement/SKILL.md"
+      },
+      {
+        "name": "payroll-processor",
+        "description": "Calculate net pay from timesheet CSV data and generate paystub and summary reports.",
+        "author": "Nuvel Skills (owned)",
+        "theme": "hr",
+        "path": "skills/hr/payroll-processor/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/payroll-processor/SKILL.md"
       }
     ],
     "sales": [
@@ -419,6 +427,44 @@
         "theme": "procurement",
         "path": "skills/procurement/inventory-planning/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/procurement/inventory-planning/SKILL.md"
+      }
+    ],
+    "customer": [
+      {
+        "name": "triage-agent",
+        "description": "Classify incoming customer requests by urgency and department using keyword rules and route them.",
+        "author": "Nuvel Skills (owned)",
+        "theme": "customer",
+        "path": "skills/customer/triage-agent/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/customer/triage-agent/SKILL.md"
+      }
+    ],
+    "ops": [
+      {
+        "name": "inventory-checker",
+        "description": "Monitor stock levels against thresholds, flag OK/LOW/CRITICAL/OUT status, and recommend reorder quantities.",
+        "author": "Nuvel Skills (owned)",
+        "theme": "ops",
+        "path": "skills/ops/inventory-checker/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/ops/inventory-checker/SKILL.md"
+      },
+      {
+        "name": "order-processor",
+        "description": "Process orders through a received→validated→fulfilled→shipped state machine with per-stage validation gates.",
+        "author": "Nuvel Skills (owned)",
+        "theme": "ops",
+        "path": "skills/ops/order-processor/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/ops/order-processor/SKILL.md"
+      }
+    ],
+    "audit": [
+      {
+        "name": "log-inspector",
+        "description": "Parse structured logs, detect error-frequency spikes in configurable time windows, and flag compliance anomalies.",
+        "author": "Nuvel Skills (owned)",
+        "theme": "audit",
+        "path": "skills/audit/log-inspector/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/audit/log-inspector/SKILL.md"
       }
     ]
   }
