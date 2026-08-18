@@ -1,5 +1,5 @@
 {
-  "version": 14,
+  "version": 15,
   "updated": "2026-08-18",
   "themes": {
     "software-development": [
@@ -465,6 +465,24 @@
         "theme": "audit",
         "path": "skills/audit/log-inspector/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/audit/log-inspector/SKILL.md"
+      }
+    ],
+    "fleet": [
+      {
+        "name": "manage",
+        "description": "Manage a fleet of enterprise bots — check fleet status, inspect bots, update models and skills, run health checks across the fleet, and retire bots. Bundles a manage_fleet.py script.",
+        "author": "Nuvel Skills (owned)",
+        "theme": "fleet",
+        "path": "skills/fleet/manage/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/fleet/manage/SKILL.md"
+      },
+      {
+        "name": "troubleshoot",
+        "description": "Diagnose and fix enterprise bot issues — inspect logs, verify skill installation, check config, reinstall skills, and escalate to a human when needed. Bundles a troubleshoot_bot.py script.",
+        "author": "Nuvel Skills (owned)",
+        "theme": "fleet",
+        "path": "skills/fleet/troubleshoot/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/fleet/troubleshoot/SKILL.md"
       }
     ]
   }
