@@ -8,7 +8,7 @@ This repo is a library of **SOPs written as executable markdown**. Each skill is
 
 ## Themes
 
-Seven themes today — six roles and a meta-layer: **software-development**, **growth**, **backoffice**, **hr**, **sales**, and **customer-support** are deployable employee roles; **skillification** is the meta-layer that governs how skills themselves get promoted into this repo. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
+Eleven themes today — ten roles and a meta-layer: **software-development**, **growth**, **backoffice**, **hr**, **sales**, **customer-support**, **finance**, **procurement**, **customer**, **ops**, and **audit** are deployable employee roles; **skillification** is the meta-layer that governs how skills themselves get promoted into this repo. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
 
 ### software-development — the Engineer
 
@@ -68,6 +68,7 @@ Hire, onboard, engage, and retain employees. Full-cycle people ops as executable
 | hiring | Full-cycle hiring from an approved need to a signed offer — requisition approval, scorecard screening, structured interviews, offer management, background check, onboarding handoff. | Nuvel Skills *(owned)* |
 | employee-onboarding | New hire lifecycle to day 90 — pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, access lifecycle. | Nuvel Skills *(owned)* |
 | employee-engagement | Ongoing retention — 1:1 cadence, quarterly/annual reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, exit interviews. | Nuvel Skills *(owned)* |
+| payroll-processor | Calculate net pay from timesheet CSV data (gross → tax → deductions) and generate per-employee paystubs plus a summary report. Bundles a payroll_processor.py script. | Nuvel Skills *(owned)* |
 
 ### sales — the Account Executive
 
@@ -90,6 +91,31 @@ Source-to-pay SOPs: qualify suppliers behind a gate, run purchase orders under a
 | purchase-order-management | Run the PO lifecycle — budget-checked requisition, numbered PO, approval matrix, order tracking, goods receipt (GRN), 3-way match, exception handling, close-out. | Nuvel Skills *(owned)* |
 | vendor-negotiation | Prepare and run a commercial negotiation — market intelligence, BATNA, walk-away point, targets, pricing levers, terms (SLA/liability/renewal), concession matrix, agreement, debrief. | Nuvel Skills *(owned)* |
 | inventory-planning | Decide how much to stock and when to reorder — demand forecast, ABC classification, safety stock and reorder points from lead-time variability, EOQ, min/max/par, stockout and overstock handling. | Nuvel Skills *(owned)* |
+
+### customer — Customer Operations
+
+Front-line customer request handling — classify and route incoming requests before they reach a human queue.
+
+| Skill | Description | Author |
+|---|---|---|
+| triage-agent | Classify incoming requests by urgency (low → critical) and department (billing/tech/support/account) using keyword rules, then route. Bundles a triage_agent.py script. | Nuvel Skills *(owned)* |
+
+### ops — Operations
+
+Keep stock and orders moving — monitor inventory against thresholds and run orders through a fulfillment state machine.
+
+| Skill | Description | Author |
+|---|---|---|
+| inventory-checker | Monitor stock levels against thresholds, flag OK/LOW/CRITICAL/OUT status, and recommend reorder quantities. Bundles an inventory_checker.py script. | Nuvel Skills *(owned)* |
+| order-processor | Run orders through a received → validated → fulfilled → shipped state machine with per-stage validation gates and a processing log. Bundles an order_processor.py script. | Nuvel Skills *(owned)* |
+
+### audit — Audit & Compliance
+
+Automated log review — surface error spikes and compliance anomalies from structured logs.
+
+| Skill | Description | Author |
+|---|---|---|
+| log-inspector | Parse JSONL/CSV structured logs, detect error-frequency spikes in configurable time windows, and flag compliance anomalies. Bundles a log_inspector.py script. | Nuvel Skills *(owned)* |
 
 ### skillification — the meta-layer
 
