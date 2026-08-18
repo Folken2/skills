@@ -8,7 +8,7 @@ This repo is a library of **SOPs written as executable markdown**. Each skill is
 
 ## Themes
 
-Eleven themes today — ten roles and a meta-layer: **software-development**, **growth**, **backoffice**, **hr**, **sales**, **customer-support**, **finance**, **procurement**, **customer**, **ops**, and **audit** are deployable employee roles; **skillification** is the meta-layer that governs how skills themselves get promoted into this repo. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
+Twelve themes today — eleven roles and a meta-layer: **software-development**, **growth**, **backoffice**, **hr**, **sales**, **customer-support**, **finance**, **procurement**, **customer**, **ops**, **audit**, and **fleet** are deployable employee roles; **skillification** is the meta-layer that governs how skills themselves get promoted into this repo. Some skills are **owned** (authored/maintained here); others are **vendored-and-attributed** — high-quality upstream skills kept verbatim, credited to their source (see [Attributions](#attributions)).
 
 ### software-development — the Engineer
 
@@ -116,6 +116,15 @@ Automated log review — surface error spikes and compliance anomalies from stru
 | Skill | Description | Author |
 |---|---|---|
 | log-inspector | Parse JSONL/CSV structured logs, detect error-frequency spikes in configurable time windows, and flag compliance anomalies. Bundles a log_inspector.py script. | Nuvel Skills *(owned)* |
+
+### fleet — Fleet Governance
+
+Keep a fleet of enterprise bots healthy — inventory and health-check the fleet, update bot models and skills, and diagnose and repair broken bots.
+
+| Skill | Description | Author |
+|---|---|---|
+| manage | Check fleet status, inspect bots, run health checks, and update bot models/skills or retire bots. Bundles a manage_fleet.py script. | Nuvel Skills *(owned)* |
+| troubleshoot | Diagnose and fix bot issues — inspect logs, verify skill installation, check config, reinstall skills, and escalate to a human when needed. Bundles a troubleshoot_bot.py script. | Nuvel Skills *(owned)* |
 
 ### skillification — the meta-layer
 
