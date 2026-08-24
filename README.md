@@ -69,6 +69,7 @@ Hire, onboard, engage, and retain employees. Full-cycle people ops as executable
 | employee-onboarding | New hire lifecycle to day 90 — pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, access lifecycle. | Nuvel Skills *(owned)* |
 | employee-engagement | Ongoing retention — 1:1 cadence, quarterly/annual reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, exit interviews. | Nuvel Skills *(owned)* |
 | payroll-processor | Calculate net pay from timesheet CSV data (gross → tax → deductions) and generate per-employee paystubs plus a summary report. Bundles a payroll_processor.py script. | Nuvel Skills *(owned)* |
+| employee-offboarding | Full-cycle departure from notice to post-departure — access revocation (revoke first), equipment return, knowledge transfer, final pay & PTO, COBRA/benefits termination, exit interview, and alumni handoff. | Nuvel Skills *(owned)* |
 
 ### sales — the Account Executive
 
