@@ -3,6 +3,7 @@ name: lead-qualification
 description: Use when inbound leads arrive and you need to decide who to work, how fast, and where to route them — capture qualification criteria (BANT/GPCT/CHAMP), score, prioritize, route to the right pipeline, and set a follow-up cadence. Also use when leads are being worked in the wrong order, reps chase unqualified deals, or "why did we ignore that lead" comes up.
 version: 1.0.0
 author: Nuvel Skills
+requires: [crm_connected]
 ---
 
 # Lead Qualification

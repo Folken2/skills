@@ -34,7 +34,8 @@
         "author": "Nuvel Skills (Brandon Bayer / rag.saas-shipkit)",
         "theme": "software-development",
         "path": "skills/software-development/database-migration-safety/SKILL.md",
-        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/database-migration-safety/SKILL.md"
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/database-migration-safety/SKILL.md",
+        "requires": ["database_access"]
       },
       {
         "name": "second-order-impact-analysis",
@@ -66,7 +67,8 @@
         "author": "Anthropic",
         "theme": "software-development",
         "path": "skills/software-development/mcp-builder/SKILL.md",
-        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/mcp-builder/SKILL.md"
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/mcp-builder/SKILL.md",
+        "requires": ["mcp_sdk"]
       },
       {
         "name": "nextjs-best-practices",
@@ -308,7 +310,8 @@
         "author": "Nuvel Skills",
         "theme": "sales",
         "path": "skills/sales/lead-qualification/SKILL.md",
-        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/sales/lead-qualification/SKILL.md"
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/sales/lead-qualification/SKILL.md",
+        "requires": ["crm_connected"]
       },
       {
         "name": "discovery-call",
@@ -334,7 +337,8 @@
         "author": "Nuvel Skills",
         "theme": "customer-support",
         "path": "skills/customer-support/ticket-triage/SKILL.md",
-        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/customer-support/ticket-triage/SKILL.md"
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/customer-support/ticket-triage/SKILL.md",
+        "requires": ["support_tool_connected"]
       },
       {
         "name": "order-management",

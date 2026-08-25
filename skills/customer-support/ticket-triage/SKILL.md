@@ -3,6 +3,7 @@ name: ticket-triage
 description: "Use when a new support ticket arrives and needs to be classified, prioritized, and routed — issue type, severity, SLA assignment, tier routing, first response, and escalation. Triggers on 'triage this ticket', 'what priority', 'who handles this', 'route to the right team', 'is this an escalation'."
 version: 1.0.0
 author: Nuvel Skills
+requires: [support_tool_connected]
 ---
 
 # Ticket Triage

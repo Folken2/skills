@@ -3,6 +3,7 @@ name: database-migration-safety
 description: Use when writing, reviewing, applying, or rolling back a database schema migration — creating tables/columns/indexes/constraints, altering types, or backfilling data — to ensure every change is reversible, tested, and safe for production.
 version: 1.0.0
 author: Nuvel Skills (inspired by Brandon Bayer / rag.saas-shipkit)
+requires: [database_access]
 ---
 
 # Database Migration Safety
