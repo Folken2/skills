@@ -1,6 +1,6 @@
 {
-  "version": 15,
-  "updated": "2026-08-18",
+  "version": 16,
+  "updated": "2026-08-29",
   "themes": {
     "software-development": [
       {
@@ -35,7 +35,9 @@
         "theme": "software-development",
         "path": "skills/software-development/database-migration-safety/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/database-migration-safety/SKILL.md",
-        "requires": ["database_access"]
+        "requires": [
+          "database_access"
+        ]
       },
       {
         "name": "second-order-impact-analysis",
@@ -68,7 +70,9 @@
         "theme": "software-development",
         "path": "skills/software-development/mcp-builder/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/mcp-builder/SKILL.md",
-        "requires": ["mcp_sdk"]
+        "requires": [
+          "mcp_sdk"
+        ]
       },
       {
         "name": "nextjs-best-practices",
@@ -154,7 +158,7 @@
       },
       {
         "name": "resend-inbound",
-        "description": "Receive emails with Resend — inbound domains, email.received webhooks, retrieve content and attachments.",
+        "description": "Receive emails with Resend \u2014 inbound domains, email.received webhooks, retrieve content and attachments.",
         "author": "resend",
         "theme": "growth",
         "path": "skills/growth/resend-inbound/SKILL.md",
@@ -170,7 +174,7 @@
       },
       {
         "name": "seo-audit",
-        "description": "Use when auditing, reviewing, or diagnosing SEO on a site — crawl the site, run a scored technical + on-page + keyword audit, and produce a prioritized, effort-estimated fix queue. Also use for 'SEO health check,' 'technical SEO,' 'why am I not ranking,' or 'meta tags review.'",
+        "description": "Use when auditing, reviewing, or diagnosing SEO on a site \u2014 crawl the site, run a scored technical + on-page + keyword audit, and produce a prioritized, effort-estimated fix queue. Also use for 'SEO health check,' 'technical SEO,' 'why am I not ranking,' or 'meta tags review.'",
         "author": "Nuvel Skills",
         "theme": "growth",
         "path": "skills/growth/seo-audit/SKILL.md",
@@ -178,7 +182,7 @@
       },
       {
         "name": "content-pipeline",
-        "description": "Use when running content marketing end to end — keyword research, brief, draft, editorial review, publish, distribution, and measurement — on a repeatable monthly/quarterly cadence. Also use when content ships inconsistently, pieces don't rank or convert, or there's no line from topic to KPI.",
+        "description": "Use when running content marketing end to end \u2014 keyword research, brief, draft, editorial review, publish, distribution, and measurement \u2014 on a repeatable monthly/quarterly cadence. Also use when content ships inconsistently, pieces don't rank or convert, or there's no line from topic to KPI.",
         "author": "Nuvel Skills",
         "theme": "growth",
         "path": "skills/growth/content-pipeline/SKILL.md",
@@ -186,7 +190,7 @@
       },
       {
         "name": "email-lifecycle",
-        "description": "Use when designing or fixing lifecycle email — list hygiene and authentication (SPF/DKIM/DMARC), lifecycle-stage mapping (welcome, onboarding, nurture, re-engagement, winback), sequence design, deliverability, and compliance (CAN-SPAM, GDPR, CASL). Also use when emails hit spam, engagement decays, or there's no map of what sends to whom and why.",
+        "description": "Use when designing or fixing lifecycle email \u2014 list hygiene and authentication (SPF/DKIM/DMARC), lifecycle-stage mapping (welcome, onboarding, nurture, re-engagement, winback), sequence design, deliverability, and compliance (CAN-SPAM, GDPR, CASL). Also use when emails hit spam, engagement decays, or there's no map of what sends to whom and why.",
         "author": "Nuvel Skills",
         "theme": "growth",
         "path": "skills/growth/email-lifecycle/SKILL.md",
@@ -194,7 +198,7 @@
       },
       {
         "name": "analytics-setup",
-        "description": "Use when standing up or fixing web/product analytics — event taxonomy design, property setup (GA4/PostHog/Plausible), conversion and funnel tracking, dashboards across the AARRR pirate metrics, attribution basics, and data-quality checks. Also use when events are inconsistent, numbers don't reconcile, or nobody trusts the dashboard.",
+        "description": "Use when standing up or fixing web/product analytics \u2014 event taxonomy design, property setup (GA4/PostHog/Plausible), conversion and funnel tracking, dashboards across the AARRR pirate metrics, attribution basics, and data-quality checks. Also use when events are inconsistent, numbers don't reconcile, or nobody trusts the dashboard.",
         "author": "Nuvel Skills",
         "theme": "growth",
         "path": "skills/growth/analytics-setup/SKILL.md",
@@ -202,7 +206,7 @@
       },
       {
         "name": "paid-acquisition",
-        "description": "Use when planning or running paid acquisition — channel selection, campaign structure, creative testing, landing-page alignment, budget allocation (test vs scale), ROAS/CAC targets, and an optimization loop with scale/stop rules. Also use when paid spend isn't converting, creative testing is ad hoc, or budget is spread thin with no ROAS discipline.",
+        "description": "Use when planning or running paid acquisition \u2014 channel selection, campaign structure, creative testing, landing-page alignment, budget allocation (test vs scale), ROAS/CAC targets, and an optimization loop with scale/stop rules. Also use when paid spend isn't converting, creative testing is ad hoc, or budget is spread thin with no ROAS discipline.",
         "author": "Nuvel Skills",
         "theme": "growth",
         "path": "skills/growth/paid-acquisition/SKILL.md",
@@ -254,7 +258,7 @@
     "skillification": [
       {
         "name": "skill-promotion",
-        "description": "Promote a dogfooded internal skill into the canonical repo — curation gate, versioning, attribution review, PR workflow.",
+        "description": "Promote a dogfooded internal skill into the canonical repo \u2014 curation gate, versioning, attribution review, PR workflow.",
         "author": "Nuvel Skills",
         "theme": "skillification",
         "path": "skills/skillification/skill-promotion/SKILL.md",
@@ -262,7 +266,7 @@
       },
       {
         "name": "skill-evaluation",
-        "description": "Automated evaluation of a theme's skills — spawn subagents with only those skills, run scenario tests, score against exit criteria.",
+        "description": "Automated evaluation of a theme's skills \u2014 spawn subagents with only those skills, run scenario tests, score against exit criteria.",
         "author": "Nuvel Skills",
         "theme": "skillification",
         "path": "skills/skillification/skill-evaluation/SKILL.md",
@@ -272,7 +276,7 @@
     "hr": [
       {
         "name": "hiring",
-        "description": "Full-cycle hiring from an approved need to a signed offer and onboarding handoff — requisition approval, scorecard-driven screening, structured interviews, offer management, background check, and close-out.",
+        "description": "Full-cycle hiring from an approved need to a signed offer and onboarding handoff \u2014 requisition approval, scorecard-driven screening, structured interviews, offer management, background check, and close-out.",
         "author": "Nuvel Skills",
         "theme": "hr",
         "path": "skills/hr/hiring/SKILL.md",
@@ -280,7 +284,7 @@
       },
       {
         "name": "employee-onboarding",
-        "description": "New hire lifecycle from accepted offer to day 90 — pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, and access lifecycle for offboarding prep.",
+        "description": "New hire lifecycle from accepted offer to day 90 \u2014 pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, and access lifecycle for offboarding prep.",
         "author": "Nuvel Skills",
         "theme": "hr",
         "path": "skills/hr/employee-onboarding/SKILL.md",
@@ -288,7 +292,7 @@
       },
       {
         "name": "employee-engagement",
-        "description": "Ongoing employee lifecycle and retention — 1:1 cadence, quarterly/annual performance reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, and exit interviews fed back into retention.",
+        "description": "Ongoing employee lifecycle and retention \u2014 1:1 cadence, quarterly/annual performance reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, and exit interviews fed back into retention.",
         "author": "Nuvel Skills",
         "theme": "hr",
         "path": "skills/hr/employee-engagement/SKILL.md",
@@ -306,12 +310,14 @@
     "sales": [
       {
         "name": "lead-qualification",
-        "description": "Score and prioritize inbound leads. Capture qualification criteria (BANT/GPCT/CHAMP) and ICP fit, score 0–100, tier A/B/C, route to the right pipeline, and set a follow-up cadence. Includes a lead-scorer script.",
+        "description": "Score and prioritize inbound leads. Capture qualification criteria (BANT/GPCT/CHAMP) and ICP fit, score 0\u2013100, tier A/B/C, route to the right pipeline, and set a follow-up cadence. Includes a lead-scorer script.",
         "author": "Nuvel Skills",
         "theme": "sales",
         "path": "skills/sales/lead-qualification/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/sales/lead-qualification/SKILL.md",
-        "requires": ["crm_connected"]
+        "requires": [
+          "crm_connected"
+        ]
       },
       {
         "name": "discovery-call",
@@ -338,11 +344,13 @@
         "theme": "customer-support",
         "path": "skills/customer-support/ticket-triage/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/customer-support/ticket-triage/SKILL.md",
-        "requires": ["support_tool_connected"]
+        "requires": [
+          "support_tool_connected"
+        ]
       },
       {
         "name": "order-management",
-        "description": "Full order lifecycle for support — locate the order, verify identity, check status, resolve shipping/fulfillment issues, and process returns, refunds, replacements, and payment problems against a decision matrix with per-scenario communication.",
+        "description": "Full order lifecycle for support \u2014 locate the order, verify identity, check status, resolve shipping/fulfillment issues, and process returns, refunds, replacements, and payment problems against a decision matrix with per-scenario communication.",
         "author": "Nuvel Skills",
         "theme": "customer-support",
         "path": "skills/customer-support/order-management/SKILL.md",
@@ -350,7 +358,7 @@
       },
       {
         "name": "technical-troubleshooting",
-        "description": "Structured technical support — capture the symptom, search the knowledge base, diagnose by reproduce/isolate/single-hypothesis testing, choose fix/workaround/escalate, escalate with evidence, and follow up with the customer.",
+        "description": "Structured technical support \u2014 capture the symptom, search the knowledge base, diagnose by reproduce/isolate/single-hypothesis testing, choose fix/workaround/escalate, escalate with evidence, and follow up with the customer.",
         "author": "Nuvel Skills",
         "theme": "customer-support",
         "path": "skills/customer-support/technical-troubleshooting/SKILL.md",
@@ -358,7 +366,7 @@
       },
       {
         "name": "customer-communication",
-        "description": "Customer communication guide — tone calibration, a greeting/understanding/action/expectation/close structure, channel etiquette, handling complaints/delays/denials/pricing, firm-but-kind escalation language, and proactive positive updates.",
+        "description": "Customer communication guide \u2014 tone calibration, a greeting/understanding/action/expectation/close structure, channel etiquette, handling complaints/delays/denials/pricing, firm-but-kind escalation language, and proactive positive updates.",
         "author": "Nuvel Skills",
         "theme": "customer-support",
         "path": "skills/customer-support/customer-communication/SKILL.md",
@@ -368,7 +376,7 @@
     "finance": [
       {
         "name": "invoicing",
-        "description": "Full order-to-cash billing — invoice creation (required fields, sequential numbering, tax, currency), delivery (email/portal/EDI/PDF), payment terms, follow-up cadence, payment capture, reconciliation (partials, unapplied credits), and exceptions (disputes, credit notes, write-offs).",
+        "description": "Full order-to-cash billing \u2014 invoice creation (required fields, sequential numbering, tax, currency), delivery (email/portal/EDI/PDF), payment terms, follow-up cadence, payment capture, reconciliation (partials, unapplied credits), and exceptions (disputes, credit notes, write-offs).",
         "author": "Nuvel Skills",
         "theme": "finance",
         "path": "skills/finance/invoicing/SKILL.md",
@@ -376,7 +384,7 @@
       },
       {
         "name": "credit-control",
-        "description": "Accounts-receivable management — AR aging + DSO, escalating dunning sequences, payment reminders, payment-plan negotiation, dispute handling, escalation (credit hold, agency, legal), and accurate cash application.",
+        "description": "Accounts-receivable management \u2014 AR aging + DSO, escalating dunning sequences, payment reminders, payment-plan negotiation, dispute handling, escalation (credit hold, agency, legal), and accurate cash application.",
         "author": "Nuvel Skills",
         "theme": "finance",
         "path": "skills/finance/credit-control/SKILL.md",
@@ -384,7 +392,7 @@
       },
       {
         "name": "expense-management",
-        "description": "Corporate expense lifecycle — testable expense policy, receipt capture/OCR, chart-of-accounts + tax coding, tiered approval matrix, reimbursement, corporate-card controls, fraud/duplicate detection, and spend reporting.",
+        "description": "Corporate expense lifecycle \u2014 testable expense policy, receipt capture/OCR, chart-of-accounts + tax coding, tiered approval matrix, reimbursement, corporate-card controls, fraud/duplicate detection, and spend reporting.",
         "author": "Nuvel Skills",
         "theme": "finance",
         "path": "skills/finance/expense-management/SKILL.md",
@@ -392,7 +400,7 @@
       },
       {
         "name": "cashflow-forecasting",
-        "description": "Cash flow forecasting — reconciled cash position, bottom-up inflows/outflows on value dates, a 13-week rolling model, base/best/worst scenarios and sensitivities, timing-vs-permanent variance analysis, and weekly/monthly/quarterly review cadence.",
+        "description": "Cash flow forecasting \u2014 reconciled cash position, bottom-up inflows/outflows on value dates, a 13-week rolling model, base/best/worst scenarios and sensitivities, timing-vs-permanent variance analysis, and weekly/monthly/quarterly review cadence.",
         "author": "Nuvel Skills",
         "theme": "finance",
         "path": "skills/finance/cashflow-forecasting/SKILL.md",
@@ -402,7 +410,7 @@
     "procurement": [
       {
         "name": "supplier-qualification",
-        "description": "Vendor/supplier qualification — identify candidates, run due diligence (financials, compliance, references, insurance), assess capability (capacity, quality, technology, lead times), evaluate risk, onboard (NDA, contract, master data), and manage vendor tiering with periodic review.",
+        "description": "Vendor/supplier qualification \u2014 identify candidates, run due diligence (financials, compliance, references, insurance), assess capability (capacity, quality, technology, lead times), evaluate risk, onboard (NDA, contract, master data), and manage vendor tiering with periodic review.",
         "author": "Nuvel Skills",
         "theme": "procurement",
         "path": "skills/procurement/supplier-qualification/SKILL.md",
@@ -410,7 +418,7 @@
       },
       {
         "name": "purchase-order-management",
-        "description": "Purchase order lifecycle — requisition, PO creation, approval workflow, order tracking, goods receipt, 3-way match (PO vs receipt vs invoice), exceptions (shortages, damage, price variance), and close-out.",
+        "description": "Purchase order lifecycle \u2014 requisition, PO creation, approval workflow, order tracking, goods receipt, 3-way match (PO vs receipt vs invoice), exceptions (shortages, damage, price variance), and close-out.",
         "author": "Nuvel Skills",
         "theme": "procurement",
         "path": "skills/procurement/purchase-order-management/SKILL.md",
@@ -418,7 +426,7 @@
       },
       {
         "name": "vendor-negotiation",
-        "description": "Structured vendor negotiation — prepare with market intelligence, BATNA, and walk-away point; choose strategy; negotiate pricing, terms, SLA, warranty, IP; use concessions framework; document outcomes; debrief.",
+        "description": "Structured vendor negotiation \u2014 prepare with market intelligence, BATNA, and walk-away point; choose strategy; negotiate pricing, terms, SLA, warranty, IP; use concessions framework; document outcomes; debrief.",
         "author": "Nuvel Skills",
         "theme": "procurement",
         "path": "skills/procurement/vendor-negotiation/SKILL.md",
@@ -426,7 +434,7 @@
       },
       {
         "name": "inventory-planning",
-        "description": "Procurement inventory planning — demand forecasting, reorder points (lead time demand, safety stock, EOQ), stock levels (min/max, ABC classification), supplier lead-time tracking, stockout mitigation, overstock management, and review cadence.",
+        "description": "Procurement inventory planning \u2014 demand forecasting, reorder points (lead time demand, safety stock, EOQ), stock levels (min/max, ABC classification), supplier lead-time tracking, stockout mitigation, overstock management, and review cadence.",
         "author": "Nuvel Skills",
         "theme": "procurement",
         "path": "skills/procurement/inventory-planning/SKILL.md",
@@ -454,7 +462,7 @@
       },
       {
         "name": "order-processor",
-        "description": "Process orders through a received→validated→fulfilled→shipped state machine with per-stage validation gates.",
+        "description": "Process orders through a received\u2192validated\u2192fulfilled\u2192shipped state machine with per-stage validation gates.",
         "author": "Nuvel Skills (owned)",
         "theme": "ops",
         "path": "skills/ops/order-processor/SKILL.md",
@@ -474,7 +482,7 @@
     "fleet": [
       {
         "name": "manage",
-        "description": "Manage a fleet of enterprise bots — check fleet status, inspect bots, update models and skills, run health checks across the fleet, and retire bots. Bundles a manage_fleet.py script.",
+        "description": "Manage a fleet of enterprise bots \u2014 check fleet status, inspect bots, update models and skills, run health checks across the fleet, and retire bots. Bundles a manage_fleet.py script.",
         "author": "Nuvel Skills (owned)",
         "theme": "fleet",
         "path": "skills/fleet/manage/SKILL.md",
@@ -482,11 +490,21 @@
       },
       {
         "name": "troubleshoot",
-        "description": "Diagnose and fix enterprise bot issues — inspect logs, verify skill installation, check config, reinstall skills, and escalate to a human when needed. Bundles a troubleshoot_bot.py script.",
+        "description": "Diagnose and fix enterprise bot issues \u2014 inspect logs, verify skill installation, check config, reinstall skills, and escalate to a human when needed. Bundles a troubleshoot_bot.py script.",
         "author": "Nuvel Skills (owned)",
         "theme": "fleet",
         "path": "skills/fleet/troubleshoot/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/fleet/troubleshoot/SKILL.md"
+      }
+    ],
+    "security": [
+      {
+        "name": "security-review",
+        "description": "Security review gate for skills: checks for leaked secrets, os.environ reads of sensitive vars, exec/eval calls in scripts, network exfiltration, and unsafe patterns. Must pass before skill PRs merge.",
+        "author": "Nuvel Skills",
+        "theme": "security",
+        "path": "skills/security/security-review/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/security/security-review/SKILL.md"
       }
     ]
   }

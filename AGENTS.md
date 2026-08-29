@@ -9,6 +9,7 @@ This repository is a library of **executable SOPs (skills)** for AI agents. Skil
 | software-development | Software Engineer | 13 skills |
 | growth | Growth & Marketing | 12 skills |
 | backoffice | Admin & Operations | 5 skills |
+| security | Security & Compliance | 1 skill |
 | hr | HR Professional | 3 skills |
 | sales | Sales Representative | 3 skills |
 | customer-support | Support Agent | 4 skills |
@@ -79,4 +80,4 @@ Via MCP server (requires Nuvel):
 nuvel mcp serve --theme hr
 ```
 
-Available themes: `software-development`, `growth`, `backoffice`, `hr`, `sales`, `customer-support`, `finance`, `procurement`, `skillification`.
+Available themes: `software-development`, `growth`, `backoffice`, `hr`, `sales`, `customer-support`, `finance`, `procurement`, `security`, `skillification`.
