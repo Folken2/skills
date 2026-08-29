@@ -95,7 +95,7 @@ jobs:
       - name: Validate SKILL.md frontmatter
         run: |
           python3 - <<'PY'
-          import glob, re, sys, yaml
+          import glob, os, re, sys, yaml
 
           # Semantic version: MAJOR.MINOR.PATCH with optional pre-release/build.
           SEMVER = re.compile(
@@ -103,6 +103,10 @@ jobs:
               r"(?:-[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?"
               r"(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?$"
           )
+
+          # Maximum SKILL.md size in bytes-as-characters. Anything larger is
+          # almost certainly reference material that belongs in references/.
+          MAX_SKILL_BYTES = 100000
 
           errors = []
           warnings = []
@@ -116,6 +120,12 @@ jobs:
               if len(parts) < 3 or not parts[2].strip():
                   errors.append(f"{path}: frontmatter missing closing --- or empty body")
                   continue
+              if len(text) > MAX_SKILL_BYTES:
+                  errors.append(
+                      f"{path}: file is {len(text)} characters — exceeds the "
+                      f"{MAX_SKILL_BYTES} limit; move detail into references/"
+                  )
+                  continue
               try:
                   fm = yaml.safe_load(parts[1])
               except Exception as e:
@@ -127,6 +137,16 @@ jobs:
               for field in ("name", "description", "version"):
                   if not fm.get(field):
                       errors.append(f"{path}: frontmatter missing required field '{field}'")
+              name = fm.get("name")
+              if name:
+                  # The skill's own directory — skills/<theme>/<name>/SKILL.md —
+                  # not the theme directory above it.
+                  skill_dir = os.path.basename(os.path.dirname(path))
+                  if str(name).strip() != skill_dir:
+                      errors.append(
+                          f"{path}: frontmatter 'name' ('{name}') must match its "
+                          f"directory name ('{skill_dir}')"
+                      )
               version = fm.get("version")
               if version is not None:
                   if not SEMVER.match(str(version).strip()):
@@ -135,19 +155,43 @@ jobs:
                           f"string (e.g. '1.0.0') — got '{version}'"
                       )
               if not fm.get("author"):
-                  warnings.append(f"{path}: frontmatter missing recommended field 'author'")
+                  errors.append(f"{path}: frontmatter missing required field 'author'")
+
+          # Advisory: orphan directories under skills/<theme>/ that hold files but
+          # ship no SKILL.md. Non-blocking — reported as warnings only.
+          orphans = []
+          root = "skills"
+          if os.path.isdir(root):
+              for theme in sorted(os.listdir(root)):
+                  theme_path = os.path.join(root, theme)
+                  if not os.path.isdir(theme_path):
+                      continue
+                  for entry in sorted(os.listdir(theme_path)):
+                      skill_dir = os.path.join(theme_path, entry)
+                      if not os.path.isdir(skill_dir):
+                          continue
+                      if os.path.isfile(os.path.join(skill_dir, "SKILL.md")):
+                          continue
+                      has_files = any(files for _, _, files in os.walk(skill_dir))
+                      if has_files:
+                          orphans.append(f"{skill_dir}: contains files but no SKILL.md")
 
           if warnings:
               print("::warning::SKILL.md files missing recommended fields:")
               for w in warnings:
                   print(f"  - {w}")
 
+          if orphans:
+              print("::warning::orphan skill directories (files present, no SKILL.md):")
+              for o in orphans:
+                  print(f"  - {o}")
+
           if errors:
               print("FAIL: SKILL.md frontmatter errors:")
               for e in errors:
                   print(f"  - {e}")
               sys.exit(1)
-          print("Every SKILL.md has valid frontmatter (name, description, version)")
+          print("Every SKILL.md has valid frontmatter (name, description, version, author) and matches its directory name")
           PY
 
       - name: Block body modifications to existing SKILL.md files
@@ -200,3 +244,8 @@ jobs:
           fi
           echo ""
           echo "All existing SKILL.md files — only frontmatter was modified. ✓"
+
+      - name: Run audit_skills.py (advisory — non-blocking)
+        run: |
+          python3 scripts/audit_skills.py --json . 2>&1 || true
+          echo "::notice::Audit complete — warnings above do not block this PR"
