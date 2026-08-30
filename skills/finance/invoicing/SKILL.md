@@ -13,6 +13,13 @@ The full order-to-cash billing workflow: create a correct invoice, deliver it th
 
 Cash reality: the single largest lever on days-sales-outstanding is not chasing harder, it is invoicing accurately and immediately. A disputed or malformed invoice is the most common cause of a 30+ day payment delay, and most disputes trace to a missing PO number, wrong tax treatment, or an ambiguous due date.
 
+## Toolchain
+
+This skill is domain expertise; the actual data work runs through supporting skills:
+
+- **[[backoffice/xlsx]]** — read order/billing data and the AR tracking workbook, and write invoice records back. Reach for it whenever a step reads from or writes to an `.xlsx` file.
+- **[[backoffice/pdf]]** — render the finished invoice as the PDF you deliver to the customer.
+
 ## When to use
 
 - A deliverable or milestone is complete and a customer must be billed.
@@ -28,13 +35,13 @@ Cash reality: the single largest lever on days-sales-outstanding is not chasing 
 
 ## Workflow
 
-1. **Assemble invoice data.** Confirm the billable event is real and complete (goods delivered / milestone signed off). Gather: legal customer entity + billing address, customer PO or contract reference, line items with quantity/unit price, and the agreed currency. **Do not invoice against unconfirmed delivery** — that is the top cause of disputes.
+1. **Assemble invoice data.** Confirm the billable event is real and complete (goods delivered / milestone signed off). When the order or delivery data arrives as a spreadsheet, read it with [[backoffice/xlsx]] and pull: legal customer entity + billing address, customer PO or contract reference, line items with quantity/unit price, and the agreed currency. **Do not invoice against unconfirmed delivery** — that is the top cause of disputes.
 2. **Build the invoice.** Populate every required field: unique sequential invoice number (never reuse or skip — auditors flag gaps), issue date, supply date, itemized amounts, applicable tax per line (rate, tax ID, reverse-charge/exemption notes), subtotal, tax total, grand total, and remittance details. State the currency explicitly on every amount.
 3. **Set payment terms.** Apply the contracted term — due-on-receipt, net-15/30/60, or milestone/progress billing — and print an explicit **due date as a calendar date**, not "net 30". Add any early-payment discount or late-fee clause. If terms weren't agreed in the contract, resolve them before sending, not after.
-4. **Deliver through a payable channel.** Send via the channel the customer's AP process requires — email PDF, customer AP portal upload, or EDI — and include machine-readable payment data (bank/IBAN, card link, or digital-wallet reference). Confirm receipt: portal acknowledgement, EDI 997, or a delivery/read signal. An invoice sent to the wrong address is unpaid, not late.
-5. **Record and schedule follow-up.** Post the invoice to the AR ledger as open, and schedule the reminder cadence at creation time: a courtesy reminder ~3–5 days before due, a due-date notice, then overdue touches (e.g. +7 / +14 / +30). Automate the schedule so nothing depends on someone remembering.
+4. **Deliver through a payable channel.** Render the invoice as a PDF with [[backoffice/pdf]] and send via the channel the customer's AP process requires — email PDF, customer AP portal upload, or EDI — including machine-readable payment data (bank/IBAN, card link, or digital-wallet reference). Confirm receipt: portal acknowledgement, EDI 997, or a delivery/read signal. An invoice sent to the wrong address is unpaid, not late.
+5. **Record and schedule follow-up.** Post the invoice to the AR ledger as open, and write the invoice record (number, customer, amount, issue/due date, status) into the AR tracking spreadsheet with [[backoffice/xlsx]]. Schedule the reminder cadence at creation time: a courtesy reminder ~3–5 days before due, a due-date notice, then overdue touches (e.g. +7 / +14 / +30). Automate the schedule so nothing depends on someone remembering.
 6. **Capture payment.** Accept via the offered methods (bank transfer, card, digital wallet), capturing the remittance reference. Note the value date (when funds clear), not just the payment date.
-7. **Reconcile.** Match each receipt to its invoice(s) by amount and reference. Handle the three exception types explicitly: **partial payment** (apply to oldest/agreed lines, keep the balance open), **overpayment/unapplied credit** (park as a credit on the account, don't silently absorb it), and **short payment** (identify the deduction reason before closing). Mark fully-settled invoices paid.
+7. **Reconcile.** Match each receipt to its invoice(s) by amount and reference — when the bank pulls receipts as a spreadsheet, read it with [[backoffice/xlsx]] and update the status column in the AR tracking workbook. Handle the three exception types explicitly: **partial payment** (apply to oldest/agreed lines, keep the balance open), **overpayment/unapplied credit** (park as a credit on the account, don't silently absorb it), and **short payment** (identify the deduction reason before closing). Mark fully-settled invoices paid.
 8. **Resolve exceptions.** For disputes, log the reason and freeze follow-up on the disputed portion only. Correct errors with a **credit note referencing the original invoice number** (never edit or delete a sent invoice) and reissue if needed. Write off uncollectible balances through the approved authority and reason code, so the ledger reflects reality.
 
 ## Common Pitfalls
@@ -56,6 +63,13 @@ Cash reality: the single largest lever on days-sales-outstanding is not chasing 
 - [ ] Payments matched to invoices; partials, overpayments, and short-pays handled explicitly.
 - [ ] Any correction made via a credit note referencing the original; no sent invoice was edited or deleted.
 - [ ] Disputes logged with follow-up frozen only on the disputed portion; write-offs approved with a reason code.
+
+## Supporting skills
+
+- [[backoffice/xlsx]] — read order/billing data and read/write the AR tracking workbook.
+- [[backoffice/pdf]] — render the invoice as a deliverable PDF.
+- [[credit-control]] — hand off overdue invoices for aging and dunning.
+- [[cashflow-forecasting]] — feed open AR into the inflow model.
 
 ## Sources
 

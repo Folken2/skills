@@ -13,6 +13,13 @@ Systematic accounts-receivable management: measure what's owed and how late it i
 
 Portfolio reality: a small number of large, aging accounts usually drive most of the overdue balance. Working the aging report by *value and age* — not by whoever shouted last — is what moves DSO. Every account should always have a defined next action and next-action date; a silent overdue account is a leak.
 
+## Toolchain
+
+This skill is domain expertise; the data work runs through supporting skills:
+
+- **[[backoffice/xlsx]]** — read the AR aging export from the accounting system, build and update the aging workbook, and maintain the contact/promise-to-pay log. Reach for it whenever a step reads from or writes to an `.xlsx` file.
+- **[[backoffice/pdf]]** — render dunning letters and statements of account for delivery.
+
 ## When to use
 
 - You are managing a book of receivables and need aging, DSO, and a collection plan.
@@ -28,14 +35,14 @@ Portfolio reality: a small number of large, aging accounts usually drive most of
 
 ## Workflow
 
-1. **Build the aging.** Pull all open AR into standard buckets (current, 1–30, 31–60, 61–90, 90+) by customer. Calculate **DSO** (average receivables ÷ credit sales × days in period) and compare to your payment terms and prior periods — rising DSO with flat sales means collection is slipping. Flag the accounts driving the balance.
+1. **Build the aging.** Export the AR aging report from the accounting system as an Excel file and read it with [[backoffice/xlsx]], then pull all open AR into standard buckets (current, 1–30, 31–60, 61–90, 90+) by customer. Calculate **DSO** (average receivables ÷ credit sales × days in period) and compare to your payment terms and prior periods — rising DSO with flat sales means collection is slipping. Flag the accounts driving the balance, and write the bucketed, DSO-annotated aging back out as a working spreadsheet.
 2. **Segment the book.** Triage accounts by value × age × risk. Prioritize high-value/high-age first, and separate *won't pay* (needs pressure/escalation) from *can't pay yet* (needs a plan) from *disputing* (needs resolution). One-size dunning wastes effort on both ends.
-3. **Run the dunning sequence.** Apply a fixed cadence with escalating tone: pre-due courtesy → due-date reminder → gentle overdue nudge (7 days) → firm reminder (14–21 days) → final demand with consequences (30+ days). Match channel to stage — email early, phone as it ages, formal letter for the final demand. Log every contact, response, and promise-to-pay with a follow-up date.
+3. **Run the dunning sequence.** Apply a fixed cadence with escalating tone: pre-due courtesy → due-date reminder → gentle overdue nudge (7 days) → firm reminder (14–21 days) → final demand with consequences (30+ days). Extract the overdue invoices due for each dunning step from the aging workbook with [[backoffice/xlsx]] to drive the mail-merge. Match channel to stage — email early, phone as it ages, a formal demand letter (rendered via [[backoffice/pdf]]) for the final demand. Log every contact, response, and promise-to-pay with a follow-up date back into the tracking spreadsheet.
 4. **Chase with a promise-to-pay.** Every conversation must end with a specific commitment: amount and date. Record it, and if a promise-to-pay breaks, escalate a step rather than resetting the cadence — broken promises are a stronger risk signal than raw age.
 5. **Negotiate a payment plan when warranted.** For a *can't-pay* account worth preserving, agree written terms: an upfront down payment, a fixed installment schedule with dates, and a default clause (miss one → full balance due, account to hold). Get it in writing and monitor each installment. A plan you don't track is just a delay.
 6. **Resolve disputes.** For a disputed invoice, verify the claim against the PO/contract/delivery evidence, document it, and set a resolution owner and date. Freeze dunning **only on the disputed amount** and keep collecting the undisputed balance. Route genuine billing errors back to [[invoicing]] for a credit note.
 7. **Escalate deliberately.** When cadence and negotiation are exhausted, escalate through defined stages: internal credit hold (stop new orders), then third-party collections agency, then legal/small-claims — each gated on approval and a documented recovery-vs-cost judgment. Don't escalate to legal what a phone call would have fixed, and don't keep dialing an account that needs legal.
-8. **Apply cash accurately.** Match every remittance to specific invoices using the remittance advice. Handle unallocated/on-account cash by chasing the customer for allocation detail rather than guessing — misapplied cash creates false overdues and re-chases customers who already paid.
+8. **Apply cash accurately.** Match every remittance to specific invoices using the remittance advice; when receipts arrive as a bank spreadsheet, read it with [[backoffice/xlsx]] and update the paid/open status in the aging workbook so the next aging run is clean. Handle unallocated/on-account cash by chasing the customer for allocation detail rather than guessing — misapplied cash creates false overdues and re-chases customers who already paid.
 
 ## Common Pitfalls
 
@@ -56,6 +63,13 @@ Portfolio reality: a small number of large, aging accounts usually drive most of
 - [ ] Disputes verified, documented, owned, and dated; dunning frozen only on the disputed amount.
 - [ ] Escalations (credit hold → agency → legal) gated on approval and a recovery-vs-cost decision.
 - [ ] Remittances applied to specific invoices; no unallocated cash left parked.
+
+## Supporting skills
+
+- [[backoffice/xlsx]] — read the AR aging export and read/write the working aging + contact-log workbooks.
+- [[backoffice/pdf]] — render dunning letters, final demands, and statements of account.
+- [[invoicing]] — route genuine billing errors back for a credit note.
+- [[cashflow-forecasting]] — feed collection timing into the inflow model.
 
 ## Sources
 
