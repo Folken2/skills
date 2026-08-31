@@ -1,6 +1,6 @@
 {
-  "version": 16,
-  "updated": "2026-08-24",
+  "version": 17,
+  "updated": "2026-08-31",
   "themes": {
     "software-development": [
       {
@@ -35,7 +35,9 @@
         "theme": "software-development",
         "path": "skills/software-development/database-migration-safety/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/database-migration-safety/SKILL.md",
-        "requires": ["database_access"]
+        "requires": [
+          "database_access"
+        ]
       },
       {
         "name": "second-order-impact-analysis",
@@ -68,7 +70,9 @@
         "theme": "software-development",
         "path": "skills/software-development/mcp-builder/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/mcp-builder/SKILL.md",
-        "requires": ["mcp_sdk"]
+        "requires": [
+          "mcp_sdk"
+        ]
       },
       {
         "name": "nextjs-best-practices",
@@ -279,6 +283,14 @@
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/hiring/SKILL.md"
       },
       {
+        "name": "leave-management",
+        "description": "Manage employee time-off and absence requests \u2014 PTO, sick leave, vacation, personal days. Full lifecycle: request submission, accrual tracking, manager approval, blackout periods, minimum staffing, calendar integration, return-to-work after extended leave, and PTO payout coordination at departure.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/leave-management/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/leave-management/SKILL.md"
+      },
+      {
         "name": "employee-onboarding",
         "description": "New hire lifecycle from accepted offer to day 90 \u2014 pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, and access lifecycle for offboarding prep.",
         "author": "Nuvel Skills",
@@ -319,7 +331,9 @@
         "theme": "sales",
         "path": "skills/sales/lead-qualification/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/sales/lead-qualification/SKILL.md",
-        "requires": ["crm_connected"]
+        "requires": [
+          "crm_connected"
+        ]
       },
       {
         "name": "discovery-call",
@@ -346,7 +360,9 @@
         "theme": "customer-support",
         "path": "skills/customer-support/ticket-triage/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/customer-support/ticket-triage/SKILL.md",
-        "requires": ["support_tool_connected"]
+        "requires": [
+          "support_tool_connected"
+        ]
       },
       {
         "name": "order-management",
