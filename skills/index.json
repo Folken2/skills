@@ -1,6 +1,6 @@
 {
-  "version": 16,
-  "updated": "2026-08-24",
+  "version": 17,
+  "updated": "2026-09-07",
   "themes": {
     "software-development": [
       {
@@ -35,7 +35,9 @@
         "theme": "software-development",
         "path": "skills/software-development/database-migration-safety/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/database-migration-safety/SKILL.md",
-        "requires": ["database_access"]
+        "requires": [
+          "database_access"
+        ]
       },
       {
         "name": "second-order-impact-analysis",
@@ -68,7 +70,9 @@
         "theme": "software-development",
         "path": "skills/software-development/mcp-builder/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/mcp-builder/SKILL.md",
-        "requires": ["mcp_sdk"]
+        "requires": [
+          "mcp_sdk"
+        ]
       },
       {
         "name": "nextjs-best-practices",
@@ -287,6 +291,14 @@
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/employee-onboarding/SKILL.md"
       },
       {
+        "name": "compliance-checks",
+        "description": "Run employment compliance checks \u2014 I-9/E-Verify review, mandatory training tracking, policy acknowledgment verification, recordkeeping audits, and inspection readiness. Covers US federal employment compliance (I-9, E-Verify, W-4, OSHA, harassment prevention, data privacy).",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/compliance-checks/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/compliance-checks/SKILL.md"
+      },
+      {
         "name": "employee-engagement",
         "description": "Ongoing employee lifecycle and retention \u2014 1:1 cadence, quarterly/annual performance reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, and exit interviews fed back into retention.",
         "author": "Nuvel Skills",
@@ -301,6 +313,14 @@
         "theme": "hr",
         "path": "skills/hr/payroll-processor/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/payroll-processor/SKILL.md"
+      },
+      {
+        "name": "leave-management",
+        "description": "Manage employee time-off requests \u2014 PTO, vacation, sick leave, parental leave, and unpaid leave. Covers request submission, manager review/approval, coverage planning, accrual tracking, and recordkeeping. Handles statutory leave (FMLA, parental, jury duty) as a separate track.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/leave-management/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/leave-management/SKILL.md"
       },
       {
         "name": "employee-offboarding",
@@ -319,7 +339,9 @@
         "theme": "sales",
         "path": "skills/sales/lead-qualification/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/sales/lead-qualification/SKILL.md",
-        "requires": ["crm_connected"]
+        "requires": [
+          "crm_connected"
+        ]
       },
       {
         "name": "discovery-call",
@@ -346,7 +368,9 @@
         "theme": "customer-support",
         "path": "skills/customer-support/ticket-triage/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/customer-support/ticket-triage/SKILL.md",
-        "requires": ["support_tool_connected"]
+        "requires": [
+          "support_tool_connected"
+        ]
       },
       {
         "name": "order-management",
