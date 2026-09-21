@@ -72,6 +72,7 @@ Hire, onboard, engage, and retain employees. Full-cycle people ops as executable
 || employee-offboarding | Full-cycle departure from notice to post-departure — access revocation (revoke first), equipment return, knowledge transfer, final pay & PTO, COBRA/benefits termination, exit interview, and alumni handoff. | Nuvel Skills *(owned)* |
 || performance-review-cycle | End-to-end review cycle — goal setting (SMART/OKRs), feedback collection, self-review, SBI-based manager evaluation, peer calibration, review conversation, development planning, compensation connection, cycle retrospective. Bundles a review-cycle-manager script. | Nuvel Skills *(owned)* |
 || leave-management | Leave policy, request intake, tiered approval routing, accrual tracking and carryover, FMLA/state-leave compliance, team coverage, payroll reconciliation, termination payout. Bundles a leave-tracker script. | Nuvel Skills *(owned)* |
+|| training-and-development | Manage training programs end-to-end — needs assessment, program design, delivery, completion tracking, certification, compliance documentation, and Kirkpatrick Model evaluation. | Nuvel Skills *(owned)* |
 
 ### sales — the Account Executive
 

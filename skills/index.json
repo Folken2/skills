@@ -325,6 +325,14 @@
         "theme": "hr",
         "path": "skills/hr/leave-management/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/leave-management/SKILL.md"
+      },
+      {
+        "name": "training-and-development",
+        "description": "Manage employee training programs end-to-end — needs assessment, program design, delivery, completion tracking, certification, compliance documentation, and effectiveness evaluation using the Kirkpatrick Model.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/training-and-development/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/training-and-development/SKILL.md"
       }
     ],
     "sales": [
