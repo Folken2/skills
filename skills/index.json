@@ -309,6 +309,30 @@
         "theme": "hr",
         "path": "skills/hr/employee-offboarding/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/employee-offboarding/SKILL.md"
+      },
+      {
+        "name": "performance-review-cycle",
+        "description": "Run a structured performance review cycle end-to-end \u2014 goal setting (SMART/OKRs), continuous evidence and feedback collection, self-review, manager evaluation with SBI model, peer calibration, review conversation, development planning, compensation connection (separate conversation), and cycle retrospective. Includes a review-cycle-manager script.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/performance-review-cycle/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/performance-review-cycle/SKILL.md"
+      },
+      {
+        "name": "leave-management",
+        "description": "Manage employee leave from policy definition through request, approval, accrual, compliance, and termination payout \u2014 written policy, standardized intake, tiered approval routing, accrual tracking and carryover, FMLA and state-leave compliance (notices, certification, case files), team coverage coordination, payroll reconciliation, and periodic audits. Includes a leave-tracker script.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/leave-management/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/leave-management/SKILL.md"
+      },
+      {
+        "name": "training-and-development",
+        "description": "Manage employee training programs end-to-end — needs assessment, program design, delivery, completion tracking, certification, compliance documentation, and effectiveness evaluation using the Kirkpatrick Model.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/training-and-development/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/training-and-development/SKILL.md"
       }
     ],
     "sales": [

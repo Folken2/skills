@@ -69,7 +69,10 @@ Hire, onboard, engage, and retain employees. Full-cycle people ops as executable
 | employee-onboarding | New hire lifecycle to day 90 — pre-start equipment/accounts/workspace, day 1 orientation, first-week training and buddy, 30-60-90 milestones, access lifecycle. | Nuvel Skills *(owned)* |
 | employee-engagement | Ongoing retention — 1:1 cadence, quarterly/annual reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, exit interviews. | Nuvel Skills *(owned)* |
 | payroll-processor | Calculate net pay from timesheet CSV data (gross → tax → deductions) and generate per-employee paystubs plus a summary report. Bundles a payroll_processor.py script. | Nuvel Skills *(owned)* |
-| employee-offboarding | Full-cycle departure from notice to post-departure — access revocation (revoke first), equipment return, knowledge transfer, final pay & PTO, COBRA/benefits termination, exit interview, and alumni handoff. | Nuvel Skills *(owned)* |
+|| employee-offboarding | Full-cycle departure from notice to post-departure — access revocation (revoke first), equipment return, knowledge transfer, final pay & PTO, COBRA/benefits termination, exit interview, and alumni handoff. | Nuvel Skills *(owned)* |
+|| performance-review-cycle | End-to-end review cycle — goal setting (SMART/OKRs), feedback collection, self-review, SBI-based manager evaluation, peer calibration, review conversation, development planning, compensation connection, cycle retrospective. Bundles a review-cycle-manager script. | Nuvel Skills *(owned)* |
+|| leave-management | Leave policy, request intake, tiered approval routing, accrual tracking and carryover, FMLA/state-leave compliance, team coverage, payroll reconciliation, termination payout. Bundles a leave-tracker script. | Nuvel Skills *(owned)* |
+|| training-and-development | Manage training programs end-to-end — needs assessment, program design, delivery, completion tracking, certification, compliance documentation, and Kirkpatrick Model evaluation. | Nuvel Skills *(owned)* |
 
 ### sales — the Account Executive
 
