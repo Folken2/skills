@@ -1,6 +1,6 @@
 {
-  "version": 16,
-  "updated": "2026-08-24",
+  "version": 17,
+  "updated": "2026-10-05",
   "themes": {
     "software-development": [
       {
@@ -35,7 +35,9 @@
         "theme": "software-development",
         "path": "skills/software-development/database-migration-safety/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/database-migration-safety/SKILL.md",
-        "requires": ["database_access"]
+        "requires": [
+          "database_access"
+        ]
       },
       {
         "name": "second-order-impact-analysis",
@@ -68,7 +70,9 @@
         "theme": "software-development",
         "path": "skills/software-development/mcp-builder/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/mcp-builder/SKILL.md",
-        "requires": ["mcp_sdk"]
+        "requires": [
+          "mcp_sdk"
+        ]
       },
       {
         "name": "nextjs-best-practices",
@@ -309,6 +313,22 @@
         "theme": "hr",
         "path": "skills/hr/employee-offboarding/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/employee-offboarding/SKILL.md"
+      },
+      {
+        "name": "hr-compliance-audit",
+        "description": "Periodic audit of employee files against a compliance rule set \u2014 mandatory documents, verification timing, work-authorization expiry, policy attestation, training currency, and record-retention windows \u2014 with a severity-ranked findings report and 30/60/90 remediation plan.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/hr-compliance-audit/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/hr-compliance-audit/SKILL.md"
+      },
+      {
+        "name": "interview-scheduling",
+        "description": "Coordinated multi-stage interview loops \u2014 availability collection as discrete intervals, timezone normalisation, conflict-free slot resolution, stage sequencing, interviewer confirmation, candidate prep, and reschedules.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/interview-scheduling/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/interview-scheduling/SKILL.md"
       }
     ],
     "sales": [
@@ -319,7 +339,9 @@
         "theme": "sales",
         "path": "skills/sales/lead-qualification/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/sales/lead-qualification/SKILL.md",
-        "requires": ["crm_connected"]
+        "requires": [
+          "crm_connected"
+        ]
       },
       {
         "name": "discovery-call",
@@ -346,7 +368,9 @@
         "theme": "customer-support",
         "path": "skills/customer-support/ticket-triage/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/customer-support/ticket-triage/SKILL.md",
-        "requires": ["support_tool_connected"]
+        "requires": [
+          "support_tool_connected"
+        ]
       },
       {
         "name": "order-management",

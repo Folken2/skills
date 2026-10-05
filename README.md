@@ -70,6 +70,8 @@ Hire, onboard, engage, and retain employees. Full-cycle people ops as executable
 | employee-engagement | Ongoing retention — 1:1 cadence, quarterly/annual reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, exit interviews. | Nuvel Skills *(owned)* |
 | payroll-processor | Calculate net pay from timesheet CSV data (gross → tax → deductions) and generate per-employee paystubs plus a summary report. Bundles a payroll_processor.py script. | Nuvel Skills *(owned)* |
 | employee-offboarding | Full-cycle departure from notice to post-departure — access revocation (revoke first), equipment return, knowledge transfer, final pay & PTO, COBRA/benefits termination, exit interview, and alumni handoff. | Nuvel Skills *(owned)* |
+| hr-compliance-audit | Periodic compliance audit of employee files — mandatory documents, verification timing, work-authorization expiry, policy attestation, training currency, record-retention windows — with severity-ranked findings and a 30/60/90 remediation plan. Bundles a compliance-audit script. | Nuvel Skills *(owned)* |
+| interview-scheduling | Coordinate multi-stage interview loops — discrete availability intervals, timezone resolution, conflict-free slot solving, stage sequencing, participant confirmation, candidate prep, and reschedules. Bundles a panel-scheduler script. | Nuvel Skills *(owned)* |
 
 ### sales — the Account Executive
 
