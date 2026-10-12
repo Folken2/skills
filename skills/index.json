@@ -1,6 +1,6 @@
 {
-  "version": 16,
-  "updated": "2026-08-24",
+  "version": 17,
+  "updated": "2026-10-12",
   "themes": {
     "software-development": [
       {
@@ -309,6 +309,22 @@
         "theme": "hr",
         "path": "skills/hr/employee-offboarding/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/employee-offboarding/SKILL.md"
+      },
+      {
+        "name": "performance-improvement-plan",
+        "description": "Run a formal, defensible performance improvement plan (PIP) \u2014 evidence gathering, measurable standards, support, timeline, consequences, launch meeting, scheduled check-ins, and the close/extend/exit decision.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/performance-improvement-plan/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/performance-improvement-plan/SKILL.md"
+      },
+      {
+        "name": "compensation-review",
+        "description": "Run a pay or merit cycle end to end \u2014 stakeholder alignment, budget envelope, benchmarking and pay ranges, merit matrix, calibration, pay-equity audit, approvals, communication, and post-cycle analysis.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/compensation-review/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/compensation-review/SKILL.md"
       }
     ],
     "sales": [
