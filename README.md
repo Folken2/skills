@@ -61,7 +61,7 @@ Document generation and data operations.
 
 ### hr — People Operations
 
-Hire, onboard, engage, and retain employees. Full-cycle people ops as executable SOPs — from opening a req to the exit interview.
+Hire, onboard, engage, reward, and retain employees. Full-cycle people ops as executable SOPs — from opening a req to the exit interview, including performance management and pay.
 
 | Skill | Description | Author |
 |---|---|---|
@@ -70,6 +70,8 @@ Hire, onboard, engage, and retain employees. Full-cycle people ops as executable
 | employee-engagement | Ongoing retention — 1:1 cadence, quarterly/annual reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, exit interviews. | Nuvel Skills *(owned)* |
 | payroll-processor | Calculate net pay from timesheet CSV data (gross → tax → deductions) and generate per-employee paystubs plus a summary report. Bundles a payroll_processor.py script. | Nuvel Skills *(owned)* |
 | employee-offboarding | Full-cycle departure from notice to post-departure — access revocation (revoke first), equipment return, knowledge transfer, final pay & PTO, COBRA/benefits termination, exit interview, and alumni handoff. | Nuvel Skills *(owned)* |
+| performance-improvement-plan | Run a formal, defensible PIP — evidence gathering, measurable standards, support, timeline, consequences, launch meeting, scheduled check-ins, and the close/extend/exit decision. Bundles a pip-tracker.py script. | Nuvel Skills *(owned)* |
+| compensation-review | Run a pay or merit cycle end to end — stakeholder alignment, budget envelope, benchmarking, merit matrix, calibration, pay-equity audit, approvals, communication, and post-cycle analysis. Bundles a merit-matrix.py script. | Nuvel Skills *(owned)* |
 
 ### sales — the Account Executive
 
@@ -209,7 +211,7 @@ Several skills are vendored verbatim from upstream sources and credited to their
 - **Resend** — `resend` (and its sub-skills for sending, receiving, audiences, and broadcasts).
 - **Brandon Bayer** ([rag.saas-shipkit](https://github.com/flybayer)) — the owned skills `bug-triage`, `database-migration-safety`, and `second-order-impact-analysis` are Nuvel Skills originals, restructured into modern `SKILL.md` form and inspired by the structured task templates Brandon pioneered in rag.saas-shipkit.
 
-- **HR best-practice sources** — the owned `hr` skills (`hiring`, `employee-onboarding`, `employee-engagement`) are Nuvel Skills originals whose workflows are aligned with published industry standards, principally **SHRM** (Society for Human Resource Management) guidance and benchmarking on structured hiring, onboarding, retention, and stay/exit interviews, plus **Gallup** onboarding-experience research and the widely used 30-60-90 day onboarding framework. Sources are cited inline in each skill body. Adapt jurisdiction-specific steps (background checks, tax/eligibility forms, data retention) to your local employment law.
+- **HR best-practice sources** — the owned `hr` skills (`hiring`, `employee-onboarding`, `employee-engagement`, `employee-offboarding`, `performance-improvement-plan`, `compensation-review`) are Nuvel Skills originals whose workflows are aligned with published industry standards, principally **SHRM** (Society for Human Resource Management) guidance and benchmarking on structured hiring, onboarding, retention, stay/exit interviews, the eight elements of an effective performance improvement plan, and compensation trends, plus **Gallup** onboarding-experience research, the widely used 30-60-90 day onboarding framework, **U.S. Chamber of Commerce** guidance on PIP structure and evidence, and published total-rewards practice on the annual compensation cycle (merit matrix, compa-ratio, calibration, and post-cycle pay-equity analysis). Sources are cited inline in each skill body. Adapt jurisdiction-specific steps (background checks, tax/eligibility forms, data retention, pay-transparency and equity-reporting rules) to your local employment law.
 
 - **Sales methodologies** — the owned `sales` skills (`lead-qualification`, `discovery-call`, `pipeline-management`) are Nuvel Skills originals that apply established, publicly-documented sales methodologies, credited inline: BANT (IBM), CHAMP (InsightSquared), GPCT (HubSpot), SPIN Selling (Neil Rackham), the Pain Funnel (David Sandler / Sandler Training), and MEDDIC (Dick Dunkel / Jack Napoli, PTC).
 
