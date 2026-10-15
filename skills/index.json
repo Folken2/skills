@@ -1,6 +1,6 @@
 {
-  "version": 16,
-  "updated": "2026-08-24",
+  "version": 17,
+  "updated": "2026-10-15",
   "themes": {
     "software-development": [
       {
@@ -109,6 +109,14 @@
         "theme": "software-development",
         "path": "skills/software-development/webapp-testing/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/webapp-testing/SKILL.md"
+      },
+      {
+        "name": "installer-transaction-design",
+        "description": "Plan/apply/doctor transaction contract for installers that write agent config or install skills \u2014 approval gates, conservative merges, immutable backups, fail-closed validation.",
+        "author": "Mark Folken",
+        "theme": "software-development",
+        "path": "skills/software-development/installer-transaction-design/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/installer-transaction-design/SKILL.md"
       }
     ],
     "growth": [

@@ -23,6 +23,7 @@ Also depends on superpowers (Jesse Vincent / Prime Radiant, MIT) for core develo
 | database-migration-safety | Migration safety protocol — down migrations, round-trip rollback testing, schema diff review, zero-downtime. | Nuvel Skills *(owned)* |
 | design-checklist-review | Reference UX/UI quality checklists for web app screens. Run before shipping. | markfolken *(owned)* |
 | second-order-impact-analysis | Before declaring a change done, trace ripple effects — upstream/downstream, data, API contract, performance, rollback. | Nuvel Skills *(owned)* |
+| installer-transaction-design | Plan/apply/doctor contract for installers that write agent config or install skills — approval gates, conservative merges, immutable backups, fail-closed validation. | Mark Folken *(owned)* |
 | frontend-design | Create distinctive, production-grade frontend interfaces that avoid generic AI aesthetics. | Anthropic *(vendored)* |
 | mcp-builder | Guide for creating high-quality MCP servers (Python FastMCP or Node/TypeScript MCP SDK). | Anthropic *(vendored)* |
 | nextjs-best-practices | Next.js App Router principles — Server Components, data fetching, routing patterns. | community / uncredited |

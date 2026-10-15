@@ -6,7 +6,7 @@ This repository is a library of **executable SOPs (skills)** for AI agents. Skil
 
 | Theme | Role | Skills |
 |-------|------|--------|
-| software-development | Software Engineer | 13 skills |
+| software-development | Software Engineer | 14 skills |
 | growth | Growth & Marketing | 12 skills |
 | backoffice | Admin & Operations | 5 skills |
 | hr | HR Professional | 3 skills |
