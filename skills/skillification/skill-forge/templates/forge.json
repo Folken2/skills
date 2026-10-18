@@ -1,0 +1,40 @@
+{
+  "_comment": [
+    "skill-forge config. Copy next to your eval set, NOT inside the skill directory.",
+    "See references/walkthrough.md for a complete worked example.",
+    "Run:  skillforge.py probe --config forge.json --out ./run",
+    "      skillforge.py forge --config forge.json --out ./run --k 2"
+  ],
+
+  "_skill": "path to the skill under test, relative to this file",
+  "skill": "../skills/hr/payroll-processor",
+
+  "_cases": "directory of case dirs; each holds ONE input file plus expected.json",
+  "cases": "evalset",
+
+  "_run": [
+    "command that executes the skill's script for one case.",
+    "{python} -> interpreter, {skill} -> skill dir, {input} -> the case input file,",
+    "{output} -> scratch dir for this run. The script MUST write JSON somewhere"
+  ],
+  "run": ["{python}", "{skill}/scripts/payroll_processor.py", "{input}",
+          "--output-dir", "{output}", "--quiet"],
+
+  "_result_file": "where the script writes its JSON result; {output} is substituted",
+  "result_file": "{output}/payroll_report.json",
+
+  "_rows_path": "dotted path from the JSON root to the list of rows ('' = root is the list)",
+  "rows_path": "paystubs",
+
+  "_key_field": "field identifying a row, compared as a set (catches missing/extra rows)",
+  "key_field": "employee_id",
+
+  "_value_field": "field compared numerically against expected",
+  "value_field": "net_pay",
+
+  "_tolerance": "absorbs float noise without admitting a real error; ~half the smallest meaningful unit",
+  "tolerance": 0.011,
+
+  "_editable": "files the proposer may modify; keep this tight",
+  "editable": ["scripts/payroll_processor.py"]
+}

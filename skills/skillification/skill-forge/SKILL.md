@@ -1,7 +1,7 @@
 ---
 name: skill-forge
 description: "Improve a skill's bundled scripts by propose/probe/compose — every edit is kept only if two executions visibly differ, so nothing lands on opinion."
-version: 1.0.0
+version: 1.1.0
 author: Nuvel Skills
 ---
 
@@ -145,6 +145,17 @@ python3 scripts/skillforge.py forge --config forge.json --out ./run --k 2 \
   `SKILLFORGE_BASE_URL` point it at any OpenAI-compatible endpoint.
 - Use a **flash-tier** proposer. This is a diagnosis task, not a writing task,
   and a full two-scope run costs a fraction of a cent.
+
+## Worked example
+
+`references/walkthrough.md` walks a complete run end to end: extracting the
+contract, building the eval set, the config, the real probe output, what the loop
+composed, and what review caught that the loop could not see. Read it before your
+first run — the two rules above are cheap to state and easy to get wrong in practice.
+
+`templates/forge.json` is the config template with every field annotated. It is
+also a valid config: copy it beside your eval set and edit the values. The config
+and the eval set live **outside** the skill directory so the skill ships clean.
 
 ## Output
 
