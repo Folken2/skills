@@ -1,5 +1,5 @@
 {
-  "version": 17,
+  "version": 18,
   "updated": "2026-10-18",
   "themes": {
     "software-development": [
@@ -267,6 +267,14 @@
         "theme": "skillification",
         "path": "skills/skillification/skill-evaluation/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/skillification/skill-evaluation/SKILL.md"
+      },
+      {
+        "name": "skill-forge",
+        "description": "Improve a skill's bundled scripts by propose/probe/compose \u2014 every edit is kept only if two executions visibly differ, so nothing lands on opinion.",
+        "author": "Nuvel Skills",
+        "theme": "skillification",
+        "path": "skills/skillification/skill-forge/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/skillification/skill-forge/SKILL.md"
       }
     ],
     "hr": [

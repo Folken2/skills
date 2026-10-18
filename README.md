@@ -134,6 +134,7 @@ Skills about skills: promotion, verification, extraction — how skills enter an
 | Skill | Description | Author |
 |---|---|---|
 | skill-promotion | Promote a dogfooded internal skill into the canonical repo — curation gates, versioning, attribution review, PR workflow. | Nuvel Skills *(owned)* |
+| skill-forge | Improve a skill's bundled scripts by propose/probe/compose — every edit is kept only if two executions visibly differ, so nothing lands on opinion. | Nuvel Skills *(owned)* |
 
 ## Install
 
