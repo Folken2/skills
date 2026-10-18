@@ -1,7 +1,7 @@
 ---
 name: payroll-processor
 description: "Calculate net pay from timesheet CSV data and generate paystub and summary reports."
-version: 1.0.0
+version: 1.0.1
 author: Nuvel
 license: MIT
 platforms: [linux, macos, windows]

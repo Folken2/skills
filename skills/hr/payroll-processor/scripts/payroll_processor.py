@@ -14,7 +14,10 @@ Edge cases handled:
     - Negative rate/deductions      -> clamped to 0.0, flagged in warnings
     - Zero rate                     -> allowed (results in $0 gross), flagged
     - tax_rate given as percent     -> values > 1 are interpreted as percent
-                                       (e.g. 20 -> 0.20)
+                                       (e.g. 20 -> 0.20); a trailing "%" is
+                                       always a percent (e.g. 7.5% -> 0.075)
+    - UTF-8 BOM on the header       -> stripped, so spreadsheet exports keep
+                                       their employee_id column
     - Missing employee_id/name      -> synthesised placeholder, flagged
 """
 import argparse
@@ -53,7 +56,17 @@ def _to_float(value, default=0.0):
 
 
 def normalize_tax_rate(raw):
-    """Accept either a fraction (0.20) or a percent (20) and return a fraction."""
+    """Accept a fraction (0.20), a percent (20), or a percent-suffixed value (20%).
+
+    A trailing '%' is an explicit percent, so it is always divided by 100.
+    Relying on the >1 heuristic alone would read "0.2%" as 20%.
+    """
+    text = str(raw).strip().replace("$", "").replace(",", "")
+    if text.endswith("%"):
+        rate = _to_float(text[:-1], 0.0)
+        if rate < 0:
+            return 0.0, True
+        return rate / 100.0, False
     rate = _to_float(raw, 0.0)
     if rate < 0:
         return 0.0, True
@@ -121,7 +134,11 @@ def read_timesheet(csv_path):
     if not path.is_file():
         raise FileNotFoundError(f"Timesheet not found: {csv_path}")
     stubs = []
-    with path.open(newline="", encoding="utf-8") as fh:
+    # utf-8-sig transparently strips a UTF-8 BOM. Spreadsheet exports (Excel,
+    # Google Sheets) prepend one, which otherwise makes the first header key
+    # "\ufeffemployee_id" -- every lookup misses and every row is filed as
+    # UNKNOWN-<n> with no warning.
+    with path.open(newline="", encoding="utf-8-sig") as fh:
         reader = csv.DictReader(fh)
         if reader.fieldnames is None:
             return stubs
