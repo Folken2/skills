@@ -70,7 +70,7 @@ Hire, onboard, engage, retain, and administer the employee lifecycle. Full-cycle
 | employee-engagement | Ongoing retention — 1:1 cadence, quarterly/annual reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, exit interviews. | Nuvel Skills *(owned)* |
 | payroll-processor | Calculate net pay from timesheet CSV data (gross → tax → deductions) and generate per-employee paystubs plus a summary report. Bundles a payroll_processor.py script. | Nuvel Skills *(owned)* |
 | employee-offboarding | Full-cycle departure from notice to post-departure — access revocation (revoke first), equipment return, knowledge transfer, final pay & PTO, COBRA/benefits termination, exit interview, and alumni handoff. | Nuvel Skills *(owned)* |
-| workplace-investigation | Fair, defensible investigation of a complaint or alleged policy violation — intake and triage, interim measures, written scope, evidence preservation, interview sequencing, credibility assessment, findings per allegation, corrective action, retaliation checks. | Nuvel Skills *(owned)* |
+| workplace-investigation | Fair, defensible investigation of a complaint or alleged policy violation — intake and triage, interim measures, written scope, evidence preservation, interview sequencing, credibility assessment, findings per allegation, corrective action, retaliation checks. Bundles a case_tracker.py script. | Nuvel Skills *(owned)*
 | benefits-administration | Deadline-driven benefits administration — open enrollment, new-hire enrollment, qualifying life events, eligibility, carrier files, three-way deduction reconciliation, coverage termination. Bundles a benefits_admin.py script. | Nuvel Skills *(owned)* |
 
 ### sales — the Account Executive

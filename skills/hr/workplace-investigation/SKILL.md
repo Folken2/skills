@@ -97,6 +97,26 @@ This skill ends at **findings plus a recommended corrective action**. Executing 
 | Evidence auto-deletion or mailbox expiry during the case | Facts destroyed by default retention settings | Preservation notice and export in the first days |
 | Corrective action inconsistent with comparable past cases | Inequality is the easiest thing for a claimant to prove | Compare to precedent; involve legal and the decision-maker |
 
+## Bundled tool
+
+`scripts/case_tracker.py` — stdlib-only CLI that tracks the SLA milestones and gates case closure on the artifact checklist. Every subcommand accepts `--help`.
+
+```bash
+# Create a case file with SLA deadlines computed from the severity
+python3 scripts/case_tracker.py new --id CASE-001 --received 2026-10-01 --severity high
+
+# Where does the case stand today?
+python3 scripts/case_tracker.py status --case CASE-001.json --today 2026-10-19
+
+# Mark artifacts complete as you go
+python3 scripts/case_tracker.py done --case CASE-001.json --artifact scope_written
+
+# Close — REFUSES while any required artifact is missing
+python3 scripts/case_tracker.py close --case CASE-001.json --finding substantiated
+```
+
+Severity drives the SLA (`critical`, `high`, `standard`). `status` exits `1` when a milestone is overdue, and `close` exits `1` and lists the gaps rather than letting an incomplete file be signed off — **an incomplete file is not a defensible file**. The 20 required artifacts map one-to-one onto the exit criteria below.
+
 ## Exit criteria
 
 - [ ] Complaint logged verbatim with date, channel, reporter status (named/anonymous), and case ID assigned.

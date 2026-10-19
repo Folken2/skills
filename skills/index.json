@@ -320,7 +320,7 @@
       },
       {
         "name": "workplace-investigation",
-        "description": "Fair, documented, defensible investigation of a complaint or alleged policy violation \u2014 intake and triage, interim measures, written scope, investigator conflict-check, evidence preservation, interview sequencing, credibility assessment, findings per allegation, corrective action, and post-close retaliation checks.",
+        "description": "Fair, documented, defensible investigation of a complaint or alleged policy violation \u2014 intake and triage, interim measures, written scope, investigator conflict-check, evidence preservation, interview sequencing, credibility assessment, findings per allegation, corrective action, and post-close retaliation checks. Bundles a case_tracker.py script.",
         "author": "Nuvel Skills",
         "theme": "hr",
         "path": "skills/hr/workplace-investigation/SKILL.md",
