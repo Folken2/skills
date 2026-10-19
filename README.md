@@ -61,7 +61,7 @@ Document generation and data operations.
 
 ### hr — People Operations
 
-Hire, onboard, engage, and retain employees. Full-cycle people ops as executable SOPs — from opening a req to the exit interview.
+Hire, onboard, engage, retain, and administer the employee lifecycle. Full-cycle people ops as executable SOPs — from opening a req to the exit interview, plus employee-relations investigations and benefits administration.
 
 | Skill | Description | Author |
 |---|---|---|
@@ -70,6 +70,8 @@ Hire, onboard, engage, and retain employees. Full-cycle people ops as executable
 | employee-engagement | Ongoing retention — 1:1 cadence, quarterly/annual reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, exit interviews. | Nuvel Skills *(owned)* |
 | payroll-processor | Calculate net pay from timesheet CSV data (gross → tax → deductions) and generate per-employee paystubs plus a summary report. Bundles a payroll_processor.py script. | Nuvel Skills *(owned)* |
 | employee-offboarding | Full-cycle departure from notice to post-departure — access revocation (revoke first), equipment return, knowledge transfer, final pay & PTO, COBRA/benefits termination, exit interview, and alumni handoff. | Nuvel Skills *(owned)* |
+| workplace-investigation | Fair, defensible investigation of a complaint or alleged policy violation — intake and triage, interim measures, written scope, evidence preservation, interview sequencing, credibility assessment, findings per allegation, corrective action, retaliation checks. | Nuvel Skills *(owned)* |
+| benefits-administration | Deadline-driven benefits administration — open enrollment, new-hire enrollment, qualifying life events, eligibility, carrier files, three-way deduction reconciliation, coverage termination. Bundles a benefits_admin.py script. | Nuvel Skills *(owned)* |
 
 ### sales — the Account Executive
 
@@ -211,6 +213,8 @@ Several skills are vendored verbatim from upstream sources and credited to their
 - **Brandon Bayer** ([rag.saas-shipkit](https://github.com/flybayer)) — the owned skills `bug-triage`, `database-migration-safety`, and `second-order-impact-analysis` are Nuvel Skills originals, restructured into modern `SKILL.md` form and inspired by the structured task templates Brandon pioneered in rag.saas-shipkit.
 
 - **HR best-practice sources** — the owned `hr` skills (`hiring`, `employee-onboarding`, `employee-engagement`) are Nuvel Skills originals whose workflows are aligned with published industry standards, principally **SHRM** (Society for Human Resource Management) guidance and benchmarking on structured hiring, onboarding, retention, and stay/exit interviews, plus **Gallup** onboarding-experience research and the widely used 30-60-90 day onboarding framework. Sources are cited inline in each skill body. Adapt jurisdiction-specific steps (background checks, tax/eligibility forms, data retention) to your local employment law.
+
+- **HR employee-relations & benefits sources** — the owned `hr` skills `workplace-investigation` and `benefits-administration` are Nuvel Skills originals aligned with published practice: **HR Acuity**, **Maynard Nexsen**, **Employers Council**, **HRCertification.com**, and **The HR Group** on workplace-investigation process, due process, and interview conduct; **HealthCare.gov**, **Selerix**, **BambooHR**, **Bindbee**, and **WAEPA** on qualifying life events, special enrollment periods, and open enrollment. Sources are cited inline in each skill body. Adapt jurisdiction-specific rules (interview and representation rights, data protection, eligibility thresholds, enrollment windows, continuation coverage) to your local employment law.
 
 - **Sales methodologies** — the owned `sales` skills (`lead-qualification`, `discovery-call`, `pipeline-management`) are Nuvel Skills originals that apply established, publicly-documented sales methodologies, credited inline: BANT (IBM), CHAMP (InsightSquared), GPCT (HubSpot), SPIN Selling (Neil Rackham), the Pain Funnel (David Sandler / Sandler Training), and MEDDIC (Dick Dunkel / Jack Napoli, PTC).
 

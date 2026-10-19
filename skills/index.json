@@ -1,6 +1,6 @@
 {
-  "version": 19,
-  "updated": "2026-10-18",
+  "version": 20,
+  "updated": "2026-10-19",
   "themes": {
     "software-development": [
       {
@@ -317,6 +317,22 @@
         "theme": "hr",
         "path": "skills/hr/employee-offboarding/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/employee-offboarding/SKILL.md"
+      },
+      {
+        "name": "workplace-investigation",
+        "description": "Fair, documented, defensible investigation of a complaint or alleged policy violation \u2014 intake and triage, interim measures, written scope, investigator conflict-check, evidence preservation, interview sequencing, credibility assessment, findings per allegation, corrective action, and post-close retaliation checks.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/workplace-investigation/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/workplace-investigation/SKILL.md"
+      },
+      {
+        "name": "benefits-administration",
+        "description": "Deadline-driven benefits administration \u2014 annual open enrollment, new-hire enrollment, qualifying life events, eligibility determination, carrier file submission, three-way deduction reconciliation, and coverage termination. Bundles a benefits_admin.py script.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/benefits-administration/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/benefits-administration/SKILL.md"
       }
     ],
     "sales": [
