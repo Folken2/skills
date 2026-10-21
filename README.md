@@ -24,6 +24,7 @@ Also depends on superpowers (Jesse Vincent / Prime Radiant, MIT) for core develo
 | design-checklist-review | Reference UX/UI quality checklists for web app screens. Run before shipping. | markfolken *(owned)* |
 | second-order-impact-analysis | Before declaring a change done, trace ripple effects — upstream/downstream, data, API contract, performance, rollback. | Nuvel Skills *(owned)* |
 | frontend-design | Create distinctive, production-grade frontend interfaces that avoid generic AI aesthetics. | Anthropic *(vendored)* |
+| html-demo | Show an app working on a web page by drawing it live in HTML instead of recording it — a Mac-style window plays the app step by step, every frame a pure function of one clock, with a steps bar and designed reduced-motion end frames. | fil.design *(vendored)* |
 | mcp-builder | Guide for creating high-quality MCP servers (Python FastMCP or Node/TypeScript MCP SDK). | Anthropic *(vendored)* |
 | nextjs-best-practices | Next.js App Router principles — Server Components, data fetching, routing patterns. | community / uncredited |
 | nextjs-supabase-auth | Expert integration of Supabase Auth with the Next.js App Router. | community / uncredited |
@@ -176,6 +177,7 @@ cp -r skills/<theme>/<name>/. .agents/skills/<name>/
 - [skills.sh](https://www.skills.sh/) — The agent skills directory. 1.2M+ skills searchable across 20+ harnesses. Claude Code has a built-in `/skills` command to search this catalog. Skills from this repo can also be published there.
 - [superpowers](https://github.com/obra/superpowers) — Complete software development methodology (MIT, Jesse Vincent / Prime Radiant). Our software-development theme depends on it.
 - [Checklist Design](https://checklist.design) — UX/UI reference checklists by George Hatzis.
+- [fil.design](https://fil.design/skills/html-demo) — HTML Demo, extracted from fil.design/download. Frames-as-a-function-of-one-clock demos for product pages.
 - [rag.saas-shipkit](https://github.com/rag-saas-shipkit) — Brandon Bayer's pioneering task templates that inspired our bug-triage and migration-safety skills.
 
 ## Contributing

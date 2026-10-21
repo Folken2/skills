@@ -1,6 +1,6 @@
 {
-  "version": 19,
-  "updated": "2026-10-18",
+  "version": 20,
+  "updated": "2026-10-21",
   "themes": {
     "software-development": [
       {
@@ -109,7 +109,15 @@
         "theme": "software-development",
         "path": "skills/software-development/webapp-testing/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/webapp-testing/SKILL.md"
-      }
+      },
+    {
+      "name": "html-demo",
+      "description": "Show an app working on a web page drawn live in HTML instead of recorded: a Mac-style window plays the app step by step, every frame a pure function of one clock at a fixed 1200x750 stage, with a scripted pointer, a steps bar, and designed end frames for reduced motion. Use for product demos, animated app windows and heroes, feature walkthroughs, or replacing screen recordings and GIFs of a UI.",
+      "author": "fil.design (vendor)",
+      "theme": "software-development",
+      "path": "skills/software-development/html-demo/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/html-demo/SKILL.md"
+    }
     ],
     "growth": [
       {
