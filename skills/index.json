@@ -141,6 +141,14 @@
         "theme": "software-development",
         "path": "skills/software-development/to-tickets/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/to-tickets/SKILL.md"
+      },
+      {
+        "name": "pr",
+        "description": "A PR body a human can review without reading the diff - smallest visual summary (diagram, diff sketch, tree), before/after evidence, one-way/two-way door and blast radius.",
+        "author": "Dex Horthy (Humanlayer show-me), via Matt Pocock (mattpocock/skills), adapted by Nuvel Skills",
+        "theme": "software-development",
+        "path": "skills/software-development/pr/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/pr/SKILL.md"
       }
     ],
     "growth": [

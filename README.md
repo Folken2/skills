@@ -27,6 +27,7 @@ Also depends on superpowers (Jesse Vincent / Prime Radiant, MIT) for core develo
 | grill-with-docs | Grilling that also writes the project's language down - maintains GLOSSARY.md and ADRs inline as terms and decisions resolve. | Matt Pocock *(adapted)* |
 | codebase-design | The deep-module vocabulary - interface, seam, adapter, depth, leverage, locality - for designing or restructuring a module's interface. Ships deepening and design-it-twice references. | Matt Pocock *(adapted)* |
 | to-tickets | Turn a plan, spec, or conversation into tracer-bullet vertical slices with declared blocking edges, published to the tracker. Wide refactors use expand-contract. | Matt Pocock *(adapted)* |
+| pr | A PR body a human can review without reading the diff — smallest visual summary (diagram, diff sketch, tree), before/after evidence, one-way/two-way door and blast radius. | Dex Horthy (Humanlayer) via Matt Pocock *(adapted)* |
 | frontend-design | Create distinctive, production-grade frontend interfaces that avoid generic AI aesthetics. | Anthropic *(vendored)* |
 | mcp-builder | Guide for creating high-quality MCP servers (Python FastMCP or Node/TypeScript MCP SDK). | Anthropic *(vendored)* |
 | nextjs-best-practices | Next.js App Router principles — Server Components, data fetching, routing patterns. | community / uncredited |
@@ -213,7 +214,7 @@ Several skills are vendored verbatim from upstream sources and credited to their
 - **Vercel** — `vercel-react-best-practices` and `web-design-guidelines` (Vercel Engineering / Web Interface Guidelines).
 - **Supabase** — `supabase-postgres-best-practices`.
 - **Resend** — `resend` (and its sub-skills for sending, receiving, audiences, and broadcasts).
-- **Matt Pocock** ([mattpocock/skills](https://github.com/mattpocock/skills), MIT) - the skills `grilling`, `grill-with-docs`, `codebase-design`, `to-tickets`, and `writing-for-agents` are Nuvel Skills rewrites of his agent skills: the same methods and vocabulary, re-authored as harness-agnostic markdown. Upstream ships them as Claude Code / Codex plugins with harness-specific invocation mechanics and split reference files; those are removed or inlined here so the skills work in any harness.
+- **Matt Pocock** ([mattpocock/skills](https://github.com/mattpocock/skills), MIT) - the skills `grilling`, `grill-with-docs`, `codebase-design`, `to-tickets`, `pr`, and `writing-for-agents` are Nuvel Skills rewrites of his agent skills: the same methods and vocabulary, re-authored as harness-agnostic markdown. Upstream ships them as Claude Code / Codex plugins with harness-specific invocation mechanics and split reference files; those are removed or inlined here so the skills work in any harness. `pr` carries a second lineage: its visual-summary menu comes from `show-me` by **Dex Horthy** ([Humanlayer](https://github.com/humanlayer)), credited by upstream and kept here.
 
 - **Brandon Bayer** ([rag.saas-shipkit](https://github.com/flybayer)) — the owned skills `bug-triage`, `database-migration-safety`, and `second-order-impact-analysis` are Nuvel Skills originals, restructured into modern `SKILL.md` form and inspired by the structured task templates Brandon pioneered in rag.saas-shipkit.
 
