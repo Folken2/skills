@@ -1,6 +1,6 @@
 {
-  "version": 19,
-  "updated": "2026-10-18",
+  "version": 20,
+  "updated": "2026-11-03",
   "themes": {
     "software-development": [
       {
@@ -109,6 +109,46 @@
         "theme": "software-development",
         "path": "skills/software-development/webapp-testing/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/webapp-testing/SKILL.md"
+      },
+      {
+        "name": "grilling",
+        "description": "Relentless round-based interview that stress-tests a plan, design, or decision before work starts - design tree, frontier, recommended answers.",
+        "author": "Matt Pocock (mattpocock/skills), adapted by Nuvel Skills",
+        "theme": "software-development",
+        "path": "skills/software-development/grilling/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/grilling/SKILL.md"
+      },
+      {
+        "name": "grill-with-docs",
+        "description": "Grilling that also writes the project's language down - maintains GLOSSARY.md and ADRs inline as terms and decisions resolve.",
+        "author": "Matt Pocock (mattpocock/skills), adapted by Nuvel Skills",
+        "theme": "software-development",
+        "path": "skills/software-development/grill-with-docs/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/grill-with-docs/SKILL.md"
+      },
+      {
+        "name": "codebase-design",
+        "description": "Deep-module vocabulary - interface, seam, adapter, depth, leverage, locality - for designing or restructuring a module's interface. Ships deepening + design-it-twice references.",
+        "author": "Matt Pocock (mattpocock/skills), adapted by Nuvel Skills",
+        "theme": "software-development",
+        "path": "skills/software-development/codebase-design/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/codebase-design/SKILL.md"
+      },
+      {
+        "name": "to-tickets",
+        "description": "Turn a plan, spec, or conversation into tracer-bullet vertical slices with declared blocking edges, published to the tracker. Wide refactors use expand-contract.",
+        "author": "Matt Pocock (mattpocock/skills), adapted by Nuvel Skills",
+        "theme": "software-development",
+        "path": "skills/software-development/to-tickets/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/to-tickets/SKILL.md"
+      },
+      {
+        "name": "pr",
+        "description": "A PR body a human can review without reading the diff - smallest visual summary (diagram, diff sketch, tree), before/after evidence, one-way/two-way door and blast radius.",
+        "author": "Dex Horthy (Humanlayer show-me), via Matt Pocock (mattpocock/skills), adapted by Nuvel Skills",
+        "theme": "software-development",
+        "path": "skills/software-development/pr/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/pr/SKILL.md"
       }
     ],
     "growth": [
@@ -275,6 +315,14 @@
         "theme": "skillification",
         "path": "skills/skillification/skill-forge/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/skillification/skill-forge/SKILL.md"
+      },
+      {
+        "name": "writing-for-agents",
+        "description": "Levers for writing any doc an agent consumes - context pointers, the two loads, the information hierarchy, leading words vs negation, pruning. Includes skill mechanics.",
+        "author": "Matt Pocock (mattpocock/skills), adapted by Nuvel Skills",
+        "theme": "skillification",
+        "path": "skills/skillification/writing-for-agents/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/skillification/writing-for-agents/SKILL.md"
       }
     ],
     "hr": [
