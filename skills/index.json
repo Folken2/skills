@@ -1,5 +1,5 @@
 {
-  "version": 20,
+  "version": 21,
   "updated": "2026-11-03",
   "themes": {
     "software-development": [
@@ -149,6 +149,14 @@
         "theme": "software-development",
         "path": "skills/software-development/pr/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/pr/SKILL.md"
+      },
+      {
+        "name": "code-review",
+        "description": "Two-axis review of a branch or PR - Standards (repo conventions + Fowler smell baseline) and Spec (does it implement the originating issue) - run as parallel subagents.",
+        "author": "Matt Pocock (mattpocock/skills), adapted by Nuvel Skills",
+        "theme": "software-development",
+        "path": "skills/software-development/code-review/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/software-development/code-review/SKILL.md"
       }
     ],
     "growth": [

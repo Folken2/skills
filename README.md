@@ -28,6 +28,7 @@ Also depends on superpowers (Jesse Vincent / Prime Radiant, MIT) for core develo
 | codebase-design | The deep-module vocabulary - interface, seam, adapter, depth, leverage, locality - for designing or restructuring a module's interface. Ships deepening and design-it-twice references. | Matt Pocock *(adapted)* |
 | to-tickets | Turn a plan, spec, or conversation into tracer-bullet vertical slices with declared blocking edges, published to the tracker. Wide refactors use expand-contract. | Matt Pocock *(adapted)* |
 | pr | A PR body a human can review without reading the diff — smallest visual summary (diagram, diff sketch, tree), before/after evidence, one-way/two-way door and blast radius. | Dex Horthy (Humanlayer) via Matt Pocock *(adapted)* |
+| code-review | Two-axis review of a branch or PR — Standards (repo conventions plus a Fowler smell baseline) and Spec (does it implement the originating issue), run as parallel subagents. | Matt Pocock *(adapted)* |
 | frontend-design | Create distinctive, production-grade frontend interfaces that avoid generic AI aesthetics. | Anthropic *(vendored)* |
 | mcp-builder | Guide for creating high-quality MCP servers (Python FastMCP or Node/TypeScript MCP SDK). | Anthropic *(vendored)* |
 | nextjs-best-practices | Next.js App Router principles — Server Components, data fetching, routing patterns. | community / uncredited |
