@@ -1,6 +1,6 @@
 {
-  "version": 21,
-  "updated": "2026-11-03",
+  "version": 22,
+  "updated": "2026-11-09",
   "themes": {
     "software-development": [
       {
@@ -373,6 +373,22 @@
         "theme": "hr",
         "path": "skills/hr/employee-offboarding/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/employee-offboarding/SKILL.md"
+      },
+      {
+        "name": "leave-management",
+        "description": "Full-cycle leave and time-off management \u2014 request intake (including requests that never say \"leave\"), eligibility and coverage testing, leave classification, medical certification, statutory notices, written approval or denial with appeal rights, intermittent-leave tracking, coverage and payroll/benefits coordination, and return-to-work. Bundles a leave_accrual.py calculator.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/leave-management/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/leave-management/SKILL.md"
+      },
+      {
+        "name": "employment-eligibility-verification",
+        "description": "US Form I-9 employment eligibility verification \u2014 Section 1, Section 2 document examination within 3 business days, E-Verify, reverification and rehire via Supplement B, retention and destruction dates, internal audit, and responding to a Notice of Inspection. Bundles an i9_tracker.py deadline calculator.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/employment-eligibility-verification/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/employment-eligibility-verification/SKILL.md"
       }
     ],
     "sales": [
