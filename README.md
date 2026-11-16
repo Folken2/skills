@@ -76,6 +76,8 @@ Hire, onboard, engage, and retain employees. Full-cycle people ops as executable
 | employee-engagement | Ongoing retention — 1:1 cadence, quarterly/annual reviews, continuous feedback, growth plans, recognition, stay/flight-risk checks, exit interviews. | Nuvel Skills *(owned)* |
 | payroll-processor | Calculate net pay from timesheet CSV data (gross → tax → deductions) and generate per-employee paystubs plus a summary report. Bundles a payroll_processor.py script. | Nuvel Skills *(owned)* |
 | employee-offboarding | Full-cycle departure from notice to post-departure — access revocation (revoke first), equipment return, knowledge transfer, final pay & PTO, COBRA/benefits termination, exit interview, and alumni handoff. | Nuvel Skills *(owned)* |
+| workforce-analytics | Period people metrics from a roster export — headcount and net change, turnover rate overall and per group, voluntary/involuntary split, regrettable attrition, retention, tenure, span of control, and estimated turnover cost. Bundles a workforce_metrics.py script. | Nuvel Skills *(owned)* |
+| shift-scheduling | Build or audit an hourly shift schedule — fill demand by role from employee availability, list uncovered shifts for broadcast, total weekly hours and projected overtime, and flag rest-period (clopen), notice-period, role and availability violations. Bundles a coverage_planner.py script. | Nuvel Skills *(owned)* |
 
 ### sales — the Account Executive
 
