@@ -1,6 +1,6 @@
 {
-  "version": 21,
-  "updated": "2026-11-03",
+  "version": 22,
+  "updated": "2026-11-16",
   "themes": {
     "software-development": [
       {
@@ -373,6 +373,22 @@
         "theme": "hr",
         "path": "skills/hr/employee-offboarding/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/employee-offboarding/SKILL.md"
+      },
+      {
+        "name": "workforce-analytics",
+        "description": "Use when the agent must produce a workforce metrics report for a defined period from an HR roster export: headcount and net change, turnover rate (overall and per department or other group), voluntary vs involuntary split, regrettable attrition, retention rate, tenure, span of control and estimated turnover cost. Triggers on requests such as \"what is our turnover rate\", \"attrition report\", \"quarterly people metrics\", \"retention by department\", \"how much is turnover costing us\", \"span of control check\", or any board, budget or headcount-planning pack that needs people numbers computed from a roster CSV.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/workforce-analytics/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/workforce-analytics/SKILL.md"
+      },
+      {
+        "name": "shift-scheduling",
+        "description": "Use when the agent must build or check an hourly shift schedule against staffing demand and labour rules: filling AM/PM/NIGHT (or similar) shifts by role from employee availability, finding uncovered shifts and producing an open-shift broadcast list, totalling weekly hours and projected overtime, and detecting rest-period (clopen) violations, short-notice assignments under predictive-scheduling rules, role or availability mismatches and double bookings. Triggers on \"build next week's rota\", \"are all shifts covered\", \"check this schedule\", \"who can pick up this shift\", \"overtime this week\", \"clopen\", \"fair workweek\" or \"predictive scheduling notice\".",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/shift-scheduling/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/shift-scheduling/SKILL.md"
       }
     ],
     "sales": [
