@@ -1,6 +1,6 @@
 {
-  "version": 21,
-  "updated": "2026-11-03",
+  "version": 22,
+  "updated": "2026-11-23",
   "themes": {
     "software-development": [
       {
@@ -365,6 +365,22 @@
         "theme": "hr",
         "path": "skills/hr/payroll-processor/SKILL.md",
         "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/payroll-processor/SKILL.md"
+      },
+      {
+        "name": "employee-records-retention",
+        "description": "Use when building or auditing a retention and disposition schedule for HR records \u2014 deciding how long to keep personnel files, hiring records, payroll, I-9s, FMLA, benefits, OSHA exposure and injury logs, medical files, background checks and claim/investigation files, or checking which records are due for disposition, on legal hold, or over-retained. Triggers on: record retention schedule, how long to keep employee records, purge personnel files, records disposition, legal hold, litigation hold, I-9 purge, records audit.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/employee-records-retention/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/employee-records-retention/SKILL.md"
+      },
+      {
+        "name": "workforce-planning",
+        "description": "Use when turning a current roster and a demand forecast into a quarter-by-quarter headcount gap plan and a sequenced hiring plan \u2014 supply analysis, demand forecasting, gap analysis, requisition timing against hiring lead time, and succession (single-point-of-failure) risk. Triggers on: workforce plan, headcount plan, capacity plan, hiring plan for next year, gap analysis, how many people do we need, requisition plan, succession risk.",
+        "author": "Nuvel Skills",
+        "theme": "hr",
+        "path": "skills/hr/workforce-planning/SKILL.md",
+        "raw_url": "https://raw.githubusercontent.com/Folken2/skills/main/skills/hr/workforce-planning/SKILL.md"
       },
       {
         "name": "employee-offboarding",
